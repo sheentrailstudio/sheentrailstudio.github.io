@@ -166,22 +166,7 @@ body {
     margin-right: auto;
 }
 
-.hero-image {
-    position: relative;
-    z-index: 1;
-}
 
-.hero-mockup {
-    max-width: 100%;
-    height: auto;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-    animation: mockupFloat 6s ease-in-out infinite;
-}
-
-@keyframes mockupFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
 
 .mockup-placeholder {
     width: 100%;
@@ -402,161 +387,10 @@ body {
 }
 
 /* Video Section */
-.video-section {
-    background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    position: relative;
-}
 
-.video-placeholder {
-    width: 100%;
-    height: 400px;
-    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-color) 100%);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
-    box-shadow: var(--shadow-medium);
-}
-
-.play-btn {
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--primary-color);
-    transition: var(--transition-base);
-}
-
-.play-btn:hover {
-    transform: scale(1.1);
-}
 
 /* Testimonials Section */
-.testimonials {
-    background: var(--soft-gray);
-}
 
-.testimonial-card {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: var(--shadow-light);
-    text-align: center;
-    height: 100%;
-}
-
-.testimonial-avatar {
-    width: 80px;
-    height: 80px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.testimonial-card .stars {
-    color: var(--warning-color);
-    margin-bottom: 1rem;
-}
-
-.testimonial-card blockquote {
-    font-style: italic;
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
-}
-
-.testimonial-card .author {
-    font-weight: 600;
-    color: var(--dark-color);
-}
-
-.testimonial-card .position {
-    font-size: 0.9rem;
-    color: var(--secondary-color);
-}
-
-/* Pricing Section */
-.pricing-card {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    height: 100%;
-    box-shadow: var(--shadow-light);
-    transition: var(--transition-base);
-    position: relative;
-    border: 2px solid transparent;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-}
-
-.pricing-card.featured {
-    border-color: var(--primary-color);
-    transform: scale(1.05);
-}
-
-.pricing-card.featured::before {
-    content: 'Most Popular';
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary-color);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.pricing-card .plan-name {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--dark-color);
-}
-
-.pricing-card .price {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.pricing-card .price-period {
-    color: var(--secondary-color);
-    margin-bottom: 2rem;
-}
-
-.pricing-features {
-    list-style: none;
-    margin-bottom: 2rem;
-}
-
-.pricing-features li {
-    padding: 0.5rem 0;
-    color: var(--secondary-color);
-    border-bottom: 1px solid var(--light-color);
-}
-
-.pricing-features li i {
-    color: var(--success-color);
-    margin-right: 0.5rem;
-}
 
 /* FAQ Section */
 .faq {
@@ -760,19 +594,3 @@ body {
 }
 
 /* Newsletter */
-.newsletter {
-    background: var(--gradient-primary);
-    color: white;
-    padding: 4rem 0;
-}
-
-.newsletter .form-control {
-    border: none;
-    border-radius: 50px;
-    padding: 1rem 1.5rem;
-}
-
-.newsletter .btn {
-    border-radius: 50px;
-    padding: 1rem 2rem;
-}
