@@ -71,26 +71,6 @@ export default function Home() {
         <span>© {new Date().getFullYear()} Sheen Trail Digital</span>
       </footer >
 
-      {/* Exit Button → QT Garden */}
-      < Link href="/qt-garden/" className="exit-btn" title="QT Garden 靈修花園" >
-        <svg
-          width="22" height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          {/* Door frame */}
-          <rect x="3" y="2" width="14" height="20" rx="1" />
-          {/* Doorknob */}
-          <circle cx="14" cy="12" r="1" fill="currentColor" stroke="none" />
-          {/* Exit arrow */}
-          <polyline points="17 15 21 12 17 9" />
-          <line x1="21" y1="12" x2="11" y2="12" />
-        </svg>
-      </Link >
     </>
   )
 }
