@@ -446,6 +446,41 @@ footer {
   margin-top: 1rem;
 }
 
+/* ─── DOSE MATE PAGE THEME ─── */
+.dm-page {
+  --orange: #17647d;
+  --cream: #f0eee9;
+  --cream-dim: rgba(240, 238, 233, 0.58);
+  --cream-border: rgba(240, 238, 233, 0.18);
+  --dm-accent: #018dab;
+  background: #17647d;
+  color: #f0eee9;
+  min-height: 100vh;
+}
+
+.dm-page nav {
+  background: rgba(23, 100, 125, 0.92);
+}
+
+.dm-disclaimer {
+  margin-top: 2.5rem;
+  border: 1px solid rgba(1, 141, 171, 0.45);
+  background: rgba(1, 141, 171, 0.08);
+  padding: 1.5rem 2rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--cream-dim);
+}
+
+.dm-disclaimer strong {
+  color: var(--cream);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 /* ─── QT GARDEN PAGE THEME ─── */
 .qt-page {
   --orange: #30503a;
