@@ -54,29 +54,34 @@ const faq = [
 
 const changelog = [
   {
-    version: 'v1.2',
-    date: '2026 / Feb',
+    version: 'v1.1.0',
+    date: '2026 / Jan',
     items: [
-      '新增禱告標籤篩選與搜尋功能',
-      '改善深色模式下的閱讀體驗',
+      '調整主題、頁面設計',
       '修正部分裝置字體縮放問題',
+      '修復讀經計劃日期功能能',
     ],
   },
   {
-    version: 'v1.1',
+    version: 'v1.0.5',
     date: '2025 / Dec',
     items: [
-      '加入每週靈修回顧摘要',
-      '新增更多聖經譯本選項',
-      '效能優化與介面微調',
+      '修復啟動白屏問題',
+      '更新日誌記錄'
     ],
   },
   {
-    version: 'v1.0',
-    date: '2025 / Sep',
+    version: 'v1.0.3',
+    date: '2025 / Dec',
+    items: [
+      '新增匯出功能',
+    ],
+  },
+  {
+    version: 'v1.0.1',
+    date: '2025 / May',
     items: [
       'QT Garden 正式上線',
-      'iOS 與 Android 同步首發',
       '核心功能：讀經、禱告清單、靈修日誌',
     ],
   },
@@ -89,10 +94,6 @@ export default function QtGardenPage() {
       <nav>
         <Link className="nav-logo" href="/">Sheentrail</Link>
         <div className="nav-links">
-          <Link href="/#about">關於</Link>
-          <Link href="/#services">服務</Link>
-          <Link href="/#products">產品</Link>
-          <Link href="/#contact">聯絡</Link>
         </div>
       </nav>
 
@@ -118,7 +119,7 @@ export default function QtGardenPage() {
           <div className="store-badges">
             {/* Apple App Store */}
             <a
-              href="https://apps.apple.com/us/app/qt-garden/id6751569807"
+              href="https://apps.apple.com/tw/app/qt-garden/id6744087320"
               target="_blank"
               rel="noopener noreferrer"
               className="store-badge"
@@ -134,7 +135,7 @@ export default function QtGardenPage() {
                 <text fill="var(--cream)" fontFamily="'Kollektif', Arial, sans-serif" fontWeight="700" fontSize="14" x="34" y="30" letterSpacing="0.01em">App Store</text>
               </svg>
             </a>
-            {/* Google Play */}
+            {/* Google Play
             <a
               href="https://play.google.com/store/apps/details?id=com.sheentrail.qtgarden"
               target="_blank"
@@ -160,7 +161,7 @@ export default function QtGardenPage() {
                 <text fill="var(--cream)" fontFamily="'Kollektif', Arial, sans-serif" fontSize="7" x="38" y="14.5" letterSpacing="0.02em">GET IT ON</text>
                 <text fill="var(--cream)" fontFamily="'Kollektif', Arial, sans-serif" fontWeight="700" fontSize="13" x="38" y="29" letterSpacing="0.01em">Google Play</text>
               </svg>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -180,23 +181,23 @@ export default function QtGardenPage() {
         </div>
       </section>
 
-      {/* Screenshots */}
-      <section>
-        <div className="wrap">
-          <span className="label">Preview · App 截圖</span>
-          <div className="qt-screenshots">
-            {[1, 2, 3].map((i) => (
-              <div className="qt-screenshot-ph" key={i}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="5" y="2" width="14" height="20" rx="2" />
-                  <line x1="12" y1="18" x2="12.01" y2="18" />
-                </svg>
-                <span>截圖 {i}</span>
-              </div>
-            ))}
+      {/* Screenshots
+        <section>
+          <div className="wrap">
+            <span className="label">Preview · App 截圖</span>
+            <div className="qt-screenshots">
+              {[1, 2, 3].map((i) => (
+                <div className="qt-screenshot-ph" key={i}>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" />
+                    <line x1="12" y1="18" x2="12.01" y2="18" />
+                  </svg>
+                  <span>截圖 {i}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section> */}
 
       {/* Privacy */}
       <section>
@@ -276,7 +277,7 @@ export default function QtGardenPage() {
       {/* Footer */}
       <footer>
         <Link href="/" style={{ color: 'inherit', textDecoration: 'none', opacity: 0.6 }}>← 回到首頁</Link>
-        <span>© 2026 Sheen Trail Digital</span>
+        <span>© {new Date().getFullYear()} Sheen Trail Digital</span>
       </footer>
     </div>
   )
