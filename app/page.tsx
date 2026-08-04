@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { Reveal } from "@/components/Reveal";
-import { QtGardenMockup } from "@/components/mockups/QtGardenMockup";
+import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
 import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 
 export const metadata: Metadata = {
@@ -140,7 +140,7 @@ export default function Home() {
               </div>
               <div>
                 <dt className="label">Works</dt>
-                <dd className="mt-2 font-serif text-lg text-ink">2 Products Live</dd>
+                <dd className="mt-2 font-serif text-lg text-ink">1 Live · 2 Building</dd>
               </div>
             </dl>
           </div>
@@ -260,34 +260,6 @@ export default function Home() {
           <div className="mt-16 grid gap-6 lg:grid-cols-2">
             <Reveal>
               <Link
-                href="/products/qtgarden"
-                className="group block overflow-hidden rounded-2xl border border-ink-hair bg-paper transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-ink/25"
-              >
-                <div className="relative overflow-hidden bg-gradient-to-br from-ember-50 via-paper to-moss-50 px-8 pt-14 pb-10">
-                  <QtGardenMockup />
-                </div>
-                <div className="flex items-end justify-between gap-4 border-t border-ink-hair px-8 py-7">
-                  <div>
-                    <p className="label">Available · iOS · Android</p>
-                    <h3 className="mt-3 font-serif text-[28px] font-[450] leading-tight text-ink">
-                      QT Garden
-                      <span className="ml-2 font-sans text-sm font-medium text-ink-muted">
-                        靈修花園
-                      </span>
-                    </h3>
-                    <p className="mt-2 max-w-sm body">
-                      協助建立穩定靈修節奏，整合讀經、禱告、書寫與 AI 陪伴。
-                    </p>
-                  </div>
-                  <span className="shrink-0 pb-1 font-serif text-sm italic text-ink-muted transition-colors group-hover:text-ink">
-                    View →
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-
-            <Reveal delay={120}>
-              <Link
                 href="/products/dosemate"
                 className="group block overflow-hidden rounded-2xl border border-ink-hair bg-paper transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-ink/25"
               >
@@ -313,12 +285,40 @@ export default function Home() {
                 </div>
               </Link>
             </Reveal>
+
+            <Reveal delay={120}>
+              <Link
+                href="/products/amenjournal"
+                className="group block overflow-hidden rounded-2xl border border-ink-hair bg-paper transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-ink/25"
+              >
+                <div className="relative overflow-hidden bg-gradient-to-br from-ember-50 via-paper to-moss-50 px-8 pt-14 pb-10">
+                  <AmenJournalMockup />
+                </div>
+                <div className="flex items-end justify-between gap-4 border-t border-ink-hair px-8 py-7">
+                  <div>
+                    <p className="label">In development · Coming 2026</p>
+                    <h3 className="mt-3 font-serif text-[28px] font-[450] leading-tight text-ink">
+                      Amen Journal
+                      <span className="ml-2 font-sans text-sm font-medium text-ink-muted">
+                        阿們日記
+                      </span>
+                    </h3>
+                    <p className="mt-2 max-w-sm body">
+                      用說的禱告日記——語音、文字、照片都能留下，代禱可錄成聲音分享出去。
+                    </p>
+                  </div>
+                  <span className="shrink-0 pb-1 font-serif text-sm italic text-ink-muted transition-colors group-hover:text-ink">
+                    View →
+                  </span>
+                </div>
+              </Link>
+            </Reveal>
           </div>
 
           <Reveal delay={200} className="mt-6">
             <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-dashed border-ink-hair bg-paper/60 p-8 sm:flex-row sm:items-center">
               <div>
-                <p className="label">In development</p>
+                <p className="label">In planning</p>
                 <h3 className="mt-3 font-serif text-2xl font-[450] text-ink">
                   Echo Card · 回聲祝福小卡
                 </h3>
@@ -326,7 +326,7 @@ export default function Home() {
                   將有溫度的話語，透過小卡片延伸成可分享的連結。
                 </p>
               </div>
-              <span className="chip">Coming 2026</span>
+              <span className="chip">尚未開始開發</span>
             </div>
           </Reveal>
         </div>
