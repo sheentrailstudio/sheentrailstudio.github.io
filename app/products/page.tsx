@@ -3,13 +3,13 @@ import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
-import { QtGardenMockup } from "@/components/mockups/QtGardenMockup";
+import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
 import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Sheen Trail Digital 的產品清單，包含 QT Garden 靈修花園、Dose Mate 醫療計算助手，以及正在打造中的 Echo Card。",
+    "Sheen Trail Digital 的產品清單，包含 Dose Mate 醫療計算助手，以及開發中的 Amen Journal 阿們日記與 Echo Card。",
 };
 
 type Product = {
@@ -19,33 +19,24 @@ type Product = {
   zh: string;
   tagline: string;
   description: string;
-  status: "available" | "soon";
+  status: "available" | "development" | "soon";
   domain: string;
   toneBg: string;
-  mockup: "qt" | "dose" | "echo";
+  mockup: "amen" | "dose" | "echo";
   ios?: string;
   android?: string;
 };
 
+const statusLabel: Record<Product["status"], string> = {
+  available: "Available",
+  development: "In development",
+  soon: "In planning",
+};
+
 const products: Product[] = [
   {
-    href: "/products/qtgarden",
-    label: "Product 01",
-    title: "QT Garden",
-    zh: "靈修花園",
-    tagline: "Let quiet time become sustainable.",
-    description:
-      "整合讀經、禱告、書寫與 AI 陪伴，協助建立每天回到安靜的節奏。",
-    status: "available",
-    domain: "Devotional · Spiritual Care",
-    toneBg: "from-ember-50 via-paper to-moss-50",
-    mockup: "qt",
-    ios: "https://apps.apple.com/tw/app/qt-garden/id6744087320",
-    // android: "https://play.google.com/store/apps/details?id=com.sheentrail.qtgarden",
-  },
-  {
     href: "/products/dosemate",
-    label: "Product 02",
+    label: "Product 01",
     title: "Dose Mate",
     zh: "醫療計算助手",
     tagline: "Organize critical information for review.",
@@ -59,12 +50,25 @@ const products: Product[] = [
     android: "https://play.google.com/store/apps/details?id=com.sheentrail.dosemate",
   },
   {
+    href: "/products/amenjournal",
+    label: "Product 02",
+    title: "Amen Journal",
+    zh: "語音禱告日記",
+    tagline: "Prayers, kept in your own voice.",
+    description:
+      "用說的、用寫的、用拍的記錄禱告，代禱可以錄成一段聲音送出去，並由 AI 整理禱告主題與回應的軌跡。QT Garden 的重新出發，開發中。",
+    status: "development",
+    domain: "Devotional · Spiritual Care",
+    toneBg: "from-ember-50 via-paper to-moss-50",
+    mockup: "amen",
+  },
+  {
     label: "Product 03",
     title: "Echo Card",
     zh: "回聲祝福小卡",
     tagline: "Small cards, lasting warmth.",
     description:
-      "讓有溫度的話語透過可分享的小卡片延伸連結，把關係放進產品的核心。規劃中，2026 推出。",
+      "讓有溫度的話語透過可分享的小卡片延伸連結，把關係放進產品的核心。規劃中。",
     status: "soon",
     domain: "Social · Relationship",
     toneBg: "from-paper-soft via-paper to-ember-50",
@@ -73,12 +77,12 @@ const products: Product[] = [
 ];
 
 function MockupSlot({ kind }: { kind: Product["mockup"] }) {
-  if (kind === "qt") return <QtGardenMockup />;
+  if (kind === "amen") return <AmenJournalMockup />;
   if (kind === "dose") return <DoseMateMockup />;
   return (
     <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[380px] overflow-hidden rounded-[38px] border border-dashed border-ink-hair bg-paper">
       <div className="flex h-full flex-col items-center justify-center gap-3 p-10 text-center">
-        <span className="chip">Coming 2026</span>
+        <span className="chip">In planning</span>
         <p className="font-serif text-2xl font-[450] italic text-ink">
           Echo Card
         </p>
@@ -110,9 +114,9 @@ export default function ProductsPage() {
             <span className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-ink-muted">
               Currently shipping
             </span>
-            <span className="chip">QT Garden</span>
             <span className="chip">Dose Mate</span>
-            <span className="chip opacity-60">Echo Card — 2026</span>
+            <span className="chip opacity-60">Amen Journal — 開發中</span>
+            <span className="chip opacity-60">Echo Card — 規劃中</span>
           </div>
         </div>
       </section>
@@ -147,9 +151,7 @@ export default function ProductsPage() {
                     <div>
                       <dt className="label">Status</dt>
                       <dd className="mt-2 font-serif text-base text-ink">
-                        {p.status === "available"
-                          ? "Available"
-                          : "In development"}
+                        {statusLabel[p.status]}
                       </dd>
                     </div>
                   </dl>
@@ -158,7 +160,11 @@ export default function ProductsPage() {
                     {p.ios || p.android ? (
                       <StoreBadges ios={p.ios} android={p.android} />
                     ) : (
-                      <span className="chip">Coming 2026</span>
+                      <span className="chip">
+                        {p.status === "development"
+                          ? "Coming 2026"
+                          : "尚未開始開發"}
+                      </span>
                     )}
                     {p.href ? (
                       <Link

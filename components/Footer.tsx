@@ -14,8 +14,8 @@ const columns = [
   {
     title: "Products",
     links: [
-      { href: "/products/qtgarden", label: "QT Garden" },
       { href: "/products/dosemate", label: "Dose Mate" },
+      { href: "/products/amenjournal", label: "Amen Journal" },
       { href: "/products", label: "All Products" },
     ],
   },
