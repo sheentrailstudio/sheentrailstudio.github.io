@@ -13,8 +13,8 @@ export function StoreBadges({
 }: StoreBadgesProps) {
   const isInverted = variant === "inverted";
   const baseBtn = isInverted
-    ? "border-paper/20 bg-paper/10 text-paper hover:bg-paper hover:text-ink"
-    : "border-ink/15 bg-paper-soft/60 hover:bg-moss-700";
+    ? "border-void/20 bg-void/10 text-void hover:bg-void hover:text-chrome"
+    : "border-chrome/15 bg-void-soft/60 hover:bg-moss-700";
 
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>

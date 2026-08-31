@@ -17,7 +17,7 @@ export default function AnnouncementsPage() {
         <div className="shell pb-14 sm:pb-20">
           <Reveal>
             <p className="label">Announcements</p>
-            <h1 className="display-xxl chrome-text mt-8 max-w-3xl text-balance">
+            <h1 className="display-xxl metal-text mt-8 max-w-3xl text-balance">
               最近消息
             </h1>
             <p className="mt-9 max-w-2xl text-pretty lede">
