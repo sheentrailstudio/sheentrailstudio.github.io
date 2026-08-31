@@ -1,8 +1,8 @@
 export function DoseMateMockup() {
   return (
     <div className="relative mx-auto w-full max-w-[380px]">
-      <div className="absolute -inset-6 rounded-[42px] bg-gradient-to-br from-med-50 via-paper-soft to-moss-50/50 blur-2xl" />
-      <div className="relative aspect-[9/19.5] overflow-hidden rounded-[38px] border border-ink-hair bg-paper p-1 shadow-[0_40px_80px_-30px_rgba(16,19,15,0.35)]">
+      <div className="absolute -inset-6 rounded-[42px] bg-gradient-to-br from-med-100/60 via-moss-100/30 to-transparent blur-3xl" />
+      <div className="relative aspect-[9/19.5] overflow-hidden rounded-[38px] border border-ink-hair bg-paper p-1 shadow-[0_40px_90px_-34px_rgba(92,238,192,0.35)]">
         <div className="relative h-full w-full overflow-hidden rounded-[32px] bg-paper">
           <div className="flex items-center justify-between px-7 pt-6 text-[11px] font-medium text-ink-muted">
             <span>9:41</span>
@@ -22,7 +22,7 @@ export function DoseMateMockup() {
                 Support only
               </span>
             </div>
-            <h3 className="mt-3 font-serif text-[24px] font-[450] leading-[1.1] text-ink">
+            <h3 className="mt-3 font-display text-[24px] font-medium leading-[1.1] text-ink">
               Epinephrine · Pediatric
             </h3>
             <p className="mt-1 font-sans text-[11px] text-ink-muted">
@@ -36,7 +36,7 @@ export function DoseMateMockup() {
                 <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-med-500">
                   Weight
                 </p>
-                <p className="mt-1.5 font-serif text-[22px] font-[450] leading-none text-ink">
+                <p className="mt-1.5 font-display text-[22px] font-medium leading-none text-ink">
                   12.4
                   <span className="ml-1 font-sans text-xs text-ink-muted">kg</span>
                 </p>
@@ -45,7 +45,7 @@ export function DoseMateMockup() {
                 <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-med-700">
                   Dose
                 </p>
-                <p className="mt-1.5 font-serif text-[22px] font-[450] leading-none text-med-700">
+                <p className="mt-1.5 font-display text-[22px] font-medium leading-none text-med-700">
                   0.12
                   <span className="ml-1 font-sans text-xs text-med-500">mg</span>
                 </p>

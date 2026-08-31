@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 const navItems = [
   { href: "/#services", label: "Services" },
   { href: "/products", label: "Products" },
+  { href: "/announcements", label: "Announcements" },
   { href: "/about", label: "About" },
 ];
 
@@ -24,7 +25,7 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-editorial ${
         scrolled
-          ? "border-b border-ink-hair bg-paper/85 backdrop-blur-xl"
+          ? "border-b border-ink-hair bg-paper/80 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -43,10 +44,10 @@ export function Header() {
             priority
           />
           <span className="flex items-baseline gap-1.5">
-            <span className="font-serif text-[17px] font-[450] leading-none text-ink">
+            <span className="font-display text-[17px] font-semibold leading-none text-ink">
               Sheen Trail
             </span>
-            <span className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-ink-muted">
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-muted">
               Digital
             </span>
           </span>

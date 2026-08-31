@@ -30,14 +30,14 @@ export function FAQ({ items }: FAQProps) {
                 <span className="num-badge mr-4">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="font-serif text-xl font-[450] text-ink sm:text-2xl">
+                <span className="font-display text-xl font-medium text-ink sm:text-2xl">
                   {item.question}
                 </span>
               </span>
               <span
                 aria-hidden
                 className={`mt-2 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-ink-hair text-sm transition-transform duration-500 ease-editorial ${
-                  isOpen ? "rotate-45 border-ink bg-ink text-paper" : ""
+                  isOpen ? "rotate-45 border-ink bg-paper-soft/60" : ""
                 }`}
               >
                 +

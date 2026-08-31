@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, Noto_Sans_TC, Noto_Serif_TC } from "next/font/google";
+import {
+  Fraunces,
+  Inter,
+  JetBrains_Mono,
+  Noto_Sans_TC,
+  Noto_Serif_TC,
+  Space_Grotesk,
+} from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import "./globals.css";
@@ -8,6 +15,19 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-serif",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500"],
+  variable: "--font-mono",
 });
 
 const inter = Inter({
@@ -34,14 +54,14 @@ const notoSerifTC = Noto_Serif_TC({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.sheentrail.com"),
   title: {
-    default: "Sheen Trail Digital — AI 數位產品工作室",
+    default: "Sheen Trail Digital — AI 產品工作室",
     template: "%s | Sheen Trail Digital",
   },
   description:
-    "Sheen Trail Digital 是一間 AI 數位產品工作室，專注於 App 產品設計、AI 輔助體驗與數位服務開發，協助團隊把想法落地成可信任、可延續的產品。",
+    "Sheen Trail Digital 是一間 AI 產品工作室，專注於 App 設計、AI 輔助體驗與服務開發，協助團隊把想法落地成可信任、可延續的產品。",
   keywords: [
     "Sheen Trail Digital",
-    "AI 數位產品",
+    "AI 產品",
     "App 開發",
     "產品設計",
     "Dose Mate",
@@ -79,9 +99,12 @@ export default function RootLayout({
   return (
     <html
       lang="zh-TW"
-      className={`${fraunces.variable} ${inter.variable} ${notoSansTC.variable} ${notoSerifTC.variable}`}
+      className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} ${fraunces.variable} ${inter.variable} ${notoSansTC.variable} ${notoSerifTC.variable}`}
     >
       <body className="relative">
+        <div aria-hidden className="sky-neb" />
+        <div aria-hidden className="sky" />
+        <div aria-hidden className="sky-glow" />
         <Header />
         <div className="relative z-10">{children}</div>
         <Footer />

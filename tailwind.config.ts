@@ -1,5 +1,14 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Cosmic / metallic direction.
+ *
+ * NOTE ON NAMING: `paper` and `ink` keep their old names but now hold inverted
+ * values — `paper` is the deep-space ground, `ink` is the light foreground.
+ * That is deliberate for now: every existing page is written against those
+ * names, so the whole site flips to the dark system in one pass. If this
+ * direction is kept, rename them to `void` / `chrome` in a follow-up.
+ */
 const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,57 +17,71 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        /* Deep space, not flat black — there is blue in the dark. */
         paper: {
-          DEFAULT: "#faf7ef",
-          soft: "#f3efe3",
-          deep: "#ece7d6",
+          DEFAULT: "#04060e",
+          soft: "#0a0f1f",
+          deep: "#141b31",
         },
+        /* Chrome. Foreground reads as brushed metal against the void. */
         ink: {
-          DEFAULT: "#10130f",
-          soft: "#2a2e29",
-          muted: "#5a5f57",
-          subtle: "#8a8f84",
-          hair: "rgba(16,19,15,0.12)",
+          DEFAULT: "#e9edf6",
+          soft: "#c2cbdc",
+          muted: "#8c96ac",
+          subtle: "#69738a",
+          hair: "rgba(233,237,246,0.14)",
         },
+        /* Aurora — the primary accent. An uncommon green-cyan, not the usual blue. */
         moss: {
-          50: "#eef3ec",
-          100: "#d9e3d4",
-          200: "#b2c3a9",
-          300: "#7e977d",
-          400: "#4e6d52",
-          500: "#315440",
-          600: "#264433",
-          700: "#1d3727",
-          800: "#172b1f",
-          900: "#0f1d15",
+          50: "#0b1f1a",
+          100: "#0f2f27",
+          200: "#164839",
+          300: "#8ef7d4",
+          400: "#6ef2c4",
+          500: "#5ceec0",
+          600: "#3ad9a6",
+          700: "#25b98a",
+          800: "#178964",
+          900: "#0d5540",
         },
+        /* Morning star — pale gold, used only for star marks and rare highlights. */
         ember: {
-          50: "#fbf1e8",
-          100: "#f5dcc3",
-          200: "#ecbc90",
-          300: "#e09a5f",
-          400: "#d07537",
-          500: "#b35a26",
-          600: "#8d431d",
+          50: "#1c1708",
+          100: "#2b230e",
+          200: "#8a7440",
+          300: "#e8cf9a",
+          400: "#efdcb4",
+          500: "#e2c187",
+          600: "#c9a86a",
         },
+        /* Dose Mate — plasma cyan. */
         med: {
-          50: "#eef4f6",
-          100: "#d3e3e7",
-          200: "#a6c5cc",
-          500: "#3a7a86",
-          700: "#26525b",
-          900: "#162d32",
-        },
-        garden: {
-          50: "#f5ede8",
-          100: "#ecdacd",
-          200: "#d9b6a0",
-          300: "#bc8a72",
-          500: "#805645",
-          700: "#4d2f25",
+          50: "#08202b",
+          100: "#0d3242",
+          200: "#155066",
+          500: "#4fd0e8",
+          700: "#9ae6f5",
+          900: "#d3f4fb",
         },
       },
       fontFamily: {
+        display: [
+          "var(--font-display)",
+          "Space Grotesk",
+          "var(--font-sans-tc)",
+          "Noto Sans TC",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
+        mono: [
+          "var(--font-mono)",
+          "JetBrains Mono",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "monospace",
+        ],
         serif: [
           "var(--font-serif)",
           "Fraunces",
@@ -81,7 +104,7 @@ const config: Config = {
         ],
       },
       letterSpacing: {
-        display: "-0.012em",
+        display: "-0.02em",
       },
       maxWidth: {
         shell: "78rem",
