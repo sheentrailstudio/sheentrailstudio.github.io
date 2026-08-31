@@ -14,7 +14,7 @@ export function StoreBadges({
   const isInverted = variant === "inverted";
   const baseBtn = isInverted
     ? "border-paper/20 bg-paper/10 text-paper hover:bg-paper hover:text-ink"
-    : "border-ink/15 bg-ink text-paper hover:bg-moss-700";
+    : "border-ink/15 bg-paper-soft/60 hover:bg-moss-700";
 
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>
@@ -38,7 +38,7 @@ export function StoreBadges({
             <span className="font-sans text-[10px] font-medium uppercase tracking-[0.14em] opacity-70">
               Download on the
             </span>
-            <span className="font-serif text-[17px] font-[450] leading-none">
+            <span className="font-display text-[17px] font-medium leading-none">
               App Store
             </span>
           </span>
@@ -65,7 +65,7 @@ export function StoreBadges({
             <span className="font-sans text-[10px] font-medium uppercase tracking-[0.14em] opacity-70">
               Get it on
             </span>
-            <span className="font-serif text-[17px] font-[450] leading-none">
+            <span className="font-display text-[17px] font-medium leading-none">
               Google Play
             </span>
           </span>

@@ -15,17 +15,17 @@ const problems = [
   {
     n: "01",
     title: "想禱告，卻不知道怎麼下筆",
-    body: "打開空白的一頁反而更卡。心裡有話，但那些話比較適合「說出來」，不適合先整理成句子。",
+    body: "空白的一頁反而更卡。心裡有話，但那些話適合說出來，不適合先整理成句子。",
   },
   {
     n: "02",
     title: "禱告完就散了",
-    body: "那些在車上、在睡前、在眼淚裡說過的話，沒有被留下。過幾天連自己求過什麼都想不起來。",
+    body: "在車上、睡前、眼淚裡說過的話沒有被留下。過幾天連求過什麼都想不起來。",
   },
   {
     n: "03",
     title: "看不見自己走過的路",
-    body: "神有沒有回應？我這一年長成什麼樣子？沒有紀錄，成長就只剩下一種模糊的感覺。",
+    body: "神有沒有回應？這一年長成什麼樣子？沒有紀錄，只剩模糊的感覺。",
   },
 ];
 
@@ -33,22 +33,22 @@ const solutions = [
   {
     n: "01",
     title: "用說的就可以禱告",
-    body: "按住錄音，把心裡的話直接說出來。App 自動整理成逐字稿，你可以留著原始錄音，也可以只留文字。",
+    body: "按住錄音，把話直接說出來。自動產生逐字稿，錄音與文字都可以只留一種。",
   },
   {
     n: "02",
     title: "語音、文字、照片，同一本日記",
-    body: "有時候一段錄音就夠了；有時候想安靜地打字；有時候是一張夕陽、一頁筆記、一張診斷書。三種都收在同一天裡。",
+    body: "有時一段錄音就夠，有時想安靜地打字，有時是一張照片。三種都收在同一天。",
   },
   {
     n: "03",
     title: "代禱錄音，可以送出去",
-    body: "為家人或朋友錄一段禱告，用連結分享出去。收到的人聽見的是聲音，不只是文字——這是這個產品最想守住的一件事。",
+    body: "為家人或朋友錄一段禱告，用連結送出。收到的人聽見的是聲音，不只是文字。",
   },
   {
     n: "04",
     title: "AI 幫你看見軌跡",
-    body: "AI 整理你反覆提到的主題、標記已經記下回應的禱告，讓你在月末或年末回顧時，看得見光，也看得見影。",
+    body: "AI 整理反覆出現的主題，標記已回應的禱告，回顧時看得見軌跡。",
   },
 ];
 
@@ -56,22 +56,22 @@ const useCases = [
   {
     time: "Morning",
     title: "出門前的一分鐘",
-    body: "還沒清醒到能寫字，但可以說。錄一段就出門，文字稿等晚點再看。",
+    body: "還沒清醒到能寫字，但可以說。錄一段就出門。",
   },
   {
     time: "Commute",
     title: "車上、路上、走路的時候",
-    body: "手不方便打字的時刻，正好是最想禱告的時刻。語音讓禱告不必等到坐下來。",
+    body: "手不方便打字的時候，正好最想禱告。語音讓它不必等坐下來。",
   },
   {
     time: "Evening",
     title: "睡前的整理",
-    body: "把今天的重擔說完，拍下一張想記得的畫面，讓一天有一個結束的方式。",
+    body: "把今天的重擔說完，拍一張想記得的畫面。",
   },
   {
     time: "Together",
     title: "為別人禱告的時候",
-    body: "小組結束、朋友傳來一個消息，錄一段代禱送過去，比一句「我會為你禱告」更接近陪伴。",
+    body: "小組結束、朋友傳來消息，錄一段代禱送過去，比「我會為你禱告」更近。",
   },
 ];
 
@@ -94,11 +94,11 @@ const features = [
   },
   {
     title: "代禱錄音分享",
-    body: "為特定的人錄一段禱告，用連結送出，可設定有效期限與存取權限。",
+    body: "為特定的人錄一段禱告，用連結送出，可設期限與權限。",
   },
   {
     title: "靈命軌跡回顧",
-    body: "AI 整理主題、追蹤已回應的禱告，產生可以回頭讀的月度與年度回顧。",
+    body: "整理主題、追蹤已回應的禱告，產生月度與年度回顧。",
   },
 ];
 
@@ -106,32 +106,32 @@ const faqs = [
   {
     question: "我的錄音會被誰聽到？",
     answer:
-      "預設只有你自己。禱告日記屬於使用者的個人內容，不公開、不會出現在任何動態或社群牆上。只有你主動建立分享連結的那一段錄音，才會被你指定的人聽見。",
+      "預設只有你自己。日記不公開，也不會出現在任何動態牆。只有你主動分享的那段錄音，才會被你指定的人聽見。",
   },
   {
     question: "「AI 追蹤靈命成長」到底在追蹤什麼？",
     answer:
-      "追蹤的是你自己留下的紀錄，不是你的信仰狀態。AI 做的事情是整理：把反覆出現的禱告主題歸類、把你標記為「已回應」的禱告串起來、在回顧時提醒你曾經求過什麼。它不評分、不排名，也不判斷你和神的關係——那不是一個 App 該做的事。",
+      "AI 只做整理：歸類反覆出現的主題、串起你標記為「已回應」的禱告、回顧時提醒你求過什麼。它不評分，也不判斷信仰狀態。",
   },
   {
     question: "可以完全不用語音，只打字嗎？",
     answer:
-      "可以。語音、文字、照片三種輸入完全獨立，你可以只用其中一種。設計上不會因為你少用某個功能就催促你。",
+      "可以。三種輸入互相獨立，只用一種也行，不會被催促。",
   },
   {
     question: "分享出去的錄音可以收回嗎？",
     answer:
-      "可以。分享連結由你建立、也由你關閉，並可設定有效期限。這是規劃中的核心行為，會在第一版就具備。",
+      "可以。連結由你建立、由你關閉，可設有效期限。第一版就會有。",
   },
   {
     question: "這和之前的 QT Garden 有什麼不同？",
     answer:
-      "QT Garden 想同時處理讀經、禱告、書寫與回顧，結果每一件事都只做了一半，已於日前下架。Amen Journal 把範圍收斂到一件事：把禱告留下來。語音優先、分享優先，其餘功能都要先通過「這能不能幫助禱告被留下」這個問題。",
+      "QT Garden 已停止開發並下架。開發的過程讓我們想清楚要做的那一件事：把禱告留下來。Amen Journal 從這裡重新開始，語音優先。",
   },
   {
     question: "什麼時候可以下載？",
     answer:
-      "目前在開發中，規劃 2026 年於 iOS 與 Android 推出。確定日期後我們會更新這一頁。",
+      "開發中，規劃 2026 年於 iOS 與 Android 推出。確定日期會更新這頁。",
   },
 ];
 
@@ -151,15 +151,11 @@ export default function AmenJournalPage() {
         <div className="shell grid gap-16 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-32">
           <Reveal>
             <p className="label">Amen Journal · 阿們日記</p>
-            <h1 className="display-xxl mt-8 text-balance">
-              Prayers, kept in
-              <br />
-              your own{" "}
-              <span className="italic text-moss-700">voice</span>.
+            <h1 className="display-xxl chrome-text mt-8 text-balance">
+              用說的禱告日記
             </h1>
             <p className="mt-10 max-w-xl text-pretty lede">
-              一本用說的禱告日記。語音、文字、照片都可以留下，代禱可以錄成一段聲音送出去，而 AI
-              會幫你把走過的光與影，整理成看得見的軌跡。
+              語音、文字、照片都留得下來，代禱可以錄成聲音送出去。
             </p>
 
             <div className="mt-10">
@@ -200,9 +196,9 @@ export default function AmenJournalPage() {
               sizes="(min-width: 1024px) 1200px, 100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-ink/20 via-transparent to-ink/10" />
-            <div className="absolute bottom-6 left-6 max-w-md font-serif text-2xl italic text-paper sm:text-3xl">
+            <div className="absolute bottom-6 left-6 max-w-md font-serif text-2xl text-paper sm:text-3xl">
               &ldquo;你們眾民當時時倚靠他，在他面前傾心吐意。&rdquo;
-              <span className="mt-2 block font-sans text-xs not-italic tracking-[0.22em] text-paper/70">
+              <span className="mt-2 block font-sans text-xs not-tracking-[0.22em] text-ink-soft">
                 Psalm 62:8
               </span>
             </div>
@@ -217,8 +213,7 @@ export default function AmenJournalPage() {
             <Reveal>
               <p className="label">A · Problem</p>
               <h2 className="display-xl mt-7 text-balance">
-                禱告最容易
-                <span className="italic text-ember-500">流失的地方</span>。
+                禱告流失的地方
               </h2>
             </Reveal>
             <Reveal delay={100}>
@@ -238,7 +233,7 @@ export default function AmenJournalPage() {
                 } ${i < problems.length - 1 ? "border-b border-ink-hair sm:border-b-0" : ""}`}
               >
                 <p className="num-badge">{p.n}</p>
-                <h3 className="mt-10 font-serif text-2xl font-[450] text-ink">
+                <h3 className="mt-10 font-display text-2xl font-medium text-ink">
                   {p.title}
                 </h3>
                 <p className="mt-4 body">{p.body}</p>
@@ -255,8 +250,7 @@ export default function AmenJournalPage() {
             <Reveal>
               <p className="label">B · Solution</p>
               <h2 className="display-xl mt-7 text-balance">
-                先讓禱告
-                <span className="italic text-moss-600">留得下來</span>。
+                讓禱告留下來
               </h2>
             </Reveal>
             <Reveal delay={100}>
@@ -271,7 +265,7 @@ export default function AmenJournalPage() {
               <Reveal key={s.n} delay={i * 60}>
                 <article className="card card-hover h-full">
                   <p className="num-badge">{s.n}</p>
-                  <h3 className="mt-10 font-serif text-[26px] font-[450] leading-tight text-ink">
+                  <h3 className="mt-10 font-display text-[26px] font-medium leading-tight text-ink">
                     {s.title}
                   </h3>
                   <p className="mt-4 body">{s.body}</p>
@@ -289,8 +283,7 @@ export default function AmenJournalPage() {
             <Reveal>
               <p className="label">C · Use Cases</p>
               <h2 className="display-xl mt-7 text-balance">
-                它適合
-                <span className="italic text-moss-600">哪些時刻</span>？
+                適合的時刻
               </h2>
             </Reveal>
             <Reveal delay={100}>
@@ -308,7 +301,7 @@ export default function AmenJournalPage() {
                     {u.time}
                   </span>
                   <div>
-                    <h3 className="font-serif text-2xl font-[450] text-ink">
+                    <h3 className="font-display text-2xl font-medium text-ink">
                       {u.title}
                     </h3>
                     <p className="mt-3 max-w-2xl body">{u.body}</p>
@@ -321,18 +314,17 @@ export default function AmenJournalPage() {
       </section>
 
       {/* FEATURES */}
-      <section className="section border-t border-ink-hair bg-ink text-paper">
+      <section className="section border-t border-ink-hair bg-paper-soft/60">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
-              <p className="label !text-paper/60">D · Features</p>
-              <h2 className="display-xl mt-7 text-paper">
-                六個功能，
-                <span className="italic text-ember-300">一句話說完</span>。
+              <p className="label ">D · Features</p>
+              <h2 className="display-xl mt-7 text-ink">
+                六個功能
               </h2>
             </Reveal>
             <Reveal delay={100}>
-              <p className="max-w-xl font-sans text-[15px] leading-[1.75] text-paper/75 lg:text-right lg:ml-auto">
+              <p className="max-w-xl font-sans text-[15px] leading-[1.75] text-ink-soft lg:text-right lg:ml-auto">
                 說出來、留下來、送出去，然後在某一天回頭看見。
               </p>
             </Reveal>
@@ -350,10 +342,10 @@ export default function AmenJournalPage() {
                 }`}
               >
                 <p className="num-badge !text-paper/55">0{i + 1}</p>
-                <h3 className="mt-10 font-serif text-2xl font-[450] text-paper">
+                <h3 className="mt-10 font-display text-2xl font-medium text-ink">
                   {f.title}
                 </h3>
-                <p className="mt-3 font-sans text-[14px] leading-[1.7] text-paper/70">
+                <p className="mt-3 font-sans text-[14px] leading-[1.7] text-ink-soft">
                   {f.body}
                 </p>
               </Reveal>
@@ -375,8 +367,7 @@ export default function AmenJournalPage() {
             <Reveal>
               <p className="label">E · FAQ</p>
               <h2 className="display-xl mt-7 text-balance">
-                你可能
-                <span className="italic text-moss-600">會想先知道的事</span>。
+                常見問題
               </h2>
             </Reveal>
             <Reveal delay={100}>
@@ -387,16 +378,15 @@ export default function AmenJournalPage() {
       </section>
 
       {/* STATUS */}
-      <section className="relative border-t border-ink-hair bg-ink text-paper">
+      <section className="relative border-t border-ink-hair bg-paper-soft/60">
         <div className="shell py-24 sm:py-32">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end">
             <div>
-              <p className="label !text-paper/60">Amen Journal · In development</p>
-              <h2 className="display-xl mt-7 text-balance text-paper">
-                還在做，
-                <span className="italic text-ember-300">還沒做完</span>。
+              <p className="label ">Amen Journal · In development</p>
+              <h2 className="display-xl mt-7 text-balance text-ink">
+                還沒做完
               </h2>
-              <p className="mt-6 max-w-xl font-sans text-[15px] leading-[1.75] text-paper/75">
+              <p className="mt-6 max-w-xl font-sans text-[15px] leading-[1.75] text-ink-soft">
                 預計 2026 年於 iOS 與 Android
                 推出。上架之前，這一頁寫的都是規劃；上架之後，我們會把它換成真的。
               </p>
@@ -404,7 +394,7 @@ export default function AmenJournalPage() {
             <div className="flex flex-col items-start gap-5 lg:items-end">
               <Link
                 href="/products"
-                className="font-sans text-sm text-paper/70 underline decoration-paper/30 decoration-1 underline-offset-[6px] transition-colors hover:text-paper hover:decoration-paper"
+                className="font-sans text-sm text-ink-soft underline decoration-paper/30 decoration-1 underline-offset-[6px] transition-colors hover:text-paper hover:decoration-paper"
               >
                 查看其他產品 →
               </Link>

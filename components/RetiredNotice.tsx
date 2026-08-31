@@ -7,28 +7,35 @@ import Link from "next/link";
 export function RetiredNotice() {
   return (
     <main>
-      <section className="relative pt-28 sm:pt-36">
-        <div className="shell pb-28 sm:pb-36">
-          <p className="label">Retired product</p>
-          <h1 className="display-xxl mt-8 max-w-3xl text-balance">
-            QT Garden 已經
-            <span className="italic text-ember-500">下架</span>了。
+      <section className="relative pt-24 sm:pt-28">
+        <div className="shell pb-16 sm:pb-20">
+          <p className="label">已下架的產品</p>
+          <h1 className="display-xxl chrome-text mt-8 max-w-3xl text-balance">
+            QT Garden 已下架
           </h1>
-          <p className="mt-10 max-w-2xl text-pretty lede">
-            QT Garden 想同時處理讀經、禱告、書寫與回顧，結果每一件事都只做了一半。與其繼續維持一個我們自己也不滿意的版本，我們選擇讓它結束。
-          </p>
-          <p className="mt-6 max-w-2xl body">
-            它的問題被我們留了下來，成為下一個產品的起點——Amen Journal
-            阿們日記把範圍收斂到一件事：把禱告留下來。
+          <p className="mt-7 max-w-2xl text-pretty lede">
+            開發 QT Garden 的過程，其實也是我們慢慢想清楚要做什麼的過程。答案愈來愈明確之後，我們決定把它收起來，讓力氣集中在那一件事上。
           </p>
 
-          <div className="mt-12 flex flex-col gap-3 border-t border-ink-hair pt-10 sm:flex-row">
+          <div className="mt-10 max-w-2xl space-y-5 border-l border-moss-500/30 pl-6">
+            <p className="body">
+              那件事是：把禱告留下來。不是讀更多、記更多、整理得更漂亮，而是讓一句在車上、在睡前說出口的話，不會隔天就散掉。這個判斷是做了 QT Garden 才長出來的，不是一開始就知道。
+            </p>
+            <p className="body">
+              決定不做什麼，通常比決定要做什麼難。我們花了一段時間才把範圍收到這麼窄，也因為收得夠窄，才放得下上一個版本。
+            </p>
+            <p className="body">
+              Amen Journal 阿們日記就是那個答案。它只做一件事，而且把語音放在最前面——禱告本來就是說出口的。預計 2026 年推出，請期待。
+            </p>
+          </div>
+
+          <div className="mt-9 flex flex-col gap-3 border-t border-ink-hair pt-10 sm:flex-row">
             <Link href="/products/amenjournal" className="btn-primary">
               認識 Amen Journal
               <span className="arrow">→</span>
             </Link>
-            <Link href="/products" className="btn-ghost">
-              查看所有產品
+            <Link href="/announcements" className="btn-ghost">
+              看所有公告
             </Link>
           </div>
         </div>

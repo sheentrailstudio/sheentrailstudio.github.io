@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CTASection } from "@/components/CTASection";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
 import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
@@ -41,7 +40,7 @@ const products: Product[] = [
     zh: "醫療計算助手",
     tagline: "Organize critical information for review.",
     description:
-      "將藥物劑量、體重換算、急救流程與常用公式整理成快速、有條理、可被二次確認的臨床輔助資訊。",
+      "劑量、換算、急救流程與常用公式，查得快、能二次確認。",
     status: "available",
     domain: "Medical · Clinical Support",
     toneBg: "from-med-50 via-paper to-paper-soft",
@@ -56,7 +55,7 @@ const products: Product[] = [
     zh: "語音禱告日記",
     tagline: "Prayers, kept in your own voice.",
     description:
-      "用說的、用寫的、用拍的記錄禱告，代禱可以錄成一段聲音送出去，並由 AI 整理禱告主題與回應的軌跡。QT Garden 的重新出發，開發中。",
+      "用說的、寫的、拍的記錄禱告，代禱可錄成聲音送出。開發中。",
     status: "development",
     domain: "Devotional · Spiritual Care",
     toneBg: "from-ember-50 via-paper to-moss-50",
@@ -68,7 +67,7 @@ const products: Product[] = [
     zh: "回聲祝福小卡",
     tagline: "Small cards, lasting warmth.",
     description:
-      "讓有溫度的話語透過可分享的小卡片延伸連結，把關係放進產品的核心。規劃中。",
+      "把一句有溫度的話，做成能傳出去的小卡。規劃中。",
     status: "soon",
     domain: "Social · Relationship",
     toneBg: "from-paper-soft via-paper to-ember-50",
@@ -83,11 +82,11 @@ function MockupSlot({ kind }: { kind: Product["mockup"] }) {
     <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[380px] overflow-hidden rounded-[38px] border border-dashed border-ink-hair bg-paper">
       <div className="flex h-full flex-col items-center justify-center gap-3 p-10 text-center">
         <span className="chip">In planning</span>
-        <p className="font-serif text-2xl font-[450] italic text-ink">
+        <p className="font-display text-2xl font-medium text-ink">
           Echo Card
         </p>
         <p className="max-w-[220px] font-sans text-xs text-ink-muted">
-          產品正在設計中，歡迎保持關注。
+          設計中。
         </p>
       </div>
     </div>
@@ -102,11 +101,11 @@ export default function ProductsPage() {
         <div className="shell pb-16 sm:pb-24">
           <Reveal>
             <p className="label">Products</p>
-            <h1 className="display-xxl mt-8 max-w-4xl text-balance">
-              產品是我們最誠實的宣言。
+            <h1 className="display-xxl chrome-text mt-8 max-w-4xl text-balance">
+              我們的產品
             </h1>
             <p className="mt-10 max-w-2xl text-pretty lede">
-              每個產品都回應同一件事 —— 在需要的時候，成為依靠的支點
+              在需要的時候派得上用場。
             </p>
           </Reveal>
 
@@ -136,7 +135,7 @@ export default function ProductsPage() {
                       {p.zh}
                     </span>
                   </h2>
-                  <p className="mt-6 font-serif text-2xl italic text-ink">
+                  <p className="mt-6 font-serif text-2xl text-ink">
                     &ldquo;{p.tagline}&rdquo;
                   </p>
                   <p className="mt-6 max-w-xl body">{p.description}</p>
@@ -202,14 +201,6 @@ export default function ProductsPage() {
           })}
         </div>
       </section>
-
-      <CTASection
-        label="New product"
-        title="Have a product idea worth building together?"
-        description="如果你正在規劃一個 AI 數位產品或服務，歡迎與我們聊聊定位、場景與落地方式。"
-        href="/contact"
-        buttonLabel="Let's talk"
-      />
     </main>
   );
 }

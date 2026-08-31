@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --paper: #faf7ef;
-  --paper-soft: #f3efe3;
-  --paper-deep: #ece7d6;
-  --ink: #10130f;
-  --ink-soft: #2a2e29;
-  --ink-muted: #5a5f57;
-  --ink-hair: rgba(16, 19, 15, 0.12);
-  --moss: #264433;
-  --ember: #b35a26;
+  --void: #04060e;
+  --void-soft: #0a0f1f;
+  --void-deep: #141b31;
+  --chrome: #e9edf6;
+  --chrome-soft: #c2cbdc;
+  --chrome-muted: #8c96ac;
+  --hair: rgba(233, 237, 246, 0.14);
+  --aurora: #5ceec0;
+  --star: #e8cf9a;
 }
 
 * {
@@ -20,34 +20,19 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--paper);
+  background: var(--void);
+  color-scheme: dark;
 }
 
 body {
   min-height: 100vh;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--void);
+  color: var(--chrome);
   font-family: var(--font-sans), Inter, var(--font-sans-tc), "Noto Sans TC",
     ui-sans-serif, system-ui, sans-serif;
-  font-feature-settings: "ss01", "cv11";
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image: radial-gradient(
-    rgba(16, 19, 15, 0.035) 1px,
-    transparent 1px
-  );
-  background-size: 4px 4px;
-  opacity: 0.6;
-  mix-blend-mode: multiply;
 }
 
 a {
@@ -56,7 +41,107 @@ a {
 }
 
 ::selection {
-  background: rgba(38, 68, 51, 0.2);
+  background: rgba(92, 238, 192, 0.28);
+}
+
+/* ---------------------------------------------------------------------------
+ * Night sky, back to front:
+ *   .sky-neb    nebula clouds + a diagonal milky band
+ *   .sky::before dense dust, drifting
+ *   .sky::after  brighter stars, gold/aurora tinted, twinkling
+ *   .sky-glow    the aurora wash lifting the top-right corner
+ * All CSS gradients — no canvas, no images, nothing extra to download.
+ * ------------------------------------------------------------------------ */
+.sky-neb {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      112deg,
+      transparent 30%,
+      rgba(150, 175, 235, 0.07) 42%,
+      rgba(196, 176, 240, 0.09) 50%,
+      rgba(150, 200, 235, 0.06) 58%,
+      transparent 70%
+    ),
+    radial-gradient(46% 34% at 82% 16%, rgba(122, 92, 220, 0.2), transparent 66%),
+    radial-gradient(40% 30% at 16% 30%, rgba(56, 160, 200, 0.16), transparent 68%),
+    radial-gradient(52% 38% at 30% 86%, rgba(92, 238, 192, 0.11), transparent 66%),
+    radial-gradient(34% 26% at 68% 62%, rgba(232, 207, 154, 0.07), transparent 70%);
+}
+
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sky::before,
+.sky::after {
+  content: "";
+  position: absolute;
+  inset: -60%;
+  background-repeat: repeat;
+}
+
+.sky::before {
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, rgba(233, 237, 246, 0.7), transparent),
+    radial-gradient(1px 1px at 140px 80px, rgba(233, 237, 246, 0.45), transparent),
+    radial-gradient(1px 1px at 90px 170px, rgba(233, 237, 246, 0.6), transparent),
+    radial-gradient(1px 1px at 210px 120px, rgba(233, 237, 246, 0.35), transparent),
+    radial-gradient(1px 1px at 260px 210px, rgba(233, 237, 246, 0.5), transparent),
+    radial-gradient(1px 1px at 45px 240px, rgba(233, 237, 246, 0.4), transparent),
+    radial-gradient(1px 1px at 175px 20px, rgba(233, 237, 246, 0.55), transparent),
+    radial-gradient(1px 1px at 290px 145px, rgba(233, 237, 246, 0.3), transparent);
+  background-size: 320px 280px;
+  animation: drift 240s linear infinite;
+}
+
+.sky::after {
+  background-image:
+    radial-gradient(2px 2px at 60px 90px, rgba(232, 207, 154, 0.95), transparent),
+    radial-gradient(1.8px 1.8px at 330px 40px, rgba(255, 255, 255, 0.95), transparent),
+    radial-gradient(2px 2px at 190px 300px, rgba(92, 238, 192, 0.7), transparent),
+    radial-gradient(1.6px 1.6px at 420px 220px, rgba(233, 237, 246, 0.8), transparent),
+    radial-gradient(2.2px 2.2px at 500px 360px, rgba(232, 207, 154, 0.75), transparent),
+    radial-gradient(1.6px 1.6px at 250px 160px, rgba(196, 176, 240, 0.8), transparent),
+    radial-gradient(1.8px 1.8px at 90px 400px, rgba(255, 255, 255, 0.7), transparent);
+  background-size: 560px 460px;
+  animation: drift 380s linear infinite reverse, twinkle 7s ease-in-out infinite;
+}
+
+.sky-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(58% 44% at 78% 6%, rgba(92, 238, 192, 0.12), transparent 62%),
+    radial-gradient(52% 38% at 10% 90%, rgba(79, 208, 232, 0.1), transparent 62%);
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-320px, -280px, 0);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @layer components {
@@ -64,64 +149,161 @@ a {
     @apply mx-auto w-full max-w-shell px-6 sm:px-8 lg:px-12;
   }
 
+  /* Rules catch the light rather than sitting flat. */
   .rule {
-    @apply h-px w-full bg-ink-hair;
+    @apply h-px w-full;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(233, 237, 246, 0.32),
+      transparent
+    );
   }
 
+  .rule-metal {
+    @apply h-px w-full;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(233, 237, 246, 0.38),
+      rgba(92, 238, 192, 0.22),
+      transparent
+    );
+  }
+
+  /* Brushed metal: two highlight bands with a dark trough between them. */
+  .chrome-text {
+    background: linear-gradient(
+      174deg,
+      #ffffff 0%,
+      #eef3ff 18%,
+      #9fabc4 40%,
+      #6f7c96 50%,
+      #ffffff 63%,
+      #c6d0e4 82%,
+      #f4f7ff 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  /* Quieter silver, for sub-heads and numerals. */
+  .chrome-soft {
+    background: linear-gradient(
+      176deg,
+      #f6f9ff 0%,
+      #b9c3d8 46%,
+      #8a95ad 62%,
+      #e4eaf7 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  /*
+   * Solid accent for inline emphasis. Deliberately NOT a gradient: a gradient
+   * fill on an inline span repaints per line box, so a phrase that wraps ends
+   * up with two colours and the final glyph lands on the far stop.
+   */
+  .aurora-text {
+    color: var(--aurora);
+  }
+
+  /* A machined silver edge, drawn as a gradient border. */
+  .chrome-edge {
+    border: 1px solid transparent;
+    background:
+      linear-gradient(
+          180deg,
+          rgba(233, 237, 246, 0.05),
+          rgba(233, 237, 246, 0.015)
+        )
+        padding-box,
+      linear-gradient(
+          150deg,
+          rgba(255, 255, 255, 0.55),
+          rgba(233, 237, 246, 0.1) 32%,
+          rgba(233, 237, 246, 0.06) 60%,
+          rgba(255, 255, 255, 0.4)
+        )
+        border-box;
+  }
+
+  /* Solid polished plate, for small marks and inverted chips. */
+  .chrome-plate {
+    background: linear-gradient(180deg, #ffffff 0%, #d3dcee 46%, #a9b5cd 62%, #eef3ff 100%);
+    color: #06080f;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  }
+
+  /* Technical micro-label: mono, tracked out, with a star mark. */
   .label {
-    @apply inline-flex items-center gap-2 font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-ink-muted;
+    @apply inline-flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-muted;
   }
 
   .label::before {
-    content: "";
-    @apply inline-block h-px w-6 bg-ink-muted/70;
+    content: "✦";
+    @apply text-[10px];
+    color: var(--star);
   }
 
   .display-xxl {
-    @apply font-serif font-[370] tracking-display text-[clamp(2.75rem,6.2vw,5.75rem)] leading-[1.14] text-ink;
+    @apply font-display font-semibold tracking-display text-[clamp(2.6rem,6vw,5.25rem)] leading-[1.06];
   }
 
   .display-xl {
-    @apply font-serif font-[390] tracking-display text-[clamp(2rem,3.6vw,3.25rem)] leading-[1.22] text-ink;
+    @apply font-display font-semibold tracking-display text-[clamp(1.9rem,3.4vw,3rem)] leading-[1.18];
   }
 
   .display-lg {
-    @apply font-serif font-[420] tracking-display text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.3] text-ink;
+    @apply font-display font-medium tracking-display text-[clamp(1.55rem,2.4vw,2.125rem)] leading-[1.3];
   }
 
   .display-md {
-    @apply font-serif font-[440] tracking-display text-[clamp(1.375rem,1.8vw,1.75rem)] leading-[1.4] text-ink;
+    @apply font-display font-medium text-[clamp(1.25rem,1.7vw,1.6rem)] leading-[1.4];
   }
 
-  /* CJK breathing room — applies to the Chinese segments inside display headlines */
-  .display-xxl,
-  .display-xl,
-  .display-lg,
-  .display-md {
-    word-spacing: 0.02em;
-  }
   .display-xxl:lang(zh),
   .display-xl:lang(zh),
   .display-lg:lang(zh),
-  .display-md:lang(zh),
-  .lede:lang(zh) {
-    letter-spacing: 0.015em;
+  .display-md:lang(zh) {
+    letter-spacing: 0.005em;
   }
 
   .lede {
-    @apply font-sans text-lg leading-[1.7] text-ink-soft sm:text-xl;
+    @apply font-sans text-lg leading-[1.75] text-ink-soft sm:text-xl;
   }
 
   .body {
-    @apply font-sans text-[15px] leading-[1.75] text-ink-soft sm:text-base;
+    @apply font-sans text-[15px] leading-[1.8] text-ink-soft sm:text-base;
   }
 
+  /* Buttons read as machined parts: metal fill, lit top edge. */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 font-sans text-sm font-medium transition-all duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-moss-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-sans text-sm font-medium transition-all duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-moss-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
   }
 
   .btn-primary {
-    @apply btn bg-ink text-paper hover:bg-moss-700;
+    @apply btn text-paper;
+    background: linear-gradient(180deg, #f4f7ff 0%, #c9d3e6 52%, #aab6cd 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 0 0 1px rgba(233, 237, 246, 0.18),
+      0 10px 30px -14px rgba(92, 238, 192, 0.5);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(180deg, #ffffff 0%, #dbe4f4 52%, #bcc7dc 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 0 0 1px rgba(92, 238, 192, 0.35),
+      0 14px 36px -14px rgba(92, 238, 192, 0.65);
   }
 
   .btn-primary .arrow {
@@ -133,16 +315,21 @@ a {
   }
 
   .btn-ghost {
-    @apply btn border border-ink-hair bg-transparent text-ink hover:border-ink/50;
+    @apply btn chrome-edge text-ink;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  }
+
+  .btn-ghost:hover {
+    color: var(--aurora);
   }
 
   .link-underline {
-    @apply relative inline-flex items-center gap-1 text-ink-soft transition-colors hover:text-ink;
+    @apply relative inline-flex items-center gap-1 transition-colors hover:text-ink;
   }
 
   .link-underline::after {
     content: "";
-    @apply absolute bottom-0 left-0 h-px w-full origin-right bg-current scale-x-0 transition-transform duration-300 ease-editorial;
+    @apply absolute bottom-0 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-300 ease-editorial;
   }
 
   .link-underline:hover::after {
@@ -150,15 +337,40 @@ a {
   }
 
   .chip {
-    @apply inline-flex items-center gap-2 rounded-full border border-ink-hair bg-paper-soft/60 px-3 py-1 font-sans text-xs font-medium text-ink-muted;
+    @apply chrome-edge inline-flex items-center gap-2 rounded-full px-3 py-1 font-mono text-[11px] tracking-[0.08em] text-ink-soft;
   }
 
+  /* Panels: dark glass with a machined edge and a lit top rail. */
   .card {
-    @apply relative overflow-hidden rounded-2xl border border-ink-hair bg-paper-soft/60 p-7 transition-all duration-500 ease-editorial;
+    @apply chrome-edge relative overflow-hidden rounded-2xl p-7 transition-all duration-500 ease-editorial;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
   }
 
-  .card-hover {
-    @apply hover:-translate-y-0.5 hover:border-ink/25 hover:bg-paper-soft;
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.75),
+      rgba(92, 238, 192, 0.35),
+      transparent
+    );
+    opacity: 0.7;
+    transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .card-hover:hover {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.24),
+      0 20px 50px -26px rgba(92, 238, 192, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .card-hover:hover::before {
+    opacity: 1;
   }
 
   .section {
@@ -179,8 +391,9 @@ a {
     @apply pb-0;
   }
 
+  /* Index numerals read as instrument readouts. */
   .num-badge {
-    @apply font-serif text-xs font-medium italic text-ink-muted;
+    @apply chrome-soft font-mono text-[11px] tracking-[0.16em];
   }
 }
 
