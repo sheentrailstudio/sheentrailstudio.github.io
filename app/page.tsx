@@ -141,13 +141,13 @@ export default function Home() {
         <div className="shell">
           <div className="flex items-center gap-6 border-y border-chrome-hair py-4 font-mono text-[11px] uppercase tracking-[0.24em] text-chrome-muted">
             <span>Strategy</span>
-            <span aria-hidden className="text-[9px] text-ember-300">✦</span>
+            <span aria-hidden className="text-[9px] text-star-300">✦</span>
             <span>UX Design</span>
-            <span aria-hidden className="text-[9px] text-ember-300">✦</span>
+            <span aria-hidden className="text-[9px] text-star-300">✦</span>
             <span>AI Integration</span>
-            <span aria-hidden className="text-[9px] text-ember-300">✦</span>
+            <span aria-hidden className="text-[9px] text-star-300">✦</span>
             <span className="hidden sm:inline">App &amp; Service Build</span>
-            <span aria-hidden className="hidden sm:inline text-[9px] text-ember-300">✦</span>
+            <span aria-hidden className="hidden sm:inline text-[9px] text-star-300">✦</span>
             <span className="hidden md:inline">Long-term Iteration</span>
           </div>
         </div>
@@ -234,9 +234,9 @@ export default function Home() {
             <Reveal>
               <Link
                 href="/products/dosemate"
-                className="group block h-full overflow-hidden rounded-2xl border border-chrome-hair bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-moss-500/40"
+                className="group block h-full overflow-hidden rounded-2xl border border-chrome-hair bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-aurora-500/40"
               >
-                <div className="relative overflow-hidden bg-gradient-to-b from-med-50/70 to-void px-8 pt-14 pb-10">
+                <div className="relative overflow-hidden bg-gradient-to-b from-plasma-50/70 to-void px-8 pt-14 pb-10">
                   <DoseMateMockup />
                 </div>
                 <div className="flex items-end justify-between gap-4 border-t border-chrome-hair px-8 py-7">
@@ -252,7 +252,7 @@ export default function Home() {
                       劑量計算與急救流程，查得快、能二次確認。
                     </p>
                   </div>
-                  <span className="shrink-0 pb-1 font-mono text-xs tracking-[0.12em] text-chrome-muted transition-colors group-hover:text-moss-500">
+                  <span className="shrink-0 pb-1 font-mono text-xs tracking-[0.12em] text-chrome-muted transition-colors group-hover:text-aurora-500">
                     View →
                   </span>
                 </div>
@@ -262,9 +262,9 @@ export default function Home() {
             <Reveal delay={120}>
               <Link
                 href="/products/amenjournal"
-                className="group block h-full overflow-hidden rounded-2xl border border-chrome-hair bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-moss-500/40"
+                className="group block h-full overflow-hidden rounded-2xl border border-chrome-hair bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-aurora-500/40"
               >
-                <div className="relative overflow-hidden bg-gradient-to-b from-moss-100/60 to-void px-8 pt-14 pb-10">
+                <div className="relative overflow-hidden bg-gradient-to-b from-aurora-100/60 to-void px-8 pt-14 pb-10">
                   <AmenJournalMockup />
                 </div>
                 <div className="flex items-end justify-between gap-4 border-t border-chrome-hair px-8 py-7">
@@ -280,7 +280,7 @@ export default function Home() {
                       用說的禱告日記——語音、文字、照片都能留下，代禱可錄成聲音分享出去。
                     </p>
                   </div>
-                  <span className="shrink-0 pb-1 font-mono text-xs tracking-[0.12em] text-chrome-muted transition-colors group-hover:text-moss-500">
+                  <span className="shrink-0 pb-1 font-mono text-xs tracking-[0.12em] text-chrome-muted transition-colors group-hover:text-aurora-500">
                     View →
                   </span>
                 </div>
@@ -390,7 +390,7 @@ export default function Home() {
             <Reveal delay={80}>
               <Link
                 href="/announcements"
-                className="link-underline font-mono text-[12px] uppercase tracking-[0.16em] text-moss-500"
+                className="link-underline font-mono text-[12px] uppercase tracking-[0.16em] text-aurora-500"
               >
                 All announcements
                 <span aria-hidden>→</span>

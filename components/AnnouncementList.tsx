@@ -40,7 +40,7 @@ export function AnnouncementList({
               <p className="mt-3 max-w-2xl body">{item.summary}</p>
 
               {variant === "full" && item.body?.length ? (
-                <div className="mt-6 max-w-2xl space-y-4 border-l border-moss-500/30 pl-6">
+                <div className="mt-6 max-w-2xl space-y-4 border-l border-aurora-500/30 pl-6">
                   {item.body.map((paragraph) => (
                     <p key={paragraph} className="body">
                       {paragraph}
@@ -52,7 +52,7 @@ export function AnnouncementList({
               {item.link ? (
                 <Link
                   href={item.link.href}
-                  className="link-underline mt-6 font-mono text-[12px] uppercase tracking-[0.16em] text-moss-500"
+                  className="link-underline mt-6 font-mono text-[12px] uppercase tracking-[0.16em] text-aurora-500"
                 >
                   {item.link.label}
                   <span aria-hidden>→</span>

@@ -142,7 +142,7 @@ export default function ContactPage() {
             </h2>
             <a
               href="mailto:info@sheentrail.com"
-              className="mt-12 inline-flex items-center gap-2 rounded-full bg-void px-6 py-3.5 font-sans text-sm font-medium text-chrome transition-colors hover:bg-ember-50"
+              className="mt-12 inline-flex items-center gap-2 rounded-full bg-void px-6 py-3.5 font-sans text-sm font-medium text-chrome transition-colors hover:bg-star-50"
             >
               info@sheentrail.com
               <span aria-hidden>→</span>

@@ -169,8 +169,8 @@ export default function DoseMatePage() {
                 <dd className="mt-2 font-serif text-lg text-chrome">Available</dd>
               </div>
             </dl>
-            <div className="mt-8 flex items-start gap-3 rounded-2xl border border-ember-300/40 bg-ember-50/60 p-4">
-              <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-ember-500 font-serif text-[13px] text-chrome">
+            <div className="mt-8 flex items-start gap-3 rounded-2xl border border-star-300/40 bg-star-50/60 p-4">
+              <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-star-500 font-serif text-[13px] text-chrome">
                 !
               </span>
               <p className="font-sans text-[13px] leading-[1.65] text-chrome-soft">
@@ -299,7 +299,7 @@ export default function DoseMatePage() {
             {useCases.map((u, i) => (
               <Reveal as="li" key={u.title} delay={i * 60}>
                 <div className="grid items-baseline gap-4 sm:grid-cols-[180px_1fr] sm:gap-10">
-                  <span className="font-sans text-xs font-medium uppercase tracking-[0.22em] text-med-500">
+                  <span className="font-sans text-xs font-medium uppercase tracking-[0.22em] text-plasma-500">
                     {u.time}
                   </span>
                   <div>
@@ -361,8 +361,8 @@ export default function DoseMatePage() {
       {/* DISCLAIMER */}
       <section className="section-tight border-t border-chrome-hair bg-void">
         <div className="shell">
-          <div className="rounded-2xl border border-ember-300/50 bg-ember-50/60 p-8 sm:p-10">
-            <p className="label !text-ember-600">Boundaries</p>
+          <div className="rounded-2xl border border-star-300/50 bg-star-50/60 p-8 sm:p-10">
+            <p className="label !text-star-600">Boundaries</p>
             <h3 className="mt-6 font-display text-2xl font-medium text-chrome sm:text-3xl">
               新生兒急救指引 是輔助工具，不是醫療判斷的替代品。
             </h3>

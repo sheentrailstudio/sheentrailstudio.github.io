@@ -43,7 +43,7 @@ const products: Product[] = [
       "劑量、換算、急救流程與常用公式，查得快、能二次確認。",
     status: "available",
     domain: "Medical · Clinical Support",
-    toneBg: "from-med-50 via-void to-void-soft",
+    toneBg: "from-plasma-50 via-void to-void-soft",
     mockup: "dose",
     ios: "https://apps.apple.com/app/dosemate/id6755082556",
     android: "https://play.google.com/store/apps/details?id=com.sheentrail.dosemate",
@@ -58,7 +58,7 @@ const products: Product[] = [
       "用說的、寫的、拍的記錄禱告，代禱可錄成聲音送出。開發中。",
     status: "development",
     domain: "Devotional · Spiritual Care",
-    toneBg: "from-ember-50 via-void to-moss-50",
+    toneBg: "from-star-50 via-void to-aurora-50",
     mockup: "amen",
   },
   {
@@ -70,7 +70,7 @@ const products: Product[] = [
       "把一句有溫度的話，做成能傳出去的小卡。規劃中。",
     status: "soon",
     domain: "Social · Relationship",
-    toneBg: "from-void-soft via-void to-ember-50",
+    toneBg: "from-void-soft via-void to-star-50",
     mockup: "echo",
   },
 ];

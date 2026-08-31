@@ -286,7 +286,7 @@ a {
 
   /* Buttons read as machined parts: metal fill, lit top edge. */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-sans text-sm font-medium transition-all duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-moss-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-void;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-sans text-sm font-medium transition-all duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-aurora-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-void;
   }
 
   .btn-primary {

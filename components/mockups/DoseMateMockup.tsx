@@ -1,7 +1,7 @@
 export function DoseMateMockup() {
   return (
     <div className="relative mx-auto w-full max-w-[380px]">
-      <div className="absolute -inset-6 rounded-[42px] bg-gradient-to-br from-med-100/60 via-moss-100/30 to-transparent blur-3xl" />
+      <div className="absolute -inset-6 rounded-[42px] bg-gradient-to-br from-plasma-100/60 via-aurora-100/30 to-transparent blur-3xl" />
       <div className="relative aspect-[9/19.5] overflow-hidden rounded-[38px] border border-chrome-hair bg-void p-1 shadow-[0_40px_90px_-34px_rgba(92,238,192,0.35)]">
         <div className="relative h-full w-full overflow-hidden rounded-[32px] bg-void">
           <div className="flex items-center justify-between px-7 pt-6 text-[11px] font-medium text-chrome-muted">
@@ -15,7 +15,7 @@ export function DoseMateMockup() {
 
           <div className="border-b border-chrome-hair px-6 pb-5 pt-6">
             <div className="flex items-center justify-between">
-              <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-med-500">
+              <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-plasma-500">
                 Dose Mate
               </p>
               <span className="chip !px-2.5 !py-0.5 !text-[9px] uppercase">
@@ -33,7 +33,7 @@ export function DoseMateMockup() {
           <div className="px-5 pt-4">
             <div className="grid grid-cols-2 gap-2.5">
               <div className="rounded-2xl border border-chrome-hair bg-void-soft p-3.5">
-                <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-med-500">
+                <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-plasma-500">
                   Weight
                 </p>
                 <p className="mt-1.5 font-display text-[22px] font-medium leading-none text-chrome">
@@ -41,13 +41,13 @@ export function DoseMateMockup() {
                   <span className="ml-1 font-sans text-xs text-chrome-muted">kg</span>
                 </p>
               </div>
-              <div className="rounded-2xl border border-chrome-hair bg-med-50 p-3.5">
-                <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-med-700">
+              <div className="rounded-2xl border border-chrome-hair bg-plasma-50 p-3.5">
+                <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-plasma-700">
                   Dose
                 </p>
-                <p className="mt-1.5 font-display text-[22px] font-medium leading-none text-med-700">
+                <p className="mt-1.5 font-display text-[22px] font-medium leading-none text-plasma-700">
                   0.12
-                  <span className="ml-1 font-sans text-xs text-med-500">mg</span>
+                  <span className="ml-1 font-sans text-xs text-plasma-500">mg</span>
                 </p>
               </div>
             </div>
@@ -69,8 +69,8 @@ export function DoseMateMockup() {
               ))}
             </div>
 
-            <div className="mt-4 rounded-2xl border border-ember-300/40 bg-ember-50/60 p-3">
-              <p className="font-sans text-[10px] font-medium uppercase tracking-[0.18em] text-ember-600">
+            <div className="mt-4 rounded-2xl border border-star-300/40 bg-star-50/60 p-3">
+              <p className="font-sans text-[10px] font-medium uppercase tracking-[0.18em] text-star-600">
                 Verify before use
               </p>
               <p className="mt-1 font-sans text-[11px] leading-[1.5] text-chrome-soft">
