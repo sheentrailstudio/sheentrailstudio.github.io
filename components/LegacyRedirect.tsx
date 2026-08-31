@@ -38,7 +38,7 @@ export function LegacyRedirect({ to, label }: LegacyRedirectProps) {
           </p>
           <Link
             href={to}
-            className="link-underline mt-8 inline-flex font-sans text-sm font-medium text-ink"
+            className="link-underline mt-8 inline-flex font-sans text-sm font-medium text-chrome"
           >
             前往 {label}
             <span aria-hidden>→</span>

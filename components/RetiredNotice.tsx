@@ -10,7 +10,7 @@ export function RetiredNotice() {
       <section className="relative pt-24 sm:pt-28">
         <div className="shell pb-16 sm:pb-20">
           <p className="label">已下架的產品</p>
-          <h1 className="display-xxl chrome-text mt-8 max-w-3xl text-balance">
+          <h1 className="display-xxl metal-text mt-8 max-w-3xl text-balance">
             QT Garden 已下架
           </h1>
           <p className="mt-7 max-w-2xl text-pretty lede">
@@ -29,7 +29,7 @@ export function RetiredNotice() {
             </p>
           </div>
 
-          <div className="mt-9 flex flex-col gap-3 border-t border-ink-hair pt-10 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-3 border-t border-chrome-hair pt-10 sm:flex-row">
             <Link href="/products/amenjournal" className="btn-primary">
               認識 Amen Journal
               <span className="arrow">→</span>

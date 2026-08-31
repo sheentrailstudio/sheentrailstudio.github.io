@@ -172,7 +172,7 @@ a {
   }
 
   /* Brushed metal: two highlight bands with a dark trough between them. */
-  .chrome-text {
+  .metal-text {
     background: linear-gradient(
       174deg,
       #ffffff 0%,
@@ -191,7 +191,7 @@ a {
   }
 
   /* Quieter silver, for sub-heads and numerals. */
-  .chrome-soft {
+  .metal-soft {
     background: linear-gradient(
       176deg,
       #f6f9ff 0%,
@@ -216,7 +216,7 @@ a {
   }
 
   /* A machined silver edge, drawn as a gradient border. */
-  .chrome-edge {
+  .metal-edge {
     border: 1px solid transparent;
     background:
       linear-gradient(
@@ -236,7 +236,7 @@ a {
   }
 
   /* Solid polished plate, for small marks and inverted chips. */
-  .chrome-plate {
+  .metal-plate {
     background: linear-gradient(180deg, #ffffff 0%, #d3dcee 46%, #a9b5cd 62%, #eef3ff 100%);
     color: #06080f;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95);
@@ -244,7 +244,7 @@ a {
 
   /* Technical micro-label: mono, tracked out, with a star mark. */
   .label {
-    @apply inline-flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-muted;
+    @apply inline-flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-chrome-muted;
   }
 
   .label::before {
@@ -277,20 +277,20 @@ a {
   }
 
   .lede {
-    @apply font-sans text-lg leading-[1.75] text-ink-soft sm:text-xl;
+    @apply font-sans text-lg leading-[1.75] text-chrome-soft sm:text-xl;
   }
 
   .body {
-    @apply font-sans text-[15px] leading-[1.8] text-ink-soft sm:text-base;
+    @apply font-sans text-[15px] leading-[1.8] text-chrome-soft sm:text-base;
   }
 
   /* Buttons read as machined parts: metal fill, lit top edge. */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-sans text-sm font-medium transition-all duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-moss-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-sans text-sm font-medium transition-all duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-moss-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-void;
   }
 
   .btn-primary {
-    @apply btn text-paper;
+    @apply btn text-void;
     background: linear-gradient(180deg, #f4f7ff 0%, #c9d3e6 52%, #aab6cd 100%);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.9),
@@ -315,7 +315,7 @@ a {
   }
 
   .btn-ghost {
-    @apply btn chrome-edge text-ink;
+    @apply btn metal-edge text-chrome;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
   }
 
@@ -324,7 +324,7 @@ a {
   }
 
   .link-underline {
-    @apply relative inline-flex items-center gap-1 transition-colors hover:text-ink;
+    @apply relative inline-flex items-center gap-1 transition-colors hover:text-chrome;
   }
 
   .link-underline::after {
@@ -337,12 +337,12 @@ a {
   }
 
   .chip {
-    @apply chrome-edge inline-flex items-center gap-2 rounded-full px-3 py-1 font-mono text-[11px] tracking-[0.08em] text-ink-soft;
+    @apply metal-edge inline-flex items-center gap-2 rounded-full px-3 py-1 font-mono text-[11px] tracking-[0.08em] text-chrome-soft;
   }
 
   /* Panels: dark glass with a machined edge and a lit top rail. */
   .card {
-    @apply chrome-edge relative overflow-hidden rounded-2xl p-7 transition-all duration-500 ease-editorial;
+    @apply metal-edge relative overflow-hidden rounded-2xl p-7 transition-all duration-500 ease-editorial;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
   }
 
@@ -382,7 +382,7 @@ a {
   }
 
   .hairline-list > * {
-    @apply border-t border-ink-hair py-6;
+    @apply border-t border-chrome-hair py-6;
   }
   .hairline-list > *:first-child {
     @apply border-t-0 pt-0;
@@ -393,7 +393,7 @@ a {
 
   /* Index numerals read as instrument readouts. */
   .num-badge {
-    @apply chrome-soft font-mono text-[11px] tracking-[0.16em];
+    @apply metal-soft font-mono text-[11px] tracking-[0.16em];
   }
 }
 

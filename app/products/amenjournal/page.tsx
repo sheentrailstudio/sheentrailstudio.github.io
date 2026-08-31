@@ -151,7 +151,7 @@ export default function AmenJournalPage() {
         <div className="shell grid gap-16 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-32">
           <Reveal>
             <p className="label">Amen Journal · 阿們日記</p>
-            <h1 className="display-xxl chrome-text mt-8 text-balance">
+            <h1 className="display-xxl metal-text mt-8 text-balance">
               用說的禱告日記
             </h1>
             <p className="mt-10 max-w-xl text-pretty lede">
@@ -162,18 +162,18 @@ export default function AmenJournalPage() {
               <span className="chip">In development · Coming 2026</span>
             </div>
 
-            <dl className="mt-10 grid grid-cols-3 gap-8 border-t border-ink-hair pt-8">
+            <dl className="mt-10 grid grid-cols-3 gap-8 border-t border-chrome-hair pt-8">
               <div>
                 <dt className="label">Platform</dt>
-                <dd className="mt-2 font-serif text-lg text-ink">iOS · Android</dd>
+                <dd className="mt-2 font-serif text-lg text-chrome">iOS · Android</dd>
               </div>
               <div>
                 <dt className="label">For</dt>
-                <dd className="mt-2 font-serif text-lg text-ink">Believers</dd>
+                <dd className="mt-2 font-serif text-lg text-chrome">Believers</dd>
               </div>
               <div>
                 <dt className="label">Status</dt>
-                <dd className="mt-2 font-serif text-lg text-ink">In development</dd>
+                <dd className="mt-2 font-serif text-lg text-chrome">In development</dd>
               </div>
             </dl>
           </Reveal>
@@ -185,9 +185,9 @@ export default function AmenJournalPage() {
       </section>
 
       {/* CONTEXT IMAGE */}
-      <section className="border-t border-ink-hair">
+      <section className="border-t border-chrome-hair">
         <div className="shell py-12">
-          <div className="relative h-[36vh] min-h-[280px] w-full overflow-hidden rounded-2xl border border-ink-hair bg-paper-soft">
+          <div className="relative h-[36vh] min-h-[280px] w-full overflow-hidden rounded-2xl border border-chrome-hair bg-void-soft">
             <Image
               src="/amen-journal-context.png"
               alt="Morning light over an open journal and Bible"
@@ -195,10 +195,10 @@ export default function AmenJournalPage() {
               className="object-cover"
               sizes="(min-width: 1024px) 1200px, 100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-ink/20 via-transparent to-ink/10" />
-            <div className="absolute bottom-6 left-6 max-w-md font-serif text-2xl text-paper sm:text-3xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-chrome/20 via-transparent to-chrome/10" />
+            <div className="absolute bottom-6 left-6 max-w-md font-serif text-2xl text-void sm:text-3xl">
               &ldquo;你們眾民當時時倚靠他，在他面前傾心吐意。&rdquo;
-              <span className="mt-2 block font-sans text-xs not-tracking-[0.22em] text-ink-soft">
+              <span className="mt-2 block font-sans text-xs not-tracking-[0.22em] text-chrome-soft">
                 Psalm 62:8
               </span>
             </div>
@@ -207,7 +207,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* PROBLEM */}
-      <section className="section border-t border-ink-hair">
+      <section className="section border-t border-chrome-hair">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -223,17 +223,17 @@ export default function AmenJournalPage() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-y border-ink-hair sm:grid-cols-3">
+          <div className="mt-16 grid gap-0 border-y border-chrome-hair sm:grid-cols-3">
             {problems.map((p, i) => (
               <Reveal
                 key={p.n}
                 delay={i * 80}
-                className={`p-8 sm:border-r sm:border-ink-hair ${
+                className={`p-8 sm:border-r sm:border-chrome-hair ${
                   i === problems.length - 1 ? "sm:border-r-0" : ""
-                } ${i < problems.length - 1 ? "border-b border-ink-hair sm:border-b-0" : ""}`}
+                } ${i < problems.length - 1 ? "border-b border-chrome-hair sm:border-b-0" : ""}`}
               >
                 <p className="num-badge">{p.n}</p>
-                <h3 className="mt-10 font-display text-2xl font-medium text-ink">
+                <h3 className="mt-10 font-display text-2xl font-medium text-chrome">
                   {p.title}
                 </h3>
                 <p className="mt-4 body">{p.body}</p>
@@ -244,7 +244,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* SOLUTION */}
-      <section className="section border-t border-ink-hair bg-paper-soft/60">
+      <section className="section border-t border-chrome-hair bg-void-soft/60">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -265,7 +265,7 @@ export default function AmenJournalPage() {
               <Reveal key={s.n} delay={i * 60}>
                 <article className="card card-hover h-full">
                   <p className="num-badge">{s.n}</p>
-                  <h3 className="mt-10 font-display text-[26px] font-medium leading-tight text-ink">
+                  <h3 className="mt-10 font-display text-[26px] font-medium leading-tight text-chrome">
                     {s.title}
                   </h3>
                   <p className="mt-4 body">{s.body}</p>
@@ -277,7 +277,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* USE CASES */}
-      <section className="section border-t border-ink-hair">
+      <section className="section border-t border-chrome-hair">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -301,7 +301,7 @@ export default function AmenJournalPage() {
                     {u.time}
                   </span>
                   <div>
-                    <h3 className="font-display text-2xl font-medium text-ink">
+                    <h3 className="font-display text-2xl font-medium text-chrome">
                       {u.title}
                     </h3>
                     <p className="mt-3 max-w-2xl body">{u.body}</p>
@@ -314,38 +314,38 @@ export default function AmenJournalPage() {
       </section>
 
       {/* FEATURES */}
-      <section className="section border-t border-ink-hair bg-paper-soft/60">
+      <section className="section border-t border-chrome-hair bg-void-soft/60">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
               <p className="label ">D · Features</p>
-              <h2 className="display-xl mt-7 text-ink">
+              <h2 className="display-xl mt-7 text-chrome">
                 六個功能
               </h2>
             </Reveal>
             <Reveal delay={100}>
-              <p className="max-w-xl font-sans text-[15px] leading-[1.75] text-ink-soft lg:text-right lg:ml-auto">
+              <p className="max-w-xl font-sans text-[15px] leading-[1.75] text-chrome-soft lg:text-right lg:ml-auto">
                 說出來、留下來、送出去，然後在某一天回頭看見。
               </p>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-t border-paper/15 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-0 border-t border-void/15 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((f, i) => (
               <Reveal
                 key={f.title}
                 delay={i * 60}
-                className={`border-paper/15 p-8 ${
+                className={`border-void/15 p-8 ${
                   i % 3 !== 2 ? "lg:border-r" : ""
                 } ${i % 2 === 0 ? "sm:border-r" : ""} ${
                   i < features.length - (i % 3 === 2 ? 1 : 0) ? "border-b" : ""
                 }`}
               >
-                <p className="num-badge !text-paper/55">0{i + 1}</p>
-                <h3 className="mt-10 font-display text-2xl font-medium text-ink">
+                <p className="num-badge !text-void/55">0{i + 1}</p>
+                <h3 className="mt-10 font-display text-2xl font-medium text-chrome">
                   {f.title}
                 </h3>
-                <p className="mt-3 font-sans text-[14px] leading-[1.7] text-ink-soft">
+                <p className="mt-3 font-sans text-[14px] leading-[1.7] text-chrome-soft">
                   {f.body}
                 </p>
               </Reveal>
@@ -353,7 +353,7 @@ export default function AmenJournalPage() {
           </div>
 
           <Reveal delay={200}>
-            <p className="mt-10 max-w-2xl font-sans text-[13px] leading-[1.8] text-paper/50">
+            <p className="mt-10 max-w-2xl font-sans text-[13px] leading-[1.8] text-void/50">
               以上為開發中的規劃範圍，實際上架版本可能調整。我們會在功能確定後更新這一頁，而不是先把它寫成已經存在的樣子。
             </p>
           </Reveal>
@@ -361,7 +361,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* FAQ */}
-      <section className="section border-t border-ink-hair">
+      <section className="section border-t border-chrome-hair">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-start">
             <Reveal>
@@ -378,15 +378,15 @@ export default function AmenJournalPage() {
       </section>
 
       {/* STATUS */}
-      <section className="relative border-t border-ink-hair bg-paper-soft/60">
+      <section className="relative border-t border-chrome-hair bg-void-soft/60">
         <div className="shell py-24 sm:py-32">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end">
             <div>
               <p className="label ">Amen Journal · In development</p>
-              <h2 className="display-xl mt-7 text-balance text-ink">
+              <h2 className="display-xl mt-7 text-balance text-chrome">
                 還沒做完
               </h2>
-              <p className="mt-6 max-w-xl font-sans text-[15px] leading-[1.75] text-ink-soft">
+              <p className="mt-6 max-w-xl font-sans text-[15px] leading-[1.75] text-chrome-soft">
                 預計 2026 年於 iOS 與 Android
                 推出。上架之前，這一頁寫的都是規劃；上架之後，我們會把它換成真的。
               </p>
@@ -394,7 +394,7 @@ export default function AmenJournalPage() {
             <div className="flex flex-col items-start gap-5 lg:items-end">
               <Link
                 href="/products"
-                className="font-sans text-sm text-ink-soft underline decoration-paper/30 decoration-1 underline-offset-[6px] transition-colors hover:text-paper hover:decoration-paper"
+                className="font-sans text-sm text-chrome-soft underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
               >
                 查看其他產品 →
               </Link>

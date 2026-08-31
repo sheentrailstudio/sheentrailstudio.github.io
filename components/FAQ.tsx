@@ -15,7 +15,7 @@ export function FAQ({ items }: FAQProps) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <div className="divide-y divide-ink-hair border-y border-ink-hair">
+    <div className="divide-y divide-chrome-hair border-y border-chrome-hair">
       {items.map((item, index) => {
         const isOpen = open === index;
         return (
@@ -24,20 +24,20 @@ export function FAQ({ items }: FAQProps) {
               type="button"
               onClick={() => setOpen(isOpen ? null : index)}
               aria-expanded={isOpen}
-              className="group flex w-full items-start justify-between gap-8 py-6 text-left transition-colors hover:text-ink"
+              className="group flex w-full items-start justify-between gap-8 py-6 text-left transition-colors hover:text-chrome"
             >
               <span className="flex-1">
                 <span className="num-badge mr-4">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="font-display text-xl font-medium text-ink sm:text-2xl">
+                <span className="font-display text-xl font-medium text-chrome sm:text-2xl">
                   {item.question}
                 </span>
               </span>
               <span
                 aria-hidden
-                className={`mt-2 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-ink-hair text-sm transition-transform duration-500 ease-editorial ${
-                  isOpen ? "rotate-45 border-ink bg-paper-soft/60" : ""
+                className={`mt-2 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-chrome-hair text-sm transition-transform duration-500 ease-editorial ${
+                  isOpen ? "rotate-45 border-chrome bg-void-soft/60" : ""
                 }`}
               >
                 +

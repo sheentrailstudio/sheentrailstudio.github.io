@@ -3,11 +3,8 @@ import type { Config } from "tailwindcss";
 /**
  * Cosmic / metallic direction.
  *
- * NOTE ON NAMING: `paper` and `ink` keep their old names but now hold inverted
- * values — `paper` is the deep-space ground, `ink` is the light foreground.
- * That is deliberate for now: every existing page is written against those
- * names, so the whole site flips to the dark system in one pass. If this
- * direction is kept, rename them to `void` / `chrome` in a follow-up.
+ * `void` is the deep-space ground, `chrome` the light foreground. Surface
+ * treatments (brushed type, machined edges) live in globals.css as `metal-*`.
  */
 const config: Config = {
   content: [
@@ -18,13 +15,13 @@ const config: Config = {
     extend: {
       colors: {
         /* Deep space, not flat black — there is blue in the dark. */
-        paper: {
+        void: {
           DEFAULT: "#04060e",
           soft: "#0a0f1f",
           deep: "#141b31",
         },
         /* Chrome. Foreground reads as brushed metal against the void. */
-        ink: {
+        chrome: {
           DEFAULT: "#e9edf6",
           soft: "#c2cbdc",
           muted: "#8c96ac",

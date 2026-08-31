@@ -27,7 +27,7 @@ export function AnnouncementList({
           >
             <div className="flex flex-wrap items-center gap-3 sm:flex-col sm:items-start">
               <time
-                className="chrome-soft font-mono text-[13px] tracking-[0.14em]"
+                className="metal-soft font-mono text-[13px] tracking-[0.14em]"
                 dateTime={item.date}
               >
                 {item.dateLabel}
@@ -36,7 +36,7 @@ export function AnnouncementList({
             </div>
 
             <div>
-              <h3 className="display-md chrome-text">{item.title}</h3>
+              <h3 className="display-md metal-text">{item.title}</h3>
               <p className="mt-3 max-w-2xl body">{item.summary}</p>
 
               {variant === "full" && item.body?.length ? (
