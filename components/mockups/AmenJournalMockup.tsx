@@ -6,7 +6,7 @@ const WAVE = [
 export function AmenJournalMockup() {
   return (
     <div className="relative mx-auto w-full max-w-[380px]">
-      <div className="absolute -inset-6 rounded-[42px] bg-gradient-to-br from-moss-100/50 via-med-100/30 to-transparent blur-3xl" />
+      <div className="absolute -inset-6 rounded-[42px] bg-gradient-to-br from-aurora-100/50 via-plasma-100/30 to-transparent blur-3xl" />
       <div className="relative aspect-[9/19.5] overflow-hidden rounded-[38px] border border-chrome-hair bg-void p-1 shadow-[0_40px_90px_-34px_rgba(92,238,192,0.35)]">
         <div className="relative h-full w-full overflow-hidden rounded-[32px] bg-gradient-to-b from-void-soft to-void">
           <div className="flex items-center justify-between px-7 pt-6 text-[11px] font-medium text-chrome-muted">
@@ -19,7 +19,7 @@ export function AmenJournalMockup() {
           </div>
 
           <div className="px-6 pt-8">
-            <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-ember-500">
+            <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-star-500">
               August 4 · Evening
             </p>
             <h3 className="mt-2 font-display text-[26px] font-medium leading-[1.1] text-chrome">
@@ -31,7 +31,7 @@ export function AmenJournalMockup() {
             {/* Voice entry */}
             <div className="rounded-2xl border border-chrome-hair bg-chrome p-4 text-void">
               <div className="flex items-center justify-between">
-                <p className="font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-ember-300">
+                <p className="font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-star-300">
                   Voice · 錄音中
                 </p>
                 <span className="font-sans text-[11px] tabular-nums text-void/70">
@@ -44,7 +44,7 @@ export function AmenJournalMockup() {
                     key={i}
                     style={{ height: `${h + 4}px` }}
                     className={`w-[3px] shrink-0 rounded-full ${
-                      i < 18 ? "bg-ember-300" : "bg-void/25"
+                      i < 18 ? "bg-star-300" : "bg-void/25"
                     }`}
                   />
                 ))}
@@ -59,11 +59,11 @@ export function AmenJournalMockup() {
 
             {/* Photo + text entry */}
             <div className="rounded-2xl border border-chrome-hair bg-void p-4">
-              <p className="font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-moss-600">
+              <p className="font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-aurora-600">
                 Photo · Note
               </p>
               <div className="mt-3 flex gap-3">
-                <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-ember-200 via-void-deep to-moss-200" />
+                <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-star-200 via-void-deep to-aurora-200" />
                 <div className="flex-1 space-y-1.5 pt-1">
                   <div className="h-2 w-full rounded-full bg-void-deep" />
                   <div className="h-2 w-10/12 rounded-full bg-void-deep" />
@@ -73,12 +73,12 @@ export function AmenJournalMockup() {
             </div>
 
             {/* AI trail card */}
-            <div className="rounded-2xl border border-chrome-hair bg-moss-50/70 p-4">
+            <div className="rounded-2xl border border-chrome-hair bg-aurora-50/70 p-4">
               <div className="flex items-center gap-2">
-                <span className="grid h-5 w-5 place-items-center rounded-full bg-moss-600 text-[10px] text-void">
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-aurora-600 text-[10px] text-void">
                   ✦
                 </span>
-                <p className="font-sans text-[11px] font-medium text-moss-700">
+                <p className="font-sans text-[11px] font-medium text-aurora-700">
                   禱告軌跡 · 本月回顧
                 </p>
               </div>
@@ -90,7 +90,7 @@ export function AmenJournalMockup() {
                   <span
                     key={i}
                     style={{ height: `${h}px` }}
-                    className="w-full rounded-sm bg-moss-300/70"
+                    className="w-full rounded-sm bg-aurora-300/70"
                   />
                 ))}
               </div>
@@ -98,7 +98,7 @@ export function AmenJournalMockup() {
 
             {/* Shared intercession */}
             <div className="flex items-center gap-3 rounded-2xl border border-chrome-hair bg-void p-4">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ember-50 text-[13px] text-ember-500">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-star-50 text-[13px] text-star-500">
                 ▶
               </span>
               <div className="min-w-0 flex-1">

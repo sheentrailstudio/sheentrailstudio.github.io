@@ -28,8 +28,8 @@ const config: Config = {
           subtle: "#69738a",
           hair: "rgba(233,237,246,0.14)",
         },
-        /* Aurora — the primary accent. An uncommon green-cyan, not the usual blue. */
-        moss: {
+        /* The primary accent. An uncommon green-cyan, not the usual blue. */
+        aurora: {
           50: "#0b1f1a",
           100: "#0f2f27",
           200: "#164839",
@@ -41,8 +41,10 @@ const config: Config = {
           800: "#178964",
           900: "#0d5540",
         },
-        /* Morning star — pale gold, used only for star marks and rare highlights. */
-        ember: {
+        /* Morning star: pale gold, for star marks and rare highlights. Note the
+           ramp runs dark-to-light like the rest of the dark system — 50 is the
+           deepest, not the palest. */
+        star: {
           50: "#1c1708",
           100: "#2b230e",
           200: "#8a7440",
@@ -51,8 +53,8 @@ const config: Config = {
           500: "#e2c187",
           600: "#c9a86a",
         },
-        /* Dose Mate — plasma cyan. */
-        med: {
+        /* Dose Mate. */
+        plasma: {
           50: "#08202b",
           100: "#0d3242",
           200: "#155066",

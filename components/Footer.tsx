@@ -53,7 +53,7 @@ export function Footer() {
             </p>
             <a
               href="mailto:info@sheentrail.com"
-              className="mt-8 inline-flex items-center gap-3 font-mono text-base tracking-[0.06em] text-chrome underline decoration-chrome-hair decoration-1 underline-offset-[6px] transition-colors hover:text-moss-500 hover:decoration-moss-500"
+              className="mt-8 inline-flex items-center gap-3 font-mono text-base tracking-[0.06em] text-chrome underline decoration-chrome-hair decoration-1 underline-offset-[6px] transition-colors hover:text-aurora-500 hover:decoration-aurora-500"
             >
               info@sheentrail.com
             </a>

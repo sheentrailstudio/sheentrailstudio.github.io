@@ -297,7 +297,7 @@ export default function AmenJournalPage() {
             {useCases.map((u, i) => (
               <Reveal as="li" key={u.title} delay={i * 60}>
                 <div className="grid items-baseline gap-4 sm:grid-cols-[180px_1fr] sm:gap-10">
-                  <span className="font-sans text-xs font-medium uppercase tracking-[0.22em] text-ember-500">
+                  <span className="font-sans text-xs font-medium uppercase tracking-[0.22em] text-star-500">
                     {u.time}
                   </span>
                   <div>
