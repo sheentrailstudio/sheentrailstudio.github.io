@@ -393,6 +393,18 @@ export default function AmenJournalPage() {
             </div>
             <div className="flex flex-col items-start gap-5 lg:items-end">
               <Link
+                href="/products/amenjournal/privacy"
+                className="font-sans text-sm text-chrome-soft underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+              >
+                隱私權政策 →
+              </Link>
+              <Link
+                href="/products/amenjournal/terms"
+                className="font-sans text-sm text-chrome-soft underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+              >
+                使用條款 →
+              </Link>
+              <Link
                 href="/products"
                 className="font-sans text-sm text-chrome-soft underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
               >
