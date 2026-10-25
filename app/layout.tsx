@@ -9,6 +9,13 @@ import {
 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  SITE_NAME,
+  SITE_URL,
+  ogImage,
+} from "@/lib/seo";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -52,13 +59,12 @@ const notoSerifTC = Noto_Serif_TC({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.sheentrail.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Sheen Trail Digital — AI 產品工作室",
-    template: "%s | Sheen Trail Digital",
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Sheen Trail Digital 是一間 AI 產品工作室，專注於 App 設計、AI 輔助體驗與服務開發，協助團隊把想法落地成可信任、可延續的產品。",
+  description: DEFAULT_DESCRIPTION,
   keywords: [
     "Sheen Trail Digital",
     "AI 產品",
@@ -71,23 +77,21 @@ export const metadata: Metadata = {
     "語音日記",
     "醫療工具",
   ],
-  authors: [{ name: "Sheen Trail Digital" }],
+  authors: [{ name: SITE_NAME }],
   openGraph: {
-    title: "Sheen Trail Digital",
-    description:
-      "Building meaningful digital products with clarity, care, and purpose.",
-    url: "https://www.sheentrail.com",
-    siteName: "Sheen Trail Digital",
-    images: [{ url: "/logo.png", width: 512, height: 512 }],
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    url: "/",
+    siteName: SITE_NAME,
+    images: [ogImage],
     locale: "zh_TW",
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "Sheen Trail Digital",
-    description:
-      "Building meaningful digital products with clarity, care, and purpose.",
-    images: ["/logo.png"],
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [ogImage.url],
   },
 };
 

@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Amen Journal 阿們日記",
   description:
     "Amen Journal 阿們日記是一款語音禱告日記 App。用說的、用寫的、用拍的記錄禱告，可分享代禱錄音，並由 AI 幫你回顧禱告主題與回應軌跡。開發中，預計 2026 推出。",
-};
+  path: "/products/amenjournal/",
+});
 
 const problems = [
   {

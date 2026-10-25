@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import { AnnouncementList } from "@/components/AnnouncementList";
 import { Reveal } from "@/components/Reveal";
 import { announcements } from "@/content/announcements";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "公告",
   description:
     "Sheen Trail Digital 的產品與工作室公告，包含 QT Garden 下架說明與 Amen Journal 阿們日記的開發進度。",
-  alternates: { canonical: "/announcements/" },
-};
+  path: "/announcements/",
+});
 
 export default function AnnouncementsPage() {
   return (

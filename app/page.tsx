@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
 import { AnnouncementList } from "@/components/AnnouncementList";
 import { Reveal } from "@/components/Reveal";
 import { HOME_ANNOUNCEMENT_COUNT, announcements } from "@/content/announcements";
 import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
 import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Sheen Trail Digital — AI 產品工作室",
   description:
     "Sheen Trail Digital 專注於 AI 產品、App 設計與服務開發，協助團隊把想法落地成可信任、可延續的產品。",
-};
+  path: "/",
+});
 
 const services = [
   {
