@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "找不到這個頁面",
   description: "這個網址不存在，或者它指向的內容已經搬走了。",
+  path: "/404/",
   robots: { index: false, follow: true },
-};
+});
 
 const destinations = [
   { href: "/products", en: "Products", zh: "看目前在做的產品" },
