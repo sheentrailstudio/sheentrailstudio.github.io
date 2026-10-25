@@ -5,13 +5,13 @@ import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
 import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 
-const IOS_URL = "https://apps.apple.com/app/dosemate/id6755082556";
+const IOS_URL = "https://apps.apple.com/tw/app/id6755082556";
 const ANDROID_URL = "https://play.google.com/store/apps/details?id=com.sheentrail.dosemate";
 
 export const metadata: Metadata = {
-  title: "Dose Mate · 醫療計算助手",
+  title: "新生兒急救指引",
   description:
-    "Dose Mate 是為醫療與照護場景設計的輔助工具，整理藥物劑量、體重換算、急救流程與常用公式，降低資訊取得成本。",
+    "新生兒急救指引（Dose Mate）是為醫療與照護場景設計的輔助工具，整理藥物劑量、體重換算、急救流程與常用公式，降低資訊取得成本。",
 };
 
 const problems = [
@@ -146,7 +146,7 @@ export default function DoseMatePage() {
         />
         <div className="shell grid gap-16 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-32">
           <Reveal>
-            <p className="label">Dose Mate · 醫療計算助手</p>
+            <p className="label">新生兒急救指引 · Dose Mate</p>
             <h1 className="display-xxl metal-text mt-8 text-balance">
               關鍵資訊，查得到
             </h1>
@@ -175,7 +175,7 @@ export default function DoseMatePage() {
               </span>
               <p className="font-sans text-[13px] leading-[1.65] text-chrome-soft">
                 <strong className="font-medium text-chrome">Support only.</strong>{" "}
-                Dose Mate 為輔助工具，不能取代醫療專業判斷、訓練或機構標準流程。
+                新生兒急救指引（Dose Mate）為輔助工具，不能取代醫療專業判斷、訓練或機構標準流程。
               </p>
             </div>
           </Reveal>
@@ -397,7 +397,7 @@ export default function DoseMatePage() {
             <div>
               <p className="label ">Download Dose Mate</p>
               <h2 className="display-xl mt-7 text-balance text-chrome">
-                下載 Dose Mate
+                下載新生兒急救指引
               </h2>
               <p className="mt-6 max-w-xl font-sans text-[15px] leading-[1.75] text-chrome-soft">
                 新生兒急救指引 為輔助工具，所有結果仍需由醫療專業人員依病人狀況與機構規範確認後使用。iOS 與 Android 都可下載。

@@ -245,7 +245,7 @@ export default function Home() {
                     <h3 className="mt-3 font-display text-[28px] font-medium leading-tight text-chrome">
                       Dose Mate
                       <span className="ml-2 font-sans text-sm font-medium text-chrome-muted">
-                        新生兒急救藥物指引
+                        新生兒急救指引
                       </span>
                     </h3>
                     <p className="mt-2 max-w-sm body">

@@ -65,6 +65,7 @@ export const metadata: Metadata = {
     "App 開發",
     "產品設計",
     "Dose Mate",
+    "新生兒急救指引",
     "Amen Journal",
     "阿們日記",
     "禱告日記 App",
