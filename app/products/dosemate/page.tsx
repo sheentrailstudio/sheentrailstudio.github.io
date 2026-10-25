@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import Image from "next/image";
+import { pageMetadata } from "@/lib/seo";
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
@@ -8,11 +8,12 @@ import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 const IOS_URL = "https://apps.apple.com/app/dosemate/id6755082556";
 const ANDROID_URL = "https://play.google.com/store/apps/details?id=com.sheentrail.dosemate";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Dose Mate · 醫療計算助手",
   description:
     "Dose Mate 是為醫療與照護場景設計的輔助工具，整理藥物劑量、體重換算、急救流程與常用公式，降低資訊取得成本。",
-};
+  path: "/products/dosemate/",
+});
 
 const problems = [
   {
