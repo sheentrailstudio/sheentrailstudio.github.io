@@ -8,7 +8,7 @@ import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Sheen Trail Digital 的產品清單，包含 Dose Mate 醫療計算助手，以及開發中的 Amen Journal 阿們日記與 Echo Card。",
+    "Sheen Trail Digital 的產品清單，包含新生兒急救指引（Dose Mate），以及開發中的 Amen Journal 阿們日記與 Echo Card。",
 };
 
 type Product = {
@@ -37,7 +37,7 @@ const products: Product[] = [
     href: "/products/dosemate",
     label: "Product 01",
     title: "Dose Mate",
-    zh: "醫療計算助手",
+    zh: "新生兒急救指引",
     tagline: "Organize critical information for review.",
     description:
       "劑量、換算、急救流程與常用公式，查得快、能二次確認。",
@@ -45,7 +45,7 @@ const products: Product[] = [
     domain: "Medical · Clinical Support",
     toneBg: "from-plasma-50 via-void to-void-soft",
     mockup: "dose",
-    ios: "https://apps.apple.com/app/dosemate/id6755082556",
+    ios: "https://apps.apple.com/tw/app/id6755082556",
     android: "https://play.google.com/store/apps/details?id=com.sheentrail.dosemate",
   },
   {
