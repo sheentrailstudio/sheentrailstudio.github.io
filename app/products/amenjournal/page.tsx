@@ -86,21 +86,63 @@ const review = [
   },
 ];
 
-const faqs = [
+const privacy = [
   {
-    question: "我的錄音會被誰聽到？",
-    answer:
-      "只有你自己。禱告預設只存在你的手機裡，不公開，也不會出現在任何動態牆。",
+    title: "存在你的手機裡",
+    body: "禱告預設只存在這支手機裡，沒有網路也能記錄。",
   },
+  {
+    title: "辨識在手機上完成",
+    body: "逐字稿和圖片文字辨識，都在手機上進行。",
+  },
+  {
+    title: "不登入也能用",
+    body: "錄音、打字、拍照、逐字稿、搜尋和軌跡，都不用登入。",
+  },
+  {
+    title: "隨時匯出全部",
+    body: "想帶走的時候，可以匯出全部禱告。",
+  },
+  {
+    title: "分析拿不到禱告內容",
+    body: "錯誤回報和使用分析，都拿不到禱告的文字。",
+  },
+  {
+    title: "自動標籤先徵求同意",
+    body: "開啟前先徵求同意，才把文字交給第三方 AI；錄音與圖片不會送出。",
+  },
+];
+
+const freePlan = [
+  "錄音、打字、拍照",
+  "逐字稿與圖片文字辨識",
+  "標籤、軌跡、月曆、搜尋",
+  "匯出全部禱告",
+  "已備份到雲端的禱告，可以讀回手機",
+];
+
+const paidPlan = [
+  "雲端備份",
+  "換機還原",
+  "多裝置連動",
+  "自動標籤（開啟前先徵求同意）",
+];
+
+const faqs = [
   {
     question: "可以完全不用語音，只打字嗎？",
     answer:
       "可以。三種輸入互相獨立，只用一種也行，不會被催促。",
   },
   {
+    question: "不訂閱會少什麼？",
+    answer:
+      "錄音、打字、拍照、逐字稿、搜尋和軌跡照常使用，禱告只留在這支手機上。少的是雲端備份、換機還原、多裝置連動和自動標籤。",
+  },
+  {
     question: "這和之前的 QT Garden 有什麼不同？",
     answer:
-      "QT Garden 已停止開發並下架。開發的過程讓我們想清楚要做的那一件事：把禱告留下來。Amen Journal 從這裡重新開始，語音優先。",
+      "QT Garden 已停止開發並下架。開發的過程讓我們想清楚要做的那一件事：把禱告留下來。Amen Journal 從這裡重新開始。",
   },
   {
     question: "什麼時候可以下載？",
@@ -173,7 +215,7 @@ export default function AmenJournalPage() {
             </Reveal>
             <Reveal delay={100}>
               <p className="max-w-xl body lg:text-right lg:ml-auto">
-                不是不想禱告，而是禱告發生的時刻，常常不是能坐下來寫字的時刻。
+                禱告常常發生在不能坐下來寫字的時刻。
               </p>
             </Reveal>
           </div>
@@ -334,14 +376,107 @@ export default function AmenJournalPage() {
         </div>
       </section>
 
-      {/* 隱私與收費段落（#13）加在這裡，FAQ 之前 */}
+      {/* PRIVACY */}
+      <section
+        id="privacy"
+        className="section border-t border-chrome-hair bg-void-soft/60"
+      >
+        <div className="shell">
+          <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
+            <Reveal>
+              <p className="label">E · Privacy</p>
+              <h2 className="display-xl mt-7 text-balance">
+                禱告預設留在手機上
+              </h2>
+            </Reveal>
+            <Reveal delay={100}>
+              <p className="max-w-xl body lg:text-right lg:ml-auto">
+                存在哪裡、誰看得到，這裡一次說明。
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="mt-16 grid gap-0 border-y border-chrome-hair sm:grid-cols-2 lg:grid-cols-3">
+            {privacy.map((p, i) => (
+              <Reveal
+                key={p.title}
+                delay={(i % 3) * 80}
+                className="border-b border-chrome-hair p-8 last:border-b-0 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
+              >
+                <h3 className="font-display text-2xl font-medium text-chrome">
+                  {p.title}
+                </h3>
+                <p className="mt-4 body">{p.body}</p>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={100}>
+            <p className="mt-10">
+              <Link
+                href="/products/amenjournal/privacy"
+                className="font-sans text-sm text-chrome-soft underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+              >
+                完整的隱私權政策 →
+              </Link>
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* PRICING */}
+      <section id="pricing" className="section border-t border-chrome-hair">
+        <div className="shell">
+          <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
+            <Reveal>
+              <p className="label">F · Pricing</p>
+              <h2 className="display-xl mt-7 text-balance">
+                免費與訂閱的差別
+              </h2>
+            </Reveal>
+            <Reveal delay={100}>
+              <p className="max-w-xl body lg:text-right lg:ml-auto">
+                沒訂閱，功能照常用；訂閱買的是雲端。
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="mt-16 grid gap-0 border-y border-chrome-hair sm:grid-cols-2">
+            <Reveal className="border-b border-chrome-hair p-8 sm:border-b-0 sm:border-r">
+              <p className="num-badge">Free</p>
+              <h3 className="mt-6 font-display text-2xl font-medium text-chrome">
+                免費
+              </h3>
+              <ul className="mt-6 space-y-3 body">
+                {freePlan.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+            </Reveal>
+            <Reveal delay={80} className="p-8">
+              <p className="num-badge">Subscription</p>
+              <h3 className="mt-6 font-display text-2xl font-medium text-chrome">
+                訂閱
+              </h3>
+              <ul className="mt-6 space-y-3 body">
+                {paidPlan.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+              <p className="mt-6 font-sans text-sm text-chrome-muted">
+                價格以商店購買畫面為準。
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <section className="section border-t border-chrome-hair">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-start">
             <Reveal>
-              <p className="label">E · FAQ</p>
+              <p className="label">G · FAQ</p>
               <h2 className="display-xl mt-7 text-balance">
                 常見問題
               </h2>
