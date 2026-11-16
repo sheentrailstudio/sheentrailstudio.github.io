@@ -8,18 +8,14 @@ const alts = {
   5: "阿們日記的條目畫面：一則寫下的禱告全文，底部帶有「感恩」標籤",
 } as const;
 
-export type AmenScreenshotNumber = keyof typeof alts;
-
 export function AmenScreenshot({
   n,
   sizes,
   priority,
-  className = "",
 }: {
-  n: AmenScreenshotNumber;
+  n: keyof typeof alts;
   sizes: string;
   priority?: boolean;
-  className?: string;
 }) {
   return (
     <Image
@@ -29,7 +25,7 @@ export function AmenScreenshot({
       height={1868}
       sizes={sizes}
       priority={priority}
-      className={`h-auto w-full rounded-3xl border border-chrome-hair ${className}`}
+      className="h-auto w-full rounded-3xl border border-chrome-hair"
     />
   );
 }
