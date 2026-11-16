@@ -3,10 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
+import { StoreBadges } from "@/components/StoreBadges";
 import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
+
+const APP_STORE_URL = "https://apps.apple.com/tw/app/id6804240377";
 
 export const metadata: Metadata = {
   title: "Amen Journal 阿們日記",
+  itunes: { appId: "6804240377" },
   description:
     "Amen Journal 阿們日記是一款語音禱告日記 App。用說的、用寫的、用拍的記錄禱告，可分享代禱錄音，並由 AI 幫你回顧禱告主題與回應軌跡。開發中，預計 2026 推出。",
 };
@@ -42,11 +46,6 @@ const solutions = [
   },
   {
     n: "03",
-    title: "代禱錄音，可以送出去",
-    body: "為家人或朋友錄一段禱告，用連結送出。收到的人聽見的是聲音，不只是文字。",
-  },
-  {
-    n: "04",
     title: "AI 幫你看見軌跡",
     body: "AI 整理反覆出現的主題，標記已回應的禱告，回顧時看得見軌跡。",
   },
@@ -93,10 +92,6 @@ const features = [
     body: "把畫面收進禱告裡——一段講道筆記、一張照片、一個當下。",
   },
   {
-    title: "代禱錄音分享",
-    body: "為特定的人錄一段禱告，用連結送出，可設期限與權限。",
-  },
-  {
     title: "靈命軌跡回顧",
     body: "整理主題、追蹤已回應的禱告，產生月度與年度回顧。",
   },
@@ -109,19 +104,9 @@ const faqs = [
       "預設只有你自己。日記不公開，也不會出現在任何動態牆。只有你主動分享的那段錄音，才會被你指定的人聽見。",
   },
   {
-    question: "「AI 追蹤靈命成長」到底在追蹤什麼？",
-    answer:
-      "AI 只做整理：歸類反覆出現的主題、串起你標記為「已回應」的禱告、回顧時提醒你求過什麼。它不評分，也不判斷信仰狀態。",
-  },
-  {
     question: "可以完全不用語音，只打字嗎？",
     answer:
       "可以。三種輸入互相獨立，只用一種也行，不會被催促。",
-  },
-  {
-    question: "分享出去的錄音可以收回嗎？",
-    answer:
-      "可以。連結由你建立、由你關閉，可設有效期限。第一版就會有。",
   },
   {
     question: "這和之前的 QT Garden 有什麼不同？",
@@ -158,14 +143,15 @@ export default function AmenJournalPage() {
               語音、文字、照片都留得下來，代禱可以錄成聲音送出去。
             </p>
 
-            <div className="mt-10">
-              <span className="chip">In development · Coming 2026</span>
+            <div className="mt-10 flex flex-wrap items-center gap-3">
+              <StoreBadges ios={APP_STORE_URL} />
+              <span className="chip">Android 即將推出</span>
             </div>
 
             <dl className="mt-10 grid grid-cols-3 gap-8 border-t border-chrome-hair pt-8">
               <div>
                 <dt className="label">Platform</dt>
-                <dd className="mt-2 font-serif text-lg text-chrome">iOS · Android</dd>
+                <dd className="mt-2 font-serif text-lg text-chrome">iOS</dd>
               </div>
               <div>
                 <dt className="label">For</dt>
@@ -173,7 +159,7 @@ export default function AmenJournalPage() {
               </div>
               <div>
                 <dt className="label">Status</dt>
-                <dd className="mt-2 font-serif text-lg text-chrome">In development</dd>
+                <dd className="mt-2 font-serif text-lg text-chrome">Available</dd>
               </div>
             </dl>
           </Reveal>
@@ -351,12 +337,6 @@ export default function AmenJournalPage() {
               </Reveal>
             ))}
           </div>
-
-          <Reveal delay={200}>
-            <p className="mt-10 max-w-2xl font-sans text-[13px] leading-[1.8] text-void/50">
-              以上為開發中的規劃範圍，實際上架版本可能調整。我們會在功能確定後更新這一頁，而不是先把它寫成已經存在的樣子。
-            </p>
-          </Reveal>
         </div>
       </section>
 

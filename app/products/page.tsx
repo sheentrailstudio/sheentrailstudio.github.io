@@ -18,7 +18,7 @@ type Product = {
   zh: string;
   tagline: string;
   description: string;
-  status: "available" | "development" | "soon";
+  status: "available" | "soon";
   domain: string;
   toneBg: string;
   mockup: "amen" | "dose" | "echo";
@@ -28,7 +28,6 @@ type Product = {
 
 const statusLabel: Record<Product["status"], string> = {
   available: "Available",
-  development: "In development",
   soon: "In planning",
 };
 
@@ -56,10 +55,11 @@ const products: Product[] = [
     tagline: "Prayers, kept in your own voice.",
     description:
       "用說的、寫的、拍的記錄禱告，代禱可錄成聲音送出。開發中。",
-    status: "development",
+    status: "available",
     domain: "Devotional · Spiritual Care",
     toneBg: "from-star-50 via-void to-aurora-50",
     mockup: "amen",
+    ios: "https://apps.apple.com/tw/app/id6804240377",
   },
   {
     label: "Product 03",
@@ -114,7 +114,7 @@ export default function ProductsPage() {
               Currently shipping
             </span>
             <span className="chip">Dose Mate</span>
-            <span className="chip opacity-60">Amen Journal — 開發中</span>
+            <span className="chip">Amen Journal</span>
             <span className="chip opacity-60">Echo Card — 規劃中</span>
           </div>
         </div>
@@ -159,11 +159,7 @@ export default function ProductsPage() {
                     {p.ios || p.android ? (
                       <StoreBadges ios={p.ios} android={p.android} />
                     ) : (
-                      <span className="chip">
-                        {p.status === "development"
-                          ? "Coming 2026"
-                          : "尚未開始開發"}
-                      </span>
+                      <span className="chip">尚未開始開發</span>
                     )}
                     {p.href ? (
                       <Link

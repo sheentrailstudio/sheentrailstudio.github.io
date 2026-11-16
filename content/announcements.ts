@@ -24,7 +24,7 @@ export type Announcement = {
   link?: { href: string; label: string };
 };
 
-export const HOME_ANNOUNCEMENT_COUNT = 2;
+export const HOME_ANNOUNCEMENT_COUNT = 1;
 
 export const announcements: Announcement[] = [
   {

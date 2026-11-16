@@ -132,7 +132,7 @@ export default function Home() {
               </div>
               <div>
                 <dt className="label">Works</dt>
-                <dd className="mt-2 font-display text-lg text-chrome">1 Live · 2 Building</dd>
+                <dd className="mt-2 font-display text-lg text-chrome">2 Live · 1 Planned</dd>
               </div>
             </dl>
           </div>
@@ -269,7 +269,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-end justify-between gap-4 border-t border-chrome-hair px-8 py-7">
                   <div>
-                    <p className="label">In development · Coming 2026</p>
+                    <p className="label">Available · iOS</p>
                     <h3 className="mt-3 font-display text-[28px] font-medium leading-tight text-chrome">
                       Amen Journal
                       <span className="ml-2 font-sans text-sm font-medium text-chrome-muted">
