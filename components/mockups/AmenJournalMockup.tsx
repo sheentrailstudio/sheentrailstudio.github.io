@@ -95,24 +95,6 @@ export function AmenJournalMockup() {
                 ))}
               </div>
             </div>
-
-            {/* Shared intercession */}
-            <div className="flex items-center gap-3 rounded-2xl border border-chrome-hair bg-void p-4">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-star-50 text-[13px] text-star-500">
-                ▶
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="truncate font-sans text-[12px] font-medium text-chrome">
-                  給小雅的代禱 · 0:47
-                </p>
-                <p className="font-sans text-[10px] text-chrome-muted">
-                  已分享 · 7 天後失效
-                </p>
-              </div>
-              <span className="shrink-0 rounded-full border border-chrome-hair px-2.5 py-1 font-sans text-[10px] text-chrome-muted">
-                連結
-              </span>
-            </div>
           </div>
 
           <div className="absolute inset-x-5 bottom-4 flex items-center justify-between rounded-full border border-chrome-hair bg-void px-4 py-3">
