@@ -79,7 +79,7 @@ function MockupSlot({ kind }: { kind: Product["mockup"] }) {
   if (kind === "amen")
     return (
       <div className="mx-auto w-full max-w-[380px]">
-        <AmenScreenshot n={2} sizes="(min-width: 1024px) 380px, 80vw" />
+        <AmenScreenshot n={2} />
       </div>
     );
   if (kind === "dose") return <DoseMateMockup />;

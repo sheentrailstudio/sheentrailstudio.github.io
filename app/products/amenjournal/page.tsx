@@ -72,12 +72,12 @@ const review = [
   {
     kicker: "月曆",
     title: "哪一天留下過禱告",
-    body: "月曆上標著小星的日子，就是你禱告過的日子。",
+    body: "月曆上有點的日子，就是你禱告過的日子。",
   },
   {
     kicker: "圖片",
     title: "回顧拍下的畫面",
-    body: "手寫的禱告與經文，收在圖片頁一頁頁翻。",
+    body: "手寫的禱告與經文，收在圖片頁，隨時回顧。",
   },
   {
     kicker: "搜尋",
@@ -155,11 +155,7 @@ export default function AmenJournalPage() {
 
           <Reveal delay={150}>
             <div className="mx-auto w-full max-w-[340px]">
-              <AmenScreenshot
-                n={1}
-                priority
-                sizes="(min-width: 1024px) 340px, 80vw"
-              />
+              <AmenScreenshot n={1} priority />
             </div>
           </Reveal>
         </div>
@@ -240,10 +236,7 @@ export default function AmenJournalPage() {
 
             <Reveal delay={100}>
               <div className="mx-auto w-full max-w-[320px]">
-                <AmenScreenshot
-                  n={5}
-                  sizes="(min-width: 1024px) 320px, 80vw"
-                />
+                <AmenScreenshot n={5} />
               </div>
             </Reveal>
           </div>
@@ -270,10 +263,7 @@ export default function AmenJournalPage() {
           <div className="mt-16 grid gap-12 lg:grid-cols-[0.6fr_1fr] lg:items-center lg:gap-20">
             <Reveal className="lg:order-2">
               <div className="mx-auto w-full max-w-[320px]">
-                <AmenScreenshot
-                  n={2}
-                  sizes="(min-width: 1024px) 320px, 80vw"
-                />
+                <AmenScreenshot n={2} />
               </div>
             </Reveal>
             <ul className="hairline-list lg:order-1">
@@ -318,14 +308,8 @@ export default function AmenJournalPage() {
           <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-20">
             <Reveal>
               <div className="mx-auto grid max-w-[640px] grid-cols-2 gap-4 sm:gap-6">
-                <AmenScreenshot
-                  n={3}
-                  sizes="(min-width: 1024px) 300px, 45vw"
-                />
-                <AmenScreenshot
-                  n={4}
-                  sizes="(min-width: 1024px) 300px, 45vw"
-                />
+                <AmenScreenshot n={3} />
+                <AmenScreenshot n={4} />
               </div>
             </Reveal>
             <ul className="hairline-list">

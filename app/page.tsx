@@ -266,7 +266,7 @@ export default function Home() {
               >
                 <div className="relative overflow-hidden bg-gradient-to-b from-aurora-100/60 to-void px-8 pt-14 pb-10">
                   <div className="mx-auto w-full max-w-[380px]">
-                    <AmenScreenshot n={2} sizes="(min-width: 1024px) 380px, 80vw" />
+                    <AmenScreenshot n={2} />
                   </div>
                 </div>
                 <div className="flex items-end justify-between gap-4 border-t border-chrome-hair px-8 py-7">
