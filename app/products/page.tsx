@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
-import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
+import { AmenScreenshot } from "@/components/AmenScreenshot";
 import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 
 export const metadata: Metadata = {
@@ -76,7 +76,12 @@ const products: Product[] = [
 ];
 
 function MockupSlot({ kind }: { kind: Product["mockup"] }) {
-  if (kind === "amen") return <AmenJournalMockup />;
+  if (kind === "amen")
+    return (
+      <div className="mx-auto w-full max-w-[380px]">
+        <AmenScreenshot n={2} sizes="(min-width: 1024px) 380px, 80vw" />
+      </div>
+    );
   if (kind === "dose") return <DoseMateMockup />;
   return (
     <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[380px] overflow-hidden rounded-[38px] border border-dashed border-chrome-hair bg-void">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { AnnouncementList } from "@/components/AnnouncementList";
 import { Reveal } from "@/components/Reveal";
 import { HOME_ANNOUNCEMENT_COUNT, announcements } from "@/content/announcements";
-import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
+import { AmenScreenshot } from "@/components/AmenScreenshot";
 import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 
 export const metadata: Metadata = {
@@ -265,7 +265,9 @@ export default function Home() {
                 className="group block h-full overflow-hidden rounded-2xl border border-chrome-hair bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-aurora-500/40"
               >
                 <div className="relative overflow-hidden bg-gradient-to-b from-aurora-100/60 to-void px-8 pt-14 pb-10">
-                  <AmenJournalMockup />
+                  <div className="mx-auto w-full max-w-[380px]">
+                    <AmenScreenshot n={2} sizes="(min-width: 1024px) 380px, 80vw" />
+                  </div>
                 </div>
                 <div className="flex items-end justify-between gap-4 border-t border-chrome-hair px-8 py-7">
                   <div>

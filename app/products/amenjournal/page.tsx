@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
-import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
+import { AmenScreenshot } from "@/components/AmenScreenshot";
 
 const APP_STORE_URL = "https://apps.apple.com/tw/app/id6804240377";
 
@@ -165,7 +165,13 @@ export default function AmenJournalPage() {
           </Reveal>
 
           <Reveal delay={150}>
-            <AmenJournalMockup />
+            <div className="mx-auto w-full max-w-[340px]">
+              <AmenScreenshot
+                n={1}
+                priority
+                sizes="(min-width: 1024px) 340px, 80vw"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
