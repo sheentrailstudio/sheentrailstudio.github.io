@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     description:
       "Amen Journal 阿們日記是一款語音禱告日記 App。用說的、用寫的、用拍的留下禱告，依標籤串成軌跡。已在 iOS 上架，Android 即將推出。",
     path: "/products/amenjournal/",
+    image: {
+      url: "/products/amenjournal/og.png",
+      width: 1200,
+      height: 630,
+      alt: "Amen Journal 阿們日記",
+    },
   }),
   itunes: { appId: "6804240377" },
 };
