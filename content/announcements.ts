@@ -28,6 +28,16 @@ export const HOME_ANNOUNCEMENT_COUNT = 1;
 
 export const announcements: Announcement[] = [
   {
+    id: "amen-journal-launched",
+    date: "2026-11-15",
+    dateLabel: "2026.11",
+    kind: "產品",
+    title: "Amen Journal 阿們日記已上架",
+    summary:
+      "阿們日記已在 iOS 上架。用說的、寫的、拍的留下禱告，依標籤串成軌跡。Android 即將推出。",
+    link: { href: "/products/amenjournal/", label: "看 Amen Journal" },
+  },
+  {
     id: "amen-journal-in-development",
     date: "2026-08-04",
     dateLabel: "2026.08",

@@ -79,11 +79,11 @@ export function AmenJournalMockup() {
                   ✦
                 </span>
                 <p className="font-sans text-[11px] font-medium text-aurora-700">
-                  禱告軌跡 · 本月回顧
+                  禱告軌跡
                 </p>
               </div>
               <p className="mt-2 font-serif text-[13px] leading-[1.5] text-chrome">
-                你為「家人的健康」禱告了 9 次，其中 3 次已經記下回應。
+                「家人的健康」底下有 9 則禱告，依時間串成軌跡。
               </p>
               <div className="mt-3 flex items-end gap-1">
                 {[8, 14, 10, 20, 16, 26, 22].map((h, i) => (

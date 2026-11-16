@@ -277,7 +277,7 @@ export default function Home() {
                       </span>
                     </h3>
                     <p className="mt-2 max-w-sm body">
-                      用說的禱告日記——語音、文字、照片都能留下，代禱可錄成聲音分享出去。
+                      用說的禱告日記——語音、文字、照片都能留下，依標籤串成軌跡。
                     </p>
                   </div>
                   <span className="shrink-0 pb-1 font-mono text-xs tracking-[0.12em] text-chrome-muted transition-colors group-hover:text-aurora-500">

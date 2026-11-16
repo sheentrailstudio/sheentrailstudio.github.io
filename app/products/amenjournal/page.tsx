@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Amen Journal 阿們日記",
   itunes: { appId: "6804240377" },
   description:
-    "Amen Journal 阿們日記是一款語音禱告日記 App。用說的、用寫的、用拍的記錄禱告，可分享代禱錄音，並由 AI 幫你回顧禱告主題與回應軌跡。開發中，預計 2026 推出。",
+    "Amen Journal 阿們日記是一款語音禱告日記 App。用說的、用寫的、用拍的留下禱告，依標籤串成軌跡。已在 iOS 上架，Android 即將推出。",
 };
 
 const problems = [
@@ -37,7 +37,7 @@ const solutions = [
   {
     n: "01",
     title: "用說的就可以禱告",
-    body: "按住錄音，把話直接說出來。自動產生逐字稿，錄音與文字都可以只留一種。",
+    body: "按一下開始錄音，把話直接說出來。說完自動轉成逐字稿，可以自己修改。",
   },
   {
     n: "02",
@@ -46,8 +46,8 @@ const solutions = [
   },
   {
     n: "03",
-    title: "AI 幫你看見軌跡",
-    body: "AI 整理反覆出現的主題，標記已回應的禱告，回顧時看得見軌跡。",
+    title: "依標籤串成軌跡",
+    body: "用標籤記下為什麼事禱告，同一標籤的禱告會依時間串成軌跡。",
   },
 ];
 
@@ -70,7 +70,7 @@ const useCases = [
   {
     time: "Together",
     title: "為別人禱告的時候",
-    body: "小組結束、朋友傳來消息，錄一段代禱送過去，比「我會為你禱告」更近。",
+    body: "小組結束、朋友傳來消息，先記下這件事，之後為他禱告時一翻就找到。",
   },
 ];
 
@@ -93,7 +93,7 @@ const features = [
   },
   {
     title: "靈命軌跡回顧",
-    body: "整理主題、追蹤已回應的禱告，產生月度與年度回顧。",
+    body: "用標籤記下禱告的事，同一標籤依時間串成軌跡，也能用月曆與搜尋回頭翻。",
   },
 ];
 
@@ -101,7 +101,7 @@ const faqs = [
   {
     question: "我的錄音會被誰聽到？",
     answer:
-      "預設只有你自己。日記不公開，也不會出現在任何動態牆。只有你主動分享的那段錄音，才會被你指定的人聽見。",
+      "只有你自己。禱告預設只存在你的手機裡，不公開，也不會出現在任何動態牆。",
   },
   {
     question: "可以完全不用語音，只打字嗎？",
@@ -116,7 +116,7 @@ const faqs = [
   {
     question: "什麼時候可以下載？",
     answer:
-      "開發中，規劃 2026 年於 iOS 與 Android 推出。確定日期會更新這頁。",
+      "現在就可以。iOS 版已在 App Store 上架，Android 即將推出，確定日期會更新這頁。",
   },
 ];
 
@@ -140,7 +140,7 @@ export default function AmenJournalPage() {
               用說的禱告日記
             </h1>
             <p className="mt-10 max-w-xl text-pretty lede">
-              語音、文字、照片都留得下來，代禱可以錄成聲音送出去。
+              語音、文字、照片都留得下來，依標籤串成軌跡。
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -241,7 +241,7 @@ export default function AmenJournalPage() {
             </Reveal>
             <Reveal delay={100}>
               <p className="max-w-xl body lg:text-right lg:ml-auto">
-                語音優先、分享優先。其他功能都要先回答同一個問題——這能不能幫助禱告被留下？
+                語音優先。其他功能都要先回答同一個問題——這能不能幫助禱告被留下？
               </p>
             </Reveal>
           </div>
@@ -306,12 +306,12 @@ export default function AmenJournalPage() {
             <Reveal>
               <p className="label ">D · Features</p>
               <h2 className="display-xl mt-7 text-chrome">
-                六個功能
+                留下禱告的五件事
               </h2>
             </Reveal>
             <Reveal delay={100}>
               <p className="max-w-xl font-sans text-[15px] leading-[1.75] text-chrome-soft lg:text-right lg:ml-auto">
-                說出來、留下來、送出去，然後在某一天回頭看見。
+                說出來、留下來，然後在某一天回頭看見。
               </p>
             </Reveal>
           </div>
@@ -362,14 +362,17 @@ export default function AmenJournalPage() {
         <div className="shell py-24 sm:py-32">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end">
             <div>
-              <p className="label ">Amen Journal · In development</p>
+              <p className="label ">Amen Journal · Available on iOS</p>
               <h2 className="display-xl mt-7 text-balance text-chrome">
-                還沒做完
+                現在可以下載了
               </h2>
               <p className="mt-6 max-w-xl font-sans text-[15px] leading-[1.75] text-chrome-soft">
-                預計 2026 年於 iOS 與 Android
-                推出。上架之前，這一頁寫的都是規劃；上架之後，我們會把它換成真的。
+                iOS 版已在 App Store 上架，Android 即將推出。
               </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <StoreBadges ios={APP_STORE_URL} />
+                <span className="chip">Android 即將推出</span>
+              </div>
             </div>
             <div className="flex flex-col items-start gap-5 lg:items-end">
               <Link

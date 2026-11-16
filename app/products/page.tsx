@@ -8,7 +8,7 @@ import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Sheen Trail Digital 的產品清單，包含新生兒急救指引（Dose Mate），以及開發中的 Amen Journal 阿們日記與 Echo Card。",
+    "Sheen Trail Digital 的產品清單，包含新生兒急救指引（Dose Mate），以及語音禱告日記 Amen Journal 阿們日記，還有規劃中的 Echo Card。",
 };
 
 type Product = {
@@ -54,7 +54,7 @@ const products: Product[] = [
     zh: "語音禱告日記",
     tagline: "Prayers, kept in your own voice.",
     description:
-      "用說的、寫的、拍的記錄禱告，代禱可錄成聲音送出。開發中。",
+      "用說的、寫的、拍的記錄禱告，同一件事的禱告串成軌跡。",
     status: "available",
     domain: "Devotional · Spiritual Care",
     toneBg: "from-star-50 via-void to-aurora-50",
