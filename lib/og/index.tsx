@@ -33,26 +33,19 @@ const sky =
   "radial-gradient(circle at 30% 95%, rgba(92,238,192,0.09), rgba(4,6,14,0) 45%)";
 
 /* Fixed pseudo-random field, so every build draws the same sky. */
-const stars = Array.from({ length: 70 }, (_, i) => {
+const stars = Array.from({ length: 70 }, (_, i): CSSProperties => {
   const r = (n: number) => ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
+  const size = r(3) > 0.85 ? 3 : r(3) > 0.5 ? 2 : 1;
   return {
+    position: "absolute",
     left: Math.round(r(1) * OG_WIDTH),
     top: Math.round(r(2) * OG_HEIGHT),
-    size: r(3) > 0.85 ? 3 : r(3) > 0.5 ? 2 : 1,
+    width: size,
+    height: size,
+    borderRadius: size,
     background: r(4) > 0.8 ? STAR : CHROME,
     opacity: 0.25 + r(5) * 0.6,
   };
-});
-
-const starStyle = (s: (typeof stars)[number]): CSSProperties => ({
-  position: "absolute",
-  left: s.left,
-  top: s.top,
-  width: s.size,
-  height: s.size,
-  borderRadius: s.size,
-  background: s.background,
-  opacity: s.opacity,
 });
 
 /**
@@ -76,8 +69,8 @@ export async function starryImage(children: ReactNode[]) {
           fontFamily: "Noto Sans TC",
         }}
       >
-        {stars.map((s, i) => (
-          <div key={i} style={starStyle(s)} />
+        {stars.map((style, i) => (
+          <div key={i} style={style} />
         ))}
         {children}
       </div>

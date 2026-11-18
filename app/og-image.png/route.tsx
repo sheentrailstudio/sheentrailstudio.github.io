@@ -25,10 +25,6 @@ export async function GET() {
 
   return starryImage([
     <div
-      key="glow"
-      style={{ position: "absolute", left: 0, top: 0, width: 1200, height: 630, backgroundImage: GLOW }}
-    />,
-    <div
       key="lockup"
       style={{
         position: "absolute",
@@ -36,6 +32,7 @@ export async function GET() {
         top: 0,
         width: 1200,
         height: 630,
+        backgroundImage: GLOW,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
