@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "找不到這個頁面",
   description: "這個網址不存在，或者它指向的內容已經搬走了。",
-  path: "/404/",
+  path: "/404.html",
   robots: { index: false, follow: true },
 });
 
