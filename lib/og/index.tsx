@@ -17,11 +17,11 @@ import { ImageResponse } from "next/og";
  * Google at build time instead.
  */
 
-export const OG_WIDTH = 1200;
-export const OG_HEIGHT = 630;
+const OG_WIDTH = 1200;
+const OG_HEIGHT = 630;
 
 /* tailwind.config.ts */
-export const VOID = "#04060e";
+const VOID = "#04060e";
 export const CHROME = "#e9edf6";
 export const STAR = "#e8cf9a";
 
