@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
 import { AmenScreenshot } from "@/components/AmenScreenshot";
 import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Products",
   description:
     "Sheen Trail Digital 的產品清單，包含新生兒急救指引（Dose Mate），以及語音禱告日記 Amen Journal 阿們日記，還有規劃中的 Echo Card。",
-};
+  path: "/products/",
+});
 
 type Product = {
   href?: string;
