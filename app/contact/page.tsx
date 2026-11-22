@@ -1,3 +1,4 @@
+import { ProcessSection } from "@/components/ProcessSection";
 import { Reveal } from "@/components/Reveal";
 import { pageMetadata } from "@/lib/seo";
 
@@ -21,13 +22,6 @@ const channels = [
     label: "Support",
     hint: "產品回饋與技術支援",
   },
-];
-
-const expect = [
-  { n: "01", t: "你寄信", body: "寫下需求或情境就好。" },
-  { n: "02", t: "我們回信", body: "1–2 個工作天內回覆。" },
-  { n: "03", t: "簡短討論", body: "30 分鐘，確認彼此適合。" },
-  { n: "04", t: "正式開始", body: "開始，或推薦更合適的夥伴。" },
 ];
 
 export default function ContactPage() {
@@ -94,44 +88,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* WHAT TO EXPECT */}
-      <section className="section border-t border-line bg-surface-alt">
-        <div className="shell">
-          <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
-            <Reveal>
-              <p className="label">B · What to expect</p>
-              <h2 className="display-xl mt-7 text-balance">
-                四個步驟
-              </h2>
-            </Reveal>
-            <Reveal delay={100}>
-              <p className="max-w-xl body lg:text-right lg:ml-auto">
-                沒有表單，也沒有漫長流程。
-              </p>
-            </Reveal>
-          </div>
-
-          <div className="mt-16 grid gap-0 border-y border-line sm:grid-cols-2 lg:grid-cols-4">
-            {expect.map((e, i) => (
-              <Reveal
-                key={e.n}
-                delay={i * 70}
-                className={`p-8 ${
-                  i < expect.length - 1 ? "lg:border-r lg:border-line" : ""
-                } ${i % 2 === 0 ? "sm:border-r sm:border-line" : ""} ${
-                  i < 2 ? "border-b border-line sm:border-b lg:border-b-0" : ""
-                }`}
-              >
-                <p className="num-badge">{e.n}</p>
-                <h3 className="mt-10 font-display text-2xl font-medium text-ink">
-                  {e.t}
-                </h3>
-                <p className="mt-4 body">{e.body}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProcessSection />
 
       {/* FINAL CTA */}
       <section className="section border-t border-line bg-surface-alt">

@@ -46,10 +46,10 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-6 max-w-md font-display text-2xl font-medium leading-[1.3] sm:text-[28px]">
-              隨光同行，晨星相伴。
+              App 與 AI 產品工作室
             </p>
             <p className="mt-5 max-w-md body">
-              Building meaningful digital products with clarity, care, and purpose.
+              Apps and AI features, from plan to launch.
             </p>
             <a
               href="mailto:info@sheentrail.com"
@@ -82,7 +82,6 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-line pt-6 font-sans text-xs text-ink-muted sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Sheen Trail Digital — All rights reserved.</span>
-          <span>Clarity ✦ Care ✦ Purpose</span>
         </div>
       </div>
     </footer>
