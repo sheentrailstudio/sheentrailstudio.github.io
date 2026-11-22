@@ -6,7 +6,7 @@ import { announcements } from "@/content/announcements";
 export const metadata: Metadata = {
   title: "公告",
   description:
-    "Sheen Trail Digital 的產品與工作室公告，包含 QT Garden 下架說明與 Amen Journal 阿們日記的開發進度。",
+    "Sheen Trail Digital 的產品與工作室公告，包含 QT Garden 下架說明與 Amen Journal 阿們日記的上架消息。",
   alternates: { canonical: "/announcements/" },
 };
 

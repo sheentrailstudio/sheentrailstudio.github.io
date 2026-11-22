@@ -79,11 +79,11 @@ export function AmenJournalMockup() {
                   ✦
                 </span>
                 <p className="font-sans text-[11px] font-medium text-aurora-700">
-                  禱告軌跡 · 本月回顧
+                  禱告軌跡
                 </p>
               </div>
               <p className="mt-2 font-serif text-[13px] leading-[1.5] text-chrome">
-                你為「家人的健康」禱告了 9 次，其中 3 次已經記下回應。
+                「家人的健康」底下有 9 則禱告，依時間串成軌跡。
               </p>
               <div className="mt-3 flex items-end gap-1">
                 {[8, 14, 10, 20, 16, 26, 22].map((h, i) => (
@@ -94,24 +94,6 @@ export function AmenJournalMockup() {
                   />
                 ))}
               </div>
-            </div>
-
-            {/* Shared intercession */}
-            <div className="flex items-center gap-3 rounded-2xl border border-chrome-hair bg-void p-4">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-star-50 text-[13px] text-star-500">
-                ▶
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="truncate font-sans text-[12px] font-medium text-chrome">
-                  給小雅的代禱 · 0:47
-                </p>
-                <p className="font-sans text-[10px] text-chrome-muted">
-                  已分享 · 7 天後失效
-                </p>
-              </div>
-              <span className="shrink-0 rounded-full border border-chrome-hair px-2.5 py-1 font-sans text-[10px] text-chrome-muted">
-                連結
-              </span>
             </div>
           </div>
 
