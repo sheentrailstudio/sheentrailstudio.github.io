@@ -24,28 +24,28 @@ export const metadata = pageMetadata({
 const intro = [
   "行晨成立於 2025 年，開發自己的 App，也接受委託開發。",
   "分別是醫療照護用的 Dose Mate，和語音禱告日記 Amen Journal。",
-  "規劃、設計、AI 與工程由同一組人負責，討論需求的人就是動手做的人。",
+  "規劃、設計、AI 與工程由同一團隊負責，需求直接對應實作。",
 ];
 
 const services = [
   {
     title: "產品規劃",
-    body: "把想法整理成功能清單與時程，作為設計與開發的依據。",
+    body: "交付功能清單與開發時程，作為設計與開發的依據。",
     tag: "功能清單・時程",
   },
   {
     title: "介面設計",
-    body: "設計畫面與操作流程，並做成可點擊的原型。",
+    body: "交付介面設計稿與可操作原型，在開發前驗證流程。",
     tag: "畫面・流程・原型",
   },
   {
     title: "AI 功能導入",
-    body: "把語音轉文字、圖片文字辨識、自動標籤等功能接進你的產品。",
+    body: "將語音轉文字、圖片文字辨識與自動標籤整合進產品。",
     tag: "實例：Amen Journal",
   },
   {
     title: "App 與網站開發",
-    body: "開發 iOS、Android App 與網站，並處理上架。維護另簽合約。",
+    body: "開發 iOS、Android App 與網站，並完成上架。維護另簽合約。",
     tag: "iOS・Android・網站",
   },
 ];
@@ -215,11 +215,11 @@ export default function Home() {
         <div className="shell">
           <div className="grid gap-6 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
-              <h2 className="display-xl text-balance">可以委託的工作</h2>
+              <h2 className="display-xl text-balance">四項產品開發服務</h2>
             </Reveal>
             <Reveal delay={100}>
               <p className="max-w-xl body lg:ml-auto lg:text-right">
-                可以全部委託，也可以只委託其中一段。
+                行晨承接整案開發，也承接單項服務。
               </p>
             </Reveal>
           </div>
