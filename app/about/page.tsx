@@ -4,57 +4,53 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "About",
   description:
-    "Sheen Trail Digital 是一間 AI 產品工作室，專注於 App 設計、AI 輔助體驗與服務開發。",
+    "Sheen Trail Digital 開發自有 App，並承接 App、網站與 AI 功能的開發專案。",
   path: "/about/",
 });
 
-const beliefs = [
+const principles = [
   {
-    k: "Clarity",
-    zh: "明朗",
-    body:
-      "看懂了，決定就簡單。",
+    k: "Scope",
+    zh: "範圍明確",
+    body: "開工前訂定功能範圍與時程。",
   },
   {
-    k: "Care",
-    zh: "關懷",
-    body:
-      "為真實的人、真實的場景而做。",
+    k: "Context",
+    zh: "依情境設計",
+    body: "依實際使用者與使用場景決定功能。",
   },
   {
-    k: "Craft",
-    zh: "職人",
-    body:
-      "細節累積成手感。",
+    k: "Structure",
+    zh: "結構可維護",
+    body: "以可維護、可擴充的結構撰寫程式。",
   },
   {
-    k: "Purpose",
-    zh: "目的",
-    body:
-      "讓技術對得上目的。",
+    k: "Fit",
+    zh: "技術對應需求",
+    body: "每項技術選擇都對應一項明確需求。",
   },
 ];
 
-const disciplines = [
+const services = [
   {
-    t: "Product Strategy",
-    zh: "產品策略",
-    body: "釐清產品面向，讓決策可被持續驗證。",
+    t: "Product Planning",
+    zh: "產品規劃",
+    body: "交付功能清單與開發時程，作為設計與開發的依據。",
   },
   {
-    t: "UX & Interface Design",
-    zh: "體驗與介面",
-    body: "把流程與資訊結構整理成可讀、可維護、可延續的介面。",
+    t: "Interface Design",
+    zh: "介面設計",
+    body: "交付介面設計稿與可操作原型，在開發前驗證流程。",
   },
   {
     t: "AI Integration",
-    zh: "AI 整合",
-    body: "把 LLM 與代理式流程放進真實產品，變成可信任的支援層。",
+    zh: "AI 功能導入",
+    body: "將語音轉文字、圖片文字辨識與自動標籤整合進產品。",
   },
   {
-    t: "App & Service Build",
-    zh: "產品開發",
-    body: "以可維護、可擴充的方式打造 iOS / Android / Web 產品。",
+    t: "App & Web Development",
+    zh: "App 與網站開發",
+    body: "開發 iOS、Android App 與網站，並完成上架。維護另簽合約。",
   },
 ];
 
@@ -67,10 +63,10 @@ export default function AboutPage() {
           <Reveal>
             <p className="label">About · Sheen Trail Digital</p>
             <h1 className="display-xxl mt-8 max-w-4xl text-balance">
-              行晨工作室
+              關於行晨工作室
             </h1>
             <p className="mt-10 max-w-2xl text-pretty lede">
-              把 AI 變成能被信任、被延續的產品。
+              行晨開發自有 App，也承接產品開發專案。
             </p>
           </Reveal>
         </div>
@@ -79,49 +75,45 @@ export default function AboutPage() {
       {/* NARRATIVE */}
       <section className="section border-t border-line">
         <div className="shell grid gap-14 lg:grid-cols-[0.4fr_1fr]">
-          <Reveal>
-            <p className="label">A · Story</p>
-          </Reveal>
-          <Reveal delay={100}>
+          <Reveal delay={100} className="lg:col-start-2">
             <div className="space-y-8 font-display text-[21px] font-medium leading-[1.7] text-ink sm:text-2xl">
               <p>
-                「Sheen Trail 行晨」取自晨光與道路。做產品，是把需求變成能長久使用的東西。
+                行晨成立於 2025 年，名稱取自晨光與道路。
               </p>
               <p>
-                AI 讓流程變快。使用情境、資訊結構與節奏，仍是慢工。
+                行晨提供產品規劃、介面設計、AI 功能導入與 App、網站開發。
               </p>
               <p>
-                目前做靈修陪伴與醫療工具，都始於身邊真實的需求。
+                目前已上架醫療照護工具 Dose Mate 與禱告日記 Amen Journal。
               </p>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* BELIEFS */}
+      {/* PRINCIPLES */}
       <section className="section border-t border-line bg-surface-alt">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
-              <p className="label">B · Beliefs</p>
-              <h2 className="display-xl mt-7 text-balance">
-                四個信念
+              <h2 className="display-xl text-balance">
+                行晨的四項工作原則
               </h2>
             </Reveal>
             <Reveal delay={100}>
               <p className="max-w-xl body lg:text-right lg:ml-auto">
-                我們怎麼判斷
+                每個專案都照這四項執行。
               </p>
             </Reveal>
           </div>
 
           <div className="mt-16 grid gap-0 border-y border-line sm:grid-cols-2 lg:grid-cols-4">
-            {beliefs.map((b, i) => (
+            {principles.map((b, i) => (
               <Reveal
                 key={b.k}
                 delay={i * 70}
                 className={`p-8 ${
-                  i < beliefs.length - 1 ? "lg:border-r lg:border-line" : ""
+                  i < principles.length - 1 ? "lg:border-r lg:border-line" : ""
                 } ${i % 2 === 0 ? "sm:border-r sm:border-line lg:border-r" : ""} ${
                   i < 2 ? "border-b border-line sm:border-b lg:border-b-0" : ""
                 }`}
@@ -140,25 +132,24 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* DISCIPLINES */}
+      {/* SERVICES */}
       <section className="section border-t border-line">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
-              <p className="label">C · Disciplines</p>
-              <h2 className="display-xl mt-7 text-balance">
-                四組專業
+              <h2 className="display-xl text-balance">
+                四項產品開發服務
               </h2>
             </Reveal>
             <Reveal delay={100}>
               <p className="max-w-xl body lg:text-right lg:ml-auto">
-                從策略到上架，都在同一組人手上。
+                規劃、設計、AI 與工程由同一團隊負責。
               </p>
             </Reveal>
           </div>
 
           <ul className="mt-14 hairline-list">
-            {disciplines.map((d, i) => (
+            {services.map((d, i) => (
               <Reveal as="li" key={d.t} delay={i * 60}>
                 <div className="grid items-baseline gap-4 sm:grid-cols-[60px_1fr_1.2fr] sm:gap-10">
                   <span className="num-badge">0{i + 1}</span>

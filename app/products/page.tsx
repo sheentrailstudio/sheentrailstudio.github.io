@@ -63,9 +63,9 @@ const products: Product[] = [
     label: "Product 03",
     title: "Echo Card",
     zh: "回聲祝福小卡",
-    tagline: "Small cards, lasting warmth.",
+    tagline: "Turn a short message into a shareable card.",
     description:
-      "把一句有溫度的話，做成能傳出去的小卡。規劃中。",
+      "把一句話做成能傳出去的小卡。規劃中。",
     status: "soon",
     domain: "Social · Relationship",
     mockup: "echo",
