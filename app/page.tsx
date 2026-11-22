@@ -1,10 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { AnnouncementList } from "@/components/AnnouncementList";
 import { Reveal } from "@/components/Reveal";
 import { HOME_ANNOUNCEMENT_COUNT, announcements } from "@/content/announcements";
+import {
+  AMEN_JOURNAL_IOS_URL,
+  DOSE_MATE_ANDROID_URL,
+  DOSE_MATE_IOS_URL,
+} from "@/content/stores";
 import { AmenScreenshot } from "@/components/AmenScreenshot";
-import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
+import { DoseMatePhone } from "@/components/DoseMatePhone";
+import { ProcessSection } from "@/components/ProcessSection";
+import { StoreBadges } from "@/components/StoreBadges";
 
 export const metadata = pageMetadata({
   title: "Sheen Trail Digital — AI 產品工作室",
@@ -13,72 +21,32 @@ export const metadata = pageMetadata({
   path: "/",
 });
 
+const intro = [
+  "行晨成立於 2025 年，開發自己的 App，也接受委託開發。",
+  "分別是醫療照護用的 Dose Mate，和語音禱告日記 Amen Journal。",
+  "規劃、設計、AI 與工程由同一組人負責，討論需求的人就是動手做的人。",
+];
+
 const services = [
   {
-    idx: "01",
-    title: "Product Strategy",
-    zh: "產品策略",
-    body:
-      "動手之前，先把方向定下來。",
-    tags: ["Scoping", "Research", "Roadmap"],
+    title: "產品規劃",
+    body: "把想法整理成功能清單與時程，作為設計與開發的依據。",
+    tag: "功能清單・時程",
   },
   {
-    idx: "02",
-    title: "UX & Interface Design",
-    zh: "體驗與介面設計",
-    body:
-      "看得懂、改得動、撐得久的介面。",
-    tags: ["IA", "UI System", "Prototyping"],
+    title: "介面設計",
+    body: "設計畫面與操作流程，並做成可點擊的原型。",
+    tag: "畫面・流程・原型",
   },
   {
-    idx: "03",
-    title: "AI Integration",
-    zh: "AI 輔助整合",
-    body:
-      "把 AI 放進真實流程，並驗證它可靠。",
-    tags: ["LLM", "Agents", "Evaluation"],
+    title: "AI 功能導入",
+    body: "把語音轉文字、圖片文字辨識、自動標籤等功能接進你的產品。",
+    tag: "實例：Amen Journal",
   },
   {
-    idx: "04",
-    title: "App & Service Build",
-    zh: "App 與服務開發",
-    body:
-      "iOS、Android 與 Web，從 MVP 做到長期維護。",
-    tags: ["iOS", "Android", "Web"],
-  },
-];
-
-const values = [
-  { k: "Clarity", v: "先說清楚，再動手。" },
-  { k: "Care", v: "看使用者的處境。" },
-  { k: "Craft", v: "細節決定它能用多久。" },
-  { k: "Purpose", v: "每個決定都對著需求。" },
-];
-
-const process = [
-  {
-    n: "01",
-    t: "Listen",
-    zh: "聆聽",
-    body: "先懂問題，再談解法。",
-  },
-  {
-    n: "02",
-    t: "Frame",
-    zh: "收斂",
-    body: "定出方向與優先順序。",
-  },
-  {
-    n: "03",
-    t: "Build",
-    zh: "打造",
-    body: "做出能維護的東西。",
-  },
-  {
-    n: "04",
-    t: "Iterate",
-    zh: "迭代",
-    body: "上線後持續調整。",
+    title: "App 與網站開發",
+    body: "開發 iOS、Android App 與網站，並處理上架。維護另簽合約。",
+    tag: "iOS・Android・網站",
   },
 ];
 
@@ -86,301 +54,203 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="pt-28 sm:pt-36">
-        <div className="shell grid gap-16 pb-20 lg:grid-cols-[1.25fr_0.75fr] lg:items-end lg:pb-32">
-          <div className="reveal">
-            <p className="label">Sheen Trail Digital · Est. 2025</p>
-            <h1 className="display-xxl mt-8 text-balance">
-              做有溫度的產品
-            </h1>
-            <p className="mt-10 max-w-2xl text-pretty lede">
-              策略、設計、AI 與工程，都在同一個節奏裡。
-            </p>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <Link href="/products" className="btn-primary">
-                View Products
-                <span className="arrow">→</span>
-              </Link>
-            </div>
-          </div>
-
-          <div className="reveal reveal-delay-2 border-t border-line pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-            <p className="label">Brand statement</p>
-            <p className="display-lg mt-5">
-              隨光同行，<br />
-              晨星相伴。
-            </p>
-            <dl className="mt-6 grid grid-cols-2 gap-y-5 border-t border-line pt-6">
-              <div>
-                <dt className="label">Focus</dt>
-                <dd className="mt-2 font-display text-lg text-ink">AI · App · Service</dd>
-              </div>
-              <div>
-                <dt className="label">Based in</dt>
-                <dd className="mt-2 font-display text-lg text-ink">Taipei</dd>
-              </div>
-              <div>
-                <dt className="label">Since</dt>
-                <dd className="mt-2 font-display text-lg text-ink">2025</dd>
-              </div>
-              <div>
-                <dt className="label">Works</dt>
-                <dd className="mt-2 font-display text-lg text-ink">2 Live · 1 Planned</dd>
-              </div>
-            </dl>
+      <div className="shell grid gap-14 pb-20 pt-28 sm:pt-32 lg:grid-cols-2 lg:items-center lg:gap-12 lg:pb-24">
+        <div className="reveal">
+          <Image
+            src="/logo.png"
+            alt=""
+            width={52}
+            height={52}
+            className="rounded-full"
+          />
+          <p className="label mt-6">Sheen Trail Digital · Est. 2025</p>
+          <h1 className="mt-5 font-display text-[clamp(2.4rem,4.7vw,4.25rem)] font-semibold leading-[1.15] tracking-display text-balance">
+            從構想做到上架
+          </h1>
+          <p className="mt-5 max-w-[26em] text-pretty lede">
+            行晨規劃、設計並開發 App、網站與 AI 功能。
+          </p>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#work" className="btn-primary">
+              看我們的產品
+            </a>
+            <a href="mailto:info@sheentrail.com" className="btn-ghost">
+              寄信洽詢
+            </a>
           </div>
         </div>
 
-        <div className="shell">
-          <div className="flex items-center gap-6 border-y border-line py-4 meta">
-            <span>Strategy</span>
-            <span aria-hidden className="text-[9px] accent-text">✦</span>
-            <span>UX Design</span>
-            <span aria-hidden className="text-[9px] accent-text">✦</span>
-            <span>AI Integration</span>
-            <span aria-hidden className="text-[9px] accent-text">✦</span>
-            <span className="hidden sm:inline">App &amp; Service Build</span>
-            <span aria-hidden className="hidden sm:inline text-[9px] accent-text">✦</span>
-            <span className="hidden md:inline">Long-term Iteration</span>
-          </div>
+        <div className="reveal reveal-delay-2 ml-auto grid w-full max-w-[540px] grid-cols-2 gap-4 sm:gap-8">
+          <figure>
+            <AmenScreenshot n={5} priority />
+            <figcaption className="mt-3 text-sm font-semibold text-ink">
+              Amen Journal
+              <span className="block font-normal text-ink-muted">阿們日記</span>
+            </figcaption>
+          </figure>
+          <figure className="mt-10 sm:mt-16">
+            <DoseMatePhone priority />
+            <figcaption className="mt-3 text-sm font-semibold text-ink">
+              Dose Mate
+              <span className="block font-normal text-ink-muted">新生兒急救指引</span>
+            </figcaption>
+          </figure>
         </div>
-      </section>
+      </div>
 
-      {/* SERVICES — Bento */}
-      <section id="services" className="section scroll-mt-24 border-t border-line">
-        <div className="shell">
-          <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
-            <Reveal>
-              <p className="label">B · Services</p>
-              <h2 className="display-xl mt-7 text-balance">
-                四種服務
-              </h2>
-            </Reveal>
-            <Reveal delay={100}>
-              <p className="max-w-xl body lg:text-right lg:ml-auto">
-                先理解，再收斂，最後打造。
-              </p>
-            </Reveal>
-          </div>
-
-          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2">
-            {services.map((s, i) => (
-              <Reveal
-                key={s.idx}
-                delay={i * 80}
-                className={`${
-                  i === 0
-                    ? "lg:col-span-7 lg:row-span-1"
-                    : i === 1
-                    ? "lg:col-span-5 lg:row-span-1"
-                    : i === 2
-                    ? "lg:col-span-5 lg:row-span-1"
-                    : "lg:col-span-7 lg:row-span-1"
-                }`}
-              >
-                <article className="card card-hover h-full">
-                  <div className="flex items-center justify-between">
-                    <span className="num-badge">{s.idx}</span>
-                    <div className="flex gap-1.5">
-                      {s.tags.map((t) => (
-                        <span
-                          key={t}
-                          className="meta"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <h3 className="mt-12 font-display text-[28px] font-medium leading-tight text-ink sm:text-[32px]">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 meta">
-                    {s.zh}
-                  </p>
-                  <p className="mt-6 max-w-md body">{s.body}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SELECTED WORK */}
-      <section id="work" className="section scroll-mt-24 border-t border-line bg-surface-alt">
-        <div className="shell">
-          <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
-            <Reveal>
-              <p className="label">C · Selected Work</p>
-              <h2 className="display-xl mt-7 text-balance">
-                我們自己做的產品
-              </h2>
-            </Reveal>
-            <Reveal delay={100}>
-              <p className="max-w-xl body lg:text-right lg:ml-auto">
-                做過什麼，就擺在這裡。
-              </p>
-            </Reveal>
-          </div>
-
-          <div className="mt-16 grid gap-6 lg:grid-cols-2">
-            <Reveal>
-              <Link
-                href="/products/dosemate"
-                className="group block h-full overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-ink-muted"
-              >
-                <div className="relative overflow-hidden bg-surface-alt px-8 pt-14 pb-10">
-                  <DoseMateMockup />
-                </div>
-                <div className="flex items-end justify-between gap-4 border-t border-line px-8 py-7">
-                  <div>
-                    <p className="label">Available · iOS · Android</p>
-                    <h3 className="mt-3 font-display text-[28px] font-medium leading-tight text-ink">
-                      Dose Mate
-                      <span className="ml-2 font-sans text-sm font-medium text-ink-muted">
-                        新生兒急救指引
-                      </span>
-                    </h3>
-                    <p className="mt-2 max-w-sm body">
-                      劑量計算與急救流程，查得快、能二次確認。
-                    </p>
-                  </div>
-                  <span className="shrink-0 pb-1 meta transition-colors group-hover:text-ink">
-                    View →
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-
-            <Reveal delay={120}>
-              <Link
-                href="/products/amenjournal"
-                className="group block h-full overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-ink-muted"
-              >
-                <div className="relative overflow-hidden bg-surface-alt px-8 pt-14 pb-10">
-                  <div className="mx-auto w-full max-w-[380px]">
-                    <AmenScreenshot n={2} />
-                  </div>
-                </div>
-                <div className="flex items-end justify-between gap-4 border-t border-line px-8 py-7">
-                  <div>
-                    <p className="label">Available · iOS</p>
-                    <h3 className="mt-3 font-display text-[28px] font-medium leading-tight text-ink">
-                      Amen Journal
-                      <span className="ml-2 font-sans text-sm font-medium text-ink-muted">
-                        阿們日記
-                      </span>
-                    </h3>
-                    <p className="mt-2 max-w-sm body">
-                      用說的禱告日記——語音、文字、照片都能留下，依標籤串成軌跡。
-                    </p>
-                  </div>
-                  <span className="shrink-0 pb-1 meta transition-colors group-hover:text-ink">
-                    View →
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-          </div>
-
-          <Reveal delay={200} className="mt-6">
-            <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-dashed border-line bg-surface p-8 sm:flex-row sm:items-center">
-              <div>
-                <p className="label">In planning</p>
-                <h3 className="mt-3 font-display text-2xl font-medium text-ink">
-                  Echo Card · 回聲祝福小卡
-                </h3>
-                <p className="mt-2 max-w-xl body">
-                  把一句話做成能傳出去的小卡。
-                </p>
-              </div>
-              <span className="chip">尚未開始開發</span>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* PROCESS */}
-      <section id="process" className="section scroll-mt-24 border-t border-line">
-        <div className="shell">
-          <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
-            <Reveal>
-              <p className="label">D · Process</p>
-              <h2 className="display-xl mt-7 text-balance">
-                四個步驟
-              </h2>
-            </Reveal>
-            <Reveal delay={100}>
-              <p className="max-w-xl body lg:text-right lg:ml-auto">
-                每個階段都問同一件事：三年後還撐得住嗎？
-              </p>
-            </Reveal>
-          </div>
-
-          <div className="mt-16 grid gap-0 border-t border-line sm:grid-cols-2 lg:grid-cols-4">
-            {process.map((p, i) => (
-              <Reveal
-                key={p.n}
-                delay={i * 80}
-                className={`border-line p-8 sm:border-b lg:border-r lg:border-b-0 ${
-                  i === 3 ? "lg:border-r-0" : ""
-                } ${i < 2 ? "" : "sm:border-b-0"}`}
-              >
-                <p className="num-badge">{p.n}</p>
-                <h3 className="mt-10 font-display text-[28px] font-medium leading-tight text-ink">
-                  {p.t}
-                </h3>
-                <p className="mt-1 meta">
-                  {p.zh}
-                </p>
-                <p className="mt-6 body">{p.body}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* VALUES */}
-      <section className="section border-t border-line bg-surface-alt">
-        <div className="shell grid gap-12 lg:grid-cols-[0.5fr_1fr]">
+      {/* ABOUT */}
+      <section className="section border-t border-line">
+        <div className="shell grid gap-8 lg:grid-cols-[0.55fr_1fr] lg:gap-12">
           <Reveal>
-            <p className="label">E · Values</p>
-            <h2 className="display-xl mt-7">
-              我們在意的事
-            </h2>
+            <h2 className="display-xl text-balance">已上架兩款自有產品</h2>
           </Reveal>
           <Reveal delay={100}>
-            <ul className="hairline-list">
-              {values.map((v, i) => (
-                <li
-                  key={v.k}
-                  className="grid gap-2 sm:grid-cols-[160px_1fr] sm:gap-10"
-                >
-                  <div className="flex items-baseline gap-4">
-                    <span className="num-badge">
-                      0{i + 1}
-                    </span>
-                    <span className="font-display text-2xl font-medium text-ink">
-                      {v.k}
-                    </span>
-                  </div>
-                  <p className="max-w-xl font-sans text-[15px] leading-[1.75] text-ink-muted">
-                    {v.v}
-                  </p>
-                </li>
+            <div className="max-w-2xl space-y-5">
+              {intro.map((p) => (
+                <p key={p} className="lede">
+                  {p}
+                </p>
               ))}
-            </ul>
+            </div>
           </Reveal>
         </div>
       </section>
 
+      {/* PRODUCTS */}
+      <section
+        id="work"
+        className="section scroll-mt-24 border-t border-line bg-surface-alt"
+      >
+        <div className="shell">
+          <Reveal>
+            <h2 className="display-xl text-balance">我們自己做的產品</h2>
+          </Reveal>
+
+          <div className="mt-14">
+            <Reveal className="grid items-center gap-10 border-t border-line py-14 lg:grid-cols-[4fr_8fr] lg:gap-16">
+              <div>
+                <p className="accent-text text-sm font-semibold">
+                  已上架 iOS｜Android 即將推出
+                </p>
+                <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-ink sm:text-[34px]">
+                  Amen Journal
+                  <span className="mt-1.5 block text-[17px] font-medium text-ink-muted">
+                    阿們日記
+                  </span>
+                </h3>
+                <div className="mt-5 max-w-sm space-y-3">
+                  <p className="body">
+                    語音禱告日記：說話時即時轉成文字，也能用打字和照片記錄。
+                  </p>
+                  <p className="body">
+                    紀錄依標籤串成軌跡。資料預設只存在手機，雲端備份需訂閱。
+                  </p>
+                </div>
+                <StoreBadges ios={AMEN_JOURNAL_IOS_URL} className="mt-7" />
+                <Link
+                  href="/products/amenjournal"
+                  className="mt-6 inline-block border-b-[1.5px] border-gold pb-0.5 text-[15px] font-semibold text-ink"
+                >
+                  View →
+                </Link>
+              </div>
+              <div className="grid grid-cols-3 gap-2.5 sm:gap-6">
+                <AmenScreenshot n={1} />
+                <AmenScreenshot n={3} />
+                <AmenScreenshot n={4} />
+              </div>
+            </Reveal>
+
+            <Reveal className="grid items-center gap-10 border-t border-line py-14 lg:grid-cols-[8fr_4fr] lg:gap-16">
+              <div className="mx-auto w-full max-w-[200px] sm:max-w-[240px] lg:order-first">
+                <DoseMatePhone />
+              </div>
+              <div className="order-first lg:order-none">
+                <p className="accent-text text-sm font-semibold">
+                  已上架｜iOS・Android
+                </p>
+                <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-ink sm:text-[34px]">
+                  Dose Mate
+                  <span className="mt-1.5 block text-[17px] font-medium text-ink-muted">
+                    新生兒急救指引
+                  </span>
+                </h3>
+                <div className="mt-5 max-w-sm space-y-3">
+                  <p className="body">
+                    為醫療與照護場景設計，涵蓋藥物劑量、體重換算、急救流程與常用公式。
+                  </p>
+                  <p className="body">
+                    核心計算離線可用。結果標示為輔助參考，最終判斷保留給專業人員。
+                  </p>
+                </div>
+                <StoreBadges
+                  ios={DOSE_MATE_IOS_URL}
+                  android={DOSE_MATE_ANDROID_URL}
+                  className="mt-7"
+                />
+                <Link
+                  href="/products/dosemate"
+                  className="mt-6 inline-block border-b-[1.5px] border-gold pb-0.5 text-[15px] font-semibold text-ink"
+                >
+                  View →
+                </Link>
+              </div>
+            </Reveal>
+
+            <Reveal className="border-t border-line pt-10">
+              <p className="accent-text text-sm font-semibold">
+                規劃中・尚未開始開發
+              </p>
+              <h3 className="mt-2 font-display text-[22px] font-semibold text-ink">
+                Echo Card · 回聲祝福小卡
+              </h3>
+              <p className="mt-1 body">把一句話做成能傳出去的小卡。</p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="section scroll-mt-24 border-t border-line">
+        <div className="shell">
+          <div className="grid gap-6 lg:grid-cols-[0.55fr_1fr] lg:items-end">
+            <Reveal>
+              <h2 className="display-xl text-balance">可以委託的工作</h2>
+            </Reveal>
+            <Reveal delay={100}>
+              <p className="max-w-xl body lg:ml-auto lg:text-right">
+                可以全部委託，也可以只委託其中一段。
+              </p>
+            </Reveal>
+          </div>
+
+          <ul className="mt-14 border-t border-ink">
+            {services.map((s, i) => (
+              <Reveal
+                as="li"
+                key={s.title}
+                delay={i * 60}
+                className="grid gap-1 border-b border-line py-6 lg:grid-cols-[3fr_6fr_3fr] lg:items-baseline lg:gap-8"
+              >
+                <h3 className="font-display text-[22px] font-semibold text-ink">
+                  {s.title}
+                </h3>
+                <p className="body">{s.body}</p>
+                <p className="meta lg:text-right">{s.tag}</p>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <ProcessSection id="process" />
+
       {/* ANNOUNCEMENTS */}
-      <section id="announcements" className="section scroll-mt-24 border-t border-line">
+      <section id="announcements" className="section scroll-mt-24">
         <div className="shell">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal>
-              <p className="label">Recent</p>
-              <h2 className="display-xl mt-7">最近公告</h2>
+              <h2 className="display-xl">最近公告</h2>
             </Reveal>
             <Reveal delay={80}>
               <Link
