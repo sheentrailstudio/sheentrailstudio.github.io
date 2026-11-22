@@ -1,20 +1,15 @@
 type StoreBadgesProps = {
   ios?: string;
   android?: string;
-  variant?: "default" | "inverted";
   className?: string;
 };
 
 export function StoreBadges({
   ios,
   android,
-  variant = "default",
   className = "",
 }: StoreBadgesProps) {
-  const isInverted = variant === "inverted";
-  const baseBtn = isInverted
-    ? "border-void/20 bg-void/10 text-void hover:bg-void hover:text-chrome"
-    : "border-chrome/15 bg-void-soft/60 hover:bg-aurora-700";
+  const baseBtn = "border-ink bg-ink text-surface hover:bg-ink/85";
 
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>

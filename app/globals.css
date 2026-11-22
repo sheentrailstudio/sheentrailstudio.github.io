@@ -2,34 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --void: #04060e;
-  --void-soft: #0a0f1f;
-  --void-deep: #141b31;
-  --chrome: #e9edf6;
-  --chrome-soft: #c2cbdc;
-  --chrome-muted: #8c96ac;
-  --hair: rgba(233, 237, 246, 0.14);
-  --aurora: #5ceec0;
-  --star: #e8cf9a;
-}
-
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  background: var(--void);
-  color-scheme: dark;
+  background: theme("colors.surface");
+  color-scheme: light;
 }
 
 body {
   min-height: 100vh;
-  background: var(--void);
-  color: var(--chrome);
-  font-family: var(--font-sans), Inter, var(--font-sans-tc), "Noto Sans TC",
-    ui-sans-serif, system-ui, sans-serif;
+  background: theme("colors.surface");
+  color: theme("colors.ink");
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,107 +27,8 @@ a {
 }
 
 ::selection {
-  background: rgba(92, 238, 192, 0.28);
-}
-
-/* ---------------------------------------------------------------------------
- * Night sky, back to front:
- *   .sky-neb    nebula clouds + a diagonal milky band
- *   .sky::before dense dust, drifting
- *   .sky::after  brighter stars, gold/aurora tinted, twinkling
- *   .sky-glow    the aurora wash lifting the top-right corner
- * All CSS gradients — no canvas, no images, nothing extra to download.
- * ------------------------------------------------------------------------ */
-.sky-neb {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      112deg,
-      transparent 30%,
-      rgba(150, 175, 235, 0.07) 42%,
-      rgba(196, 176, 240, 0.09) 50%,
-      rgba(150, 200, 235, 0.06) 58%,
-      transparent 70%
-    ),
-    radial-gradient(46% 34% at 82% 16%, rgba(122, 92, 220, 0.2), transparent 66%),
-    radial-gradient(40% 30% at 16% 30%, rgba(56, 160, 200, 0.16), transparent 68%),
-    radial-gradient(52% 38% at 30% 86%, rgba(92, 238, 192, 0.11), transparent 66%),
-    radial-gradient(34% 26% at 68% 62%, rgba(232, 207, 154, 0.07), transparent 70%);
-}
-
-.sky {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.sky::before,
-.sky::after {
-  content: "";
-  position: absolute;
-  inset: -60%;
-  background-repeat: repeat;
-}
-
-.sky::before {
-  background-image:
-    radial-gradient(1px 1px at 20px 30px, rgba(233, 237, 246, 0.7), transparent),
-    radial-gradient(1px 1px at 140px 80px, rgba(233, 237, 246, 0.45), transparent),
-    radial-gradient(1px 1px at 90px 170px, rgba(233, 237, 246, 0.6), transparent),
-    radial-gradient(1px 1px at 210px 120px, rgba(233, 237, 246, 0.35), transparent),
-    radial-gradient(1px 1px at 260px 210px, rgba(233, 237, 246, 0.5), transparent),
-    radial-gradient(1px 1px at 45px 240px, rgba(233, 237, 246, 0.4), transparent),
-    radial-gradient(1px 1px at 175px 20px, rgba(233, 237, 246, 0.55), transparent),
-    radial-gradient(1px 1px at 290px 145px, rgba(233, 237, 246, 0.3), transparent);
-  background-size: 320px 280px;
-  animation: drift 240s linear infinite;
-}
-
-.sky::after {
-  background-image:
-    radial-gradient(2px 2px at 60px 90px, rgba(232, 207, 154, 0.95), transparent),
-    radial-gradient(1.8px 1.8px at 330px 40px, rgba(255, 255, 255, 0.95), transparent),
-    radial-gradient(2px 2px at 190px 300px, rgba(92, 238, 192, 0.7), transparent),
-    radial-gradient(1.6px 1.6px at 420px 220px, rgba(233, 237, 246, 0.8), transparent),
-    radial-gradient(2.2px 2.2px at 500px 360px, rgba(232, 207, 154, 0.75), transparent),
-    radial-gradient(1.6px 1.6px at 250px 160px, rgba(196, 176, 240, 0.8), transparent),
-    radial-gradient(1.8px 1.8px at 90px 400px, rgba(255, 255, 255, 0.7), transparent);
-  background-size: 560px 460px;
-  animation: drift 380s linear infinite reverse, twinkle 7s ease-in-out infinite;
-}
-
-.sky-glow {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(58% 44% at 78% 6%, rgba(92, 238, 192, 0.12), transparent 62%),
-    radial-gradient(52% 38% at 10% 90%, rgba(79, 208, 232, 0.1), transparent 62%);
-}
-
-@keyframes drift {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-320px, -280px, 0);
-  }
-}
-
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.75;
-  }
-  50% {
-    opacity: 1;
-  }
+  background: theme("colors.ink");
+  color: theme("colors.surface");
 }
 
 @layer components {
@@ -149,116 +36,25 @@ a {
     @apply mx-auto w-full max-w-shell px-6 sm:px-8 lg:px-12;
   }
 
-  /* Rules catch the light rather than sitting flat. */
   .rule {
-    @apply h-px w-full;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(233, 237, 246, 0.32),
-      transparent
-    );
+    @apply h-px w-full bg-line;
   }
 
-  .rule-metal {
-    @apply h-px w-full;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(233, 237, 246, 0.38),
-      rgba(92, 238, 192, 0.22),
-      transparent
-    );
+  /* Small signals in gold (numerals, status). */
+  .accent-text {
+    color: theme("colors.gold-text");
   }
 
-  /* Brushed metal: two highlight bands with a dark trough between them. */
-  .metal-text {
-    background: linear-gradient(
-      174deg,
-      #ffffff 0%,
-      #eef3ff 18%,
-      #9fabc4 40%,
-      #6f7c96 50%,
-      #ffffff 63%,
-      #c6d0e4 82%,
-      #f4f7ff 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-  }
-
-  /* Quieter silver, for sub-heads and numerals. */
-  .metal-soft {
-    background: linear-gradient(
-      176deg,
-      #f6f9ff 0%,
-      #b9c3d8 46%,
-      #8a95ad 62%,
-      #e4eaf7 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-  }
-
-  /*
-   * Solid accent for inline emphasis. Deliberately NOT a gradient: a gradient
-   * fill on an inline span repaints per line box, so a phrase that wraps ends
-   * up with two colours and the final glyph lands on the far stop.
-   */
-  .aurora-text {
-    color: var(--aurora);
-  }
-
-  /* A machined silver edge, drawn as a gradient border. */
-  .metal-edge {
-    border: 1px solid transparent;
-    background:
-      linear-gradient(
-          180deg,
-          rgba(233, 237, 246, 0.05),
-          rgba(233, 237, 246, 0.015)
-        )
-        padding-box,
-      linear-gradient(
-          150deg,
-          rgba(255, 255, 255, 0.55),
-          rgba(233, 237, 246, 0.1) 32%,
-          rgba(233, 237, 246, 0.06) 60%,
-          rgba(255, 255, 255, 0.4)
-        )
-        border-box;
-  }
-
-  /* Solid polished plate, for small marks and inverted chips. */
-  .metal-plate {
-    background: linear-gradient(180deg, #ffffff 0%, #d3dcee 46%, #a9b5cd 62%, #eef3ff 100%);
-    color: #06080f;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95);
-  }
-
-  /* Technical micro-label: mono, tracked out, with a star mark. */
   .label {
-    @apply inline-flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-chrome-muted;
-  }
-
-  .label::before {
-    content: "✦";
-    @apply text-[10px];
-    color: var(--star);
+    @apply inline-flex items-center gap-2 text-sm font-medium text-ink-muted;
   }
 
   .display-xxl {
-    @apply font-display font-semibold tracking-display text-[clamp(2.6rem,6vw,5.25rem)] leading-[1.06];
+    @apply font-display font-bold tracking-display text-[clamp(2.6rem,6vw,5.25rem)] leading-[1.1];
   }
 
   .display-xl {
-    @apply font-display font-semibold tracking-display text-[clamp(1.9rem,3.4vw,3rem)] leading-[1.18];
+    @apply font-display font-bold tracking-display text-[clamp(1.9rem,3.4vw,3rem)] leading-[1.2];
   }
 
   .display-lg {
@@ -277,33 +73,19 @@ a {
   }
 
   .lede {
-    @apply font-sans text-lg leading-[1.75] text-chrome-soft sm:text-xl;
+    @apply font-sans text-lg leading-[1.75] text-ink-muted sm:text-xl;
   }
 
   .body {
-    @apply font-sans text-[15px] leading-[1.8] text-chrome-soft sm:text-base;
+    @apply font-sans text-[15px] leading-[1.8] text-ink-muted sm:text-base;
   }
 
-  /* Buttons read as machined parts: metal fill, lit top edge. */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-sans text-sm font-medium transition-all duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-aurora-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-void;
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 font-sans text-sm font-semibold transition-colors duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
   }
 
   .btn-primary {
-    @apply btn text-void;
-    background: linear-gradient(180deg, #f4f7ff 0%, #c9d3e6 52%, #aab6cd 100%);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.9),
-      0 0 0 1px rgba(233, 237, 246, 0.18),
-      0 10px 30px -14px rgba(92, 238, 192, 0.5);
-  }
-
-  .btn-primary:hover {
-    background: linear-gradient(180deg, #ffffff 0%, #dbe4f4 52%, #bcc7dc 100%);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.9),
-      0 0 0 1px rgba(92, 238, 192, 0.35),
-      0 14px 36px -14px rgba(92, 238, 192, 0.65);
+    @apply btn bg-ink text-surface hover:bg-ink/85;
   }
 
   .btn-primary .arrow {
@@ -315,16 +97,11 @@ a {
   }
 
   .btn-ghost {
-    @apply btn metal-edge text-chrome;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  }
-
-  .btn-ghost:hover {
-    color: var(--aurora);
+    @apply btn border border-line text-ink hover:border-ink;
   }
 
   .link-underline {
-    @apply relative inline-flex items-center gap-1 transition-colors hover:text-chrome;
+    @apply relative inline-flex items-center gap-1 transition-colors hover:text-ink;
   }
 
   .link-underline::after {
@@ -337,40 +114,15 @@ a {
   }
 
   .chip {
-    @apply metal-edge inline-flex items-center gap-2 rounded-full px-3 py-1 font-mono text-[11px] tracking-[0.08em] text-chrome-soft;
+    @apply inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium text-ink-muted;
   }
 
-  /* Panels: dark glass with a machined edge and a lit top rail. */
   .card {
-    @apply metal-edge relative overflow-hidden rounded-2xl p-7 transition-all duration-500 ease-editorial;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
-  }
-
-  .card::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 auto 0;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.75),
-      rgba(92, 238, 192, 0.35),
-      transparent
-    );
-    opacity: 0.7;
-    transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    @apply relative overflow-hidden rounded-2xl border border-line bg-surface p-7 transition-all duration-500 ease-editorial;
   }
 
   .card-hover:hover {
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.24),
-      0 20px 50px -26px rgba(92, 238, 192, 0.5);
-    transform: translateY(-2px);
-  }
-
-  .card-hover:hover::before {
-    opacity: 1;
+    @apply -translate-y-0.5 border-ink-muted;
   }
 
   .section {
@@ -382,7 +134,7 @@ a {
   }
 
   .hairline-list > * {
-    @apply border-t border-chrome-hair py-6;
+    @apply border-t border-line py-6;
   }
   .hairline-list > *:first-child {
     @apply border-t-0 pt-0;
@@ -391,9 +143,8 @@ a {
     @apply pb-0;
   }
 
-  /* Index numerals read as instrument readouts. */
   .num-badge {
-    @apply metal-soft font-mono text-[11px] tracking-[0.16em];
+    @apply accent-text text-[13px] font-semibold tabular-nums;
   }
 }
 

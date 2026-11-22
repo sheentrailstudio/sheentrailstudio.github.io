@@ -85,13 +85,13 @@ function MockupSlot({ kind }: { kind: Product["mockup"] }) {
     );
   if (kind === "dose") return <DoseMateMockup />;
   return (
-    <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[380px] overflow-hidden rounded-[38px] border border-dashed border-chrome-hair bg-void">
+    <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[380px] overflow-hidden rounded-[38px] border border-dashed border-line bg-void">
       <div className="flex h-full flex-col items-center justify-center gap-3 p-10 text-center">
         <span className="chip">In planning</span>
-        <p className="font-display text-2xl font-medium text-chrome">
+        <p className="font-display text-2xl font-medium text-ink">
           Echo Card
         </p>
-        <p className="max-w-[220px] font-sans text-xs text-chrome-muted">
+        <p className="max-w-[220px] font-sans text-xs text-ink-muted">
           設計中。
         </p>
       </div>
@@ -107,7 +107,7 @@ export default function ProductsPage() {
         <div className="shell pb-16 sm:pb-24">
           <Reveal>
             <p className="label">Products</p>
-            <h1 className="display-xxl metal-text mt-8 max-w-4xl text-balance">
+            <h1 className="display-xxl mt-8 max-w-4xl text-balance">
               我們的產品
             </h1>
             <p className="mt-10 max-w-2xl text-pretty lede">
@@ -115,8 +115,8 @@ export default function ProductsPage() {
             </p>
           </Reveal>
 
-          <div className="mt-12 flex flex-wrap items-center gap-3 border-t border-chrome-hair pt-6">
-            <span className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-chrome-muted">
+          <div className="mt-12 flex flex-wrap items-center gap-3 border-t border-line pt-6">
+            <span className="font-sans text-[13px] font-medium text-ink-muted">
               Currently shipping
             </span>
             <span className="chip">Dose Mate</span>
@@ -127,7 +127,7 @@ export default function ProductsPage() {
       </section>
 
       {/* PRODUCT ROWS */}
-      <section className="border-t border-chrome-hair">
+      <section className="border-t border-line">
         <div className="shell">
           {products.map((p, i) => {
             const reverse = i % 2 === 1;
@@ -137,25 +137,25 @@ export default function ProductsPage() {
                   <p className="label">{p.label}</p>
                   <h2 className="display-xl mt-7 text-balance">
                     {p.title}
-                    <span className="ml-3 font-sans text-lg font-medium tracking-normal text-chrome-muted">
+                    <span className="ml-3 font-sans text-lg font-medium tracking-normal text-ink-muted">
                       {p.zh}
                     </span>
                   </h2>
-                  <p className="mt-6 font-serif text-2xl text-chrome">
+                  <p className="mt-6 text-2xl text-ink">
                     &ldquo;{p.tagline}&rdquo;
                   </p>
                   <p className="mt-6 max-w-xl body">{p.description}</p>
 
-                  <dl className="mt-10 grid gap-y-4 border-t border-chrome-hair pt-6 sm:grid-cols-2">
+                  <dl className="mt-10 grid gap-y-4 border-t border-line pt-6 sm:grid-cols-2">
                     <div>
                       <dt className="label">Domain</dt>
-                      <dd className="mt-2 font-serif text-base text-chrome">
+                      <dd className="mt-2 text-base text-ink">
                         {p.domain}
                       </dd>
                     </div>
                     <div>
                       <dt className="label">Status</dt>
-                      <dd className="mt-2 font-serif text-base text-chrome">
+                      <dd className="mt-2 text-base text-ink">
                         {statusLabel[p.status]}
                       </dd>
                     </div>
@@ -170,7 +170,7 @@ export default function ProductsPage() {
                     {p.href ? (
                       <Link
                         href={p.href}
-                        className="link-underline font-sans text-sm font-medium text-chrome"
+                        className="link-underline font-sans text-sm font-medium text-ink"
                       >
                         View product details
                         <span aria-hidden>→</span>
@@ -184,7 +184,7 @@ export default function ProductsPage() {
                   className={reverse ? "lg:order-1" : ""}
                 >
                   <div
-                    className={`relative overflow-hidden rounded-3xl border border-chrome-hair bg-gradient-to-br ${p.toneBg} px-6 py-16 sm:px-10`}
+                    className={`relative overflow-hidden rounded-3xl border border-line bg-gradient-to-br ${p.toneBg} px-6 py-16 sm:px-10`}
                   >
                     <MockupSlot kind={p.mockup} />
                   </div>
@@ -195,7 +195,7 @@ export default function ProductsPage() {
             return (
               <div
                 key={p.title}
-                className="border-b border-chrome-hair py-20 last:border-b-0 sm:py-28"
+                className="border-b border-line py-20 last:border-b-0 sm:py-28"
               >
                 {content}
               </div>

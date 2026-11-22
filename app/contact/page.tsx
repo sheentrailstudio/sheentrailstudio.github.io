@@ -38,7 +38,7 @@ export default function ContactPage() {
         <div className="shell grid gap-16 pb-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:pb-24">
           <Reveal>
             <p className="label">Contact</p>
-            <h1 className="display-xxl metal-text mt-8 text-balance">
+            <h1 className="display-xxl mt-8 text-balance">
               先問一個好問題
             </h1>
             <p className="mt-10 max-w-xl text-pretty lede">
@@ -47,18 +47,18 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="rounded-3xl border border-chrome-hair bg-void-soft/70 p-8 sm:p-10">
+            <div className="rounded-3xl border border-line bg-surface-alt p-8 sm:p-10">
               <p className="label">Primary contact</p>
               <a
                 href="mailto:info@sheentrail.com"
-                className="mt-6 inline-flex items-baseline gap-3 font-display text-[32px] font-medium text-chrome underline decoration-chrome-hair decoration-1 underline-offset-[8px] transition-colors hover:decoration-chrome sm:text-4xl"
+                className="mt-6 inline-flex items-baseline gap-3 font-display text-[32px] font-medium text-ink underline decoration-line decoration-1 underline-offset-[8px] transition-colors hover:decoration-chrome sm:text-4xl"
               >
                 info@sheentrail.com
                 <span aria-hidden className="text-xl not-italic">
                   →
                 </span>
               </a>
-              <p className="mt-6 max-w-md font-sans text-sm leading-[1.75] text-chrome-muted">
+              <p className="mt-6 max-w-md font-sans text-sm leading-[1.75] text-ink-muted">
                 1–2 個工作天內回覆。
               </p>
             </div>
@@ -67,25 +67,25 @@ export default function ContactPage() {
       </section>
 
       {/* CHANNELS */}
-      <section className="section-tight border-t border-chrome-hair">
+      <section className="section-tight border-t border-line">
         <div className="shell">
           <Reveal>
             <p className="label">A · Channels</p>
           </Reveal>
-          <div className="mt-10 grid gap-0 border-y border-chrome-hair sm:grid-cols-3">
+          <div className="mt-10 grid gap-0 border-y border-line sm:grid-cols-3">
             {channels.map((c, i) => (
               <Reveal
                 key={c.label}
                 delay={i * 70}
                 className={`p-8 ${
-                  i < channels.length - 1 ? "sm:border-r sm:border-chrome-hair" : ""
-                } ${i < channels.length - 1 ? "border-b border-chrome-hair sm:border-b-0" : ""}`}
+                  i < channels.length - 1 ? "sm:border-r sm:border-line" : ""
+                } ${i < channels.length - 1 ? "border-b border-line sm:border-b-0" : ""}`}
               >
                 <p className="num-badge">0{i + 1}</p>
-                <h3 className="mt-10 font-display text-2xl font-medium text-chrome">
+                <h3 className="mt-10 font-display text-2xl font-medium text-ink">
                   {c.label}
                 </h3>
-                <p className="mt-2 font-sans text-xs font-medium uppercase tracking-[0.22em] text-chrome-muted">
+                <p className="mt-2 font-sans text-[13px] font-medium text-ink-muted">
                   {c.hint}
                 </p>
               </Reveal>
@@ -95,7 +95,7 @@ export default function ContactPage() {
       </section>
 
       {/* WHAT TO EXPECT */}
-      <section className="section border-t border-chrome-hair bg-void-soft/60">
+      <section className="section border-t border-line bg-surface-alt">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -111,19 +111,19 @@ export default function ContactPage() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-y border-chrome-hair sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-0 border-y border-line sm:grid-cols-2 lg:grid-cols-4">
             {expect.map((e, i) => (
               <Reveal
                 key={e.n}
                 delay={i * 70}
                 className={`p-8 ${
-                  i < expect.length - 1 ? "lg:border-r lg:border-chrome-hair" : ""
-                } ${i % 2 === 0 ? "sm:border-r sm:border-chrome-hair" : ""} ${
-                  i < 2 ? "border-b border-chrome-hair sm:border-b lg:border-b-0" : ""
+                  i < expect.length - 1 ? "lg:border-r lg:border-line" : ""
+                } ${i % 2 === 0 ? "sm:border-r sm:border-line" : ""} ${
+                  i < 2 ? "border-b border-line sm:border-b lg:border-b-0" : ""
                 }`}
               >
                 <p className="num-badge">{e.n}</p>
-                <h3 className="mt-10 font-display text-2xl font-medium text-chrome">
+                <h3 className="mt-10 font-display text-2xl font-medium text-ink">
                   {e.t}
                 </h3>
                 <p className="mt-4 body">{e.body}</p>
@@ -134,16 +134,16 @@ export default function ContactPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="section border-t border-chrome-hair bg-void-soft/60">
+      <section className="section border-t border-line bg-surface-alt">
         <div className="shell text-center">
           <Reveal>
-            <p className="label ">Ready when you are</p>
-            <h2 className="display-xxl mx-auto mt-8 max-w-4xl text-balance text-chrome">
+            <p className="label">Ready when you are</p>
+            <h2 className="display-xxl mx-auto mt-8 max-w-4xl text-balance text-ink">
               寄一封信
             </h2>
             <a
               href="mailto:info@sheentrail.com"
-              className="mt-12 inline-flex items-center gap-2 rounded-full bg-void px-6 py-3.5 font-sans text-sm font-medium text-chrome transition-colors hover:bg-star-50"
+              className="mt-12 inline-flex items-center gap-2 rounded-full bg-void px-6 py-3.5 font-sans text-sm font-medium text-ink transition-colors hover:bg-star-50"
             >
               info@sheentrail.com
               <span aria-hidden>→</span>

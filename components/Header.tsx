@@ -25,8 +25,8 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-editorial ${
         scrolled
-          ? "border-b border-chrome-hair bg-void/80 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
+          ? "border-b border-line bg-surface"
+          : "border-b border-transparent bg-surface"
       }`}
     >
       <div className="shell flex h-16 items-center justify-between gap-6">
@@ -44,10 +44,10 @@ export function Header() {
             priority
           />
           <span className="flex items-baseline gap-1.5">
-            <span className="font-display text-[17px] font-semibold leading-none text-chrome">
+            <span className="font-display text-[17px] font-semibold leading-none text-ink">
               Sheen Trail
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-muted">
+            <span className="text-[13px] font-medium text-ink-muted">
               Digital
             </span>
           </span>
@@ -61,7 +61,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-3.5 py-2 font-sans text-[13px] font-medium text-chrome-soft transition-colors hover:text-chrome"
+              className="rounded-full px-3.5 py-2 font-sans text-[13px] font-medium text-ink-muted transition-colors hover:text-ink"
             >
               {item.label}
             </Link>

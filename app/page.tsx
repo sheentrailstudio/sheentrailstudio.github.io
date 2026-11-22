@@ -98,7 +98,7 @@ export default function Home() {
         <div className="shell grid gap-16 pb-20 lg:grid-cols-[1.25fr_0.75fr] lg:items-end lg:pb-32">
           <div className="reveal">
             <p className="label">Sheen Trail Digital · Est. 2025</p>
-            <h1 className="display-xxl metal-text mt-8 text-balance">
+            <h1 className="display-xxl mt-8 text-balance">
               做有溫度的產品
             </h1>
             <p className="mt-10 max-w-2xl text-pretty lede">
@@ -112,35 +112,35 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="reveal reveal-delay-2 border-t border-chrome-hair pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+          <div className="reveal reveal-delay-2 border-t border-line pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
             <p className="label">Brand statement</p>
-            <p className="display-lg metal-text mt-5">
+            <p className="display-lg mt-5">
               隨光同行，<br />
               晨星相伴。
             </p>
-            <dl className="mt-6 grid grid-cols-2 gap-y-5 border-t border-chrome-hair pt-6">
+            <dl className="mt-6 grid grid-cols-2 gap-y-5 border-t border-line pt-6">
               <div>
                 <dt className="label">Focus</dt>
-                <dd className="mt-2 font-display text-lg text-chrome">AI · App · Service</dd>
+                <dd className="mt-2 font-display text-lg text-ink">AI · App · Service</dd>
               </div>
               <div>
                 <dt className="label">Based in</dt>
-                <dd className="mt-2 font-display text-lg text-chrome">Taipei</dd>
+                <dd className="mt-2 font-display text-lg text-ink">Taipei</dd>
               </div>
               <div>
                 <dt className="label">Since</dt>
-                <dd className="mt-2 font-display text-lg text-chrome">2025</dd>
+                <dd className="mt-2 font-display text-lg text-ink">2025</dd>
               </div>
               <div>
                 <dt className="label">Works</dt>
-                <dd className="mt-2 font-display text-lg text-chrome">2 Live · 1 Planned</dd>
+                <dd className="mt-2 font-display text-lg text-ink">2 Live · 1 Planned</dd>
               </div>
             </dl>
           </div>
         </div>
 
         <div className="shell">
-          <div className="flex items-center gap-6 border-y border-chrome-hair py-4 font-mono text-[11px] uppercase tracking-[0.24em] text-chrome-muted">
+          <div className="flex items-center gap-6 border-y border-line py-4 text-[13px] font-medium text-ink-muted">
             <span>Strategy</span>
             <span aria-hidden className="text-[9px] text-star-300">✦</span>
             <span>UX Design</span>
@@ -155,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES — Bento */}
-      <section id="services" className="section scroll-mt-24 border-t border-chrome-hair">
+      <section id="services" className="section scroll-mt-24 border-t border-line">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -193,17 +193,17 @@ export default function Home() {
                       {s.tags.map((t) => (
                         <span
                           key={t}
-                          className="font-mono text-[10px] uppercase tracking-[0.16em] text-chrome-muted"
+                          className="text-[13px] font-medium text-ink-muted"
                         >
                           {t}
                         </span>
                       ))}
                     </div>
                   </div>
-                  <h3 className="mt-12 font-display text-[28px] font-medium leading-tight text-chrome sm:text-[32px]">
+                  <h3 className="mt-12 font-display text-[28px] font-medium leading-tight text-ink sm:text-[32px]">
                     {s.title}
                   </h3>
-                  <p className="mt-2 font-mono text-xs uppercase tracking-[0.22em] text-chrome-muted">
+                  <p className="mt-2 text-[13px] font-medium text-ink-muted">
                     {s.zh}
                   </p>
                   <p className="mt-6 max-w-md body">{s.body}</p>
@@ -215,7 +215,7 @@ export default function Home() {
       </section>
 
       {/* SELECTED WORK */}
-      <section id="work" className="section scroll-mt-24 border-t border-chrome-hair bg-void-soft/60">
+      <section id="work" className="section scroll-mt-24 border-t border-line bg-surface-alt">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -235,17 +235,17 @@ export default function Home() {
             <Reveal>
               <Link
                 href="/products/dosemate"
-                className="group block h-full overflow-hidden rounded-2xl border border-chrome-hair bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-aurora-500/40"
+                className="group block h-full overflow-hidden rounded-2xl border border-line bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-aurora-500/40"
               >
                 <div className="relative overflow-hidden bg-gradient-to-b from-plasma-50/70 to-void px-8 pt-14 pb-10">
                   <DoseMateMockup />
                 </div>
-                <div className="flex items-end justify-between gap-4 border-t border-chrome-hair px-8 py-7">
+                <div className="flex items-end justify-between gap-4 border-t border-line px-8 py-7">
                   <div>
                     <p className="label">Available · iOS · Android</p>
-                    <h3 className="mt-3 font-display text-[28px] font-medium leading-tight text-chrome">
+                    <h3 className="mt-3 font-display text-[28px] font-medium leading-tight text-ink">
                       Dose Mate
-                      <span className="ml-2 font-sans text-sm font-medium text-chrome-muted">
+                      <span className="ml-2 font-sans text-sm font-medium text-ink-muted">
                         新生兒急救指引
                       </span>
                     </h3>
@@ -253,7 +253,7 @@ export default function Home() {
                       劑量計算與急救流程，查得快、能二次確認。
                     </p>
                   </div>
-                  <span className="shrink-0 pb-1 font-mono text-xs tracking-[0.12em] text-chrome-muted transition-colors group-hover:text-aurora-500">
+                  <span className="shrink-0 pb-1 text-[13px] font-medium text-ink-muted transition-colors group-hover:text-aurora-500">
                     View →
                   </span>
                 </div>
@@ -263,19 +263,19 @@ export default function Home() {
             <Reveal delay={120}>
               <Link
                 href="/products/amenjournal"
-                className="group block h-full overflow-hidden rounded-2xl border border-chrome-hair bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-aurora-500/40"
+                className="group block h-full overflow-hidden rounded-2xl border border-line bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-aurora-500/40"
               >
                 <div className="relative overflow-hidden bg-gradient-to-b from-aurora-100/60 to-void px-8 pt-14 pb-10">
                   <div className="mx-auto w-full max-w-[380px]">
                     <AmenScreenshot n={2} />
                   </div>
                 </div>
-                <div className="flex items-end justify-between gap-4 border-t border-chrome-hair px-8 py-7">
+                <div className="flex items-end justify-between gap-4 border-t border-line px-8 py-7">
                   <div>
                     <p className="label">Available · iOS</p>
-                    <h3 className="mt-3 font-display text-[28px] font-medium leading-tight text-chrome">
+                    <h3 className="mt-3 font-display text-[28px] font-medium leading-tight text-ink">
                       Amen Journal
-                      <span className="ml-2 font-sans text-sm font-medium text-chrome-muted">
+                      <span className="ml-2 font-sans text-sm font-medium text-ink-muted">
                         阿們日記
                       </span>
                     </h3>
@@ -283,7 +283,7 @@ export default function Home() {
                       用說的禱告日記——語音、文字、照片都能留下，依標籤串成軌跡。
                     </p>
                   </div>
-                  <span className="shrink-0 pb-1 font-mono text-xs tracking-[0.12em] text-chrome-muted transition-colors group-hover:text-aurora-500">
+                  <span className="shrink-0 pb-1 text-[13px] font-medium text-ink-muted transition-colors group-hover:text-aurora-500">
                     View →
                   </span>
                 </div>
@@ -292,10 +292,10 @@ export default function Home() {
           </div>
 
           <Reveal delay={200} className="mt-6">
-            <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-dashed border-chrome-hair bg-void/60 p-8 sm:flex-row sm:items-center">
+            <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-dashed border-line bg-void/60 p-8 sm:flex-row sm:items-center">
               <div>
                 <p className="label">In planning</p>
-                <h3 className="mt-3 font-display text-2xl font-medium text-chrome">
+                <h3 className="mt-3 font-display text-2xl font-medium text-ink">
                   Echo Card · 回聲祝福小卡
                 </h3>
                 <p className="mt-2 max-w-xl body">
@@ -309,7 +309,7 @@ export default function Home() {
       </section>
 
       {/* PROCESS */}
-      <section id="process" className="section scroll-mt-24 border-t border-chrome-hair">
+      <section id="process" className="section scroll-mt-24 border-t border-line">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -325,20 +325,20 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-t border-chrome-hair sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-0 border-t border-line sm:grid-cols-2 lg:grid-cols-4">
             {process.map((p, i) => (
               <Reveal
                 key={p.n}
                 delay={i * 80}
-                className={`border-chrome-hair p-8 sm:border-b lg:border-r lg:border-b-0 ${
+                className={`border-line p-8 sm:border-b lg:border-r lg:border-b-0 ${
                   i === 3 ? "lg:border-r-0" : ""
                 } ${i < 2 ? "" : "sm:border-b-0"}`}
               >
                 <p className="num-badge">{p.n}</p>
-                <h3 className="mt-10 font-display text-[28px] font-medium leading-tight text-chrome">
+                <h3 className="mt-10 font-display text-[28px] font-medium leading-tight text-ink">
                   {p.t}
                 </h3>
-                <p className="mt-1 font-mono text-xs uppercase tracking-[0.22em] text-chrome-muted">
+                <p className="mt-1 text-[13px] font-medium text-ink-muted">
                   {p.zh}
                 </p>
                 <p className="mt-6 body">{p.body}</p>
@@ -349,11 +349,11 @@ export default function Home() {
       </section>
 
       {/* VALUES */}
-      <section className="section border-t border-chrome-hair bg-void-soft/60">
+      <section className="section border-t border-line bg-surface-alt">
         <div className="shell grid gap-12 lg:grid-cols-[0.5fr_1fr]">
           <Reveal>
             <p className="label">E · Values</p>
-            <h2 className="display-xl metal-text mt-7">
+            <h2 className="display-xl mt-7">
               我們在意的事
             </h2>
           </Reveal>
@@ -368,11 +368,11 @@ export default function Home() {
                     <span className="num-badge">
                       0{i + 1}
                     </span>
-                    <span className="font-display text-2xl font-medium text-chrome">
+                    <span className="font-display text-2xl font-medium text-ink">
                       {v.k}
                     </span>
                   </div>
-                  <p className="max-w-xl font-sans text-[15px] leading-[1.75] text-chrome-soft">
+                  <p className="max-w-xl font-sans text-[15px] leading-[1.75] text-ink-muted">
                     {v.v}
                   </p>
                 </li>
@@ -383,17 +383,17 @@ export default function Home() {
       </section>
 
       {/* ANNOUNCEMENTS */}
-      <section id="announcements" className="section scroll-mt-24 border-t border-chrome-hair">
+      <section id="announcements" className="section scroll-mt-24 border-t border-line">
         <div className="shell">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal>
               <p className="label">Recent</p>
-              <h2 className="display-xl metal-text mt-7">最近公告</h2>
+              <h2 className="display-xl mt-7">最近公告</h2>
             </Reveal>
             <Reveal delay={80}>
               <Link
                 href="/announcements"
-                className="link-underline font-mono text-[12px] uppercase tracking-[0.16em] text-aurora-500"
+                className="link-underline text-[13px] font-medium text-aurora-500"
               >
                 All announcements
                 <span aria-hidden>→</span>

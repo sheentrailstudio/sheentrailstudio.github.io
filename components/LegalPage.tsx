@@ -12,7 +12,7 @@ function Inline({ text }: { text: string }) {
     <>
       {text.split("**").map((part, i) =>
         i % 2 === 1 ? (
-          <strong key={i} className="font-semibold text-chrome">
+          <strong key={i} className="font-semibold text-ink">
             {part}
           </strong>
         ) : (
@@ -33,13 +33,13 @@ function Block({ block }: { block: LegalBlock }) {
       );
     case "note":
       return (
-        <p className="border-l-2 border-aurora-500 pl-5 body">
+        <p className="border-l-2 border-gold pl-5 body">
           <Inline text={block.text} />
         </p>
       );
     case "list":
       return (
-        <ul className="list-disc space-y-3 pl-5 marker:text-chrome-muted">
+        <ul className="list-disc space-y-3 pl-5 marker:text-ink-muted">
           {block.items.map((item) => (
             <li key={item} className="body">
               <Inline text={item} />
@@ -56,7 +56,7 @@ function Block({ block }: { block: LegalBlock }) {
                 {block.head.map((cell) => (
                   <th
                     key={cell}
-                    className="border-b border-chrome-hair py-3 pr-6 font-mono text-[11px] uppercase tracking-[0.18em] text-chrome-muted"
+                    className="border-b border-line py-3 pr-6 text-[13px] font-medium text-ink-muted"
                   >
                     {cell}
                   </th>
@@ -69,7 +69,7 @@ function Block({ block }: { block: LegalBlock }) {
                   {row.map((cell) => (
                     <td
                       key={cell}
-                      className="border-b border-chrome-hair py-3 pr-6 align-top body"
+                      className="border-b border-line py-3 pr-6 align-top body"
                     >
                       <Inline text={cell} />
                     </td>
@@ -89,13 +89,13 @@ export function LegalPage({ product, doc, sibling }: LegalPageProps) {
       <section className="relative pt-28 sm:pt-36">
         <div className="shell pb-12 sm:pb-16">
           <p className="label">{product}</p>
-          <h1 className="display-xl metal-text mt-8 max-w-4xl text-balance">
+          <h1 className="display-xl mt-8 max-w-4xl text-balance">
             {doc.title}
           </h1>
         </div>
       </section>
 
-      <section className="border-t border-chrome-hair">
+      <section className="border-t border-line">
         <div className="shell max-w-3xl space-y-12 py-16 sm:py-20">
           {doc.intro.length > 0 && (
             <div className="space-y-5">
@@ -107,7 +107,7 @@ export function LegalPage({ product, doc, sibling }: LegalPageProps) {
 
           {doc.sections.map((section, i) => (
             <div key={section.title} className="space-y-5">
-              <h2 className="display-md text-chrome">
+              <h2 className="display-md text-ink">
                 {i + 1}. {section.title}
               </h2>
               {section.blocks.map((block, j) => (
@@ -116,16 +116,16 @@ export function LegalPage({ product, doc, sibling }: LegalPageProps) {
             </div>
           ))}
 
-          <div className="flex flex-wrap gap-6 border-t border-chrome-hair pt-10">
+          <div className="flex flex-wrap gap-6 border-t border-line pt-10">
             <Link
               href={sibling.href}
-              className="font-sans text-sm text-chrome-soft underline decoration-chrome-hair decoration-1 underline-offset-[6px] transition-colors hover:text-aurora-500"
+              className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
             >
               {sibling.label} →
             </Link>
             <Link
               href="/products/amenjournal"
-              className="font-sans text-sm text-chrome-soft underline decoration-chrome-hair decoration-1 underline-offset-[6px] transition-colors hover:text-aurora-500"
+              className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
             >
               回到 Amen Journal →
             </Link>

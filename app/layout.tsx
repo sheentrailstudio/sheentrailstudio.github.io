@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Fraunces,
-  Inter,
-  JetBrains_Mono,
-  Noto_Sans_TC,
-  Noto_Serif_TC,
-  Space_Grotesk,
-} from "next/font/google";
+import { Albert_Sans, Noto_Sans_TC } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import {
@@ -18,44 +11,17 @@ import {
 } from "@/lib/seo";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const albertSans = Albert_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-serif",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-display",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500"],
-  variable: "--font-mono",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600"],
   variable: "--font-sans",
 });
 
 const notoSansTC = Noto_Sans_TC({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans-tc",
-});
-
-const notoSerifTC = Noto_Serif_TC({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600"],
-  variable: "--font-serif-tc",
 });
 
 export const metadata: Metadata = {
@@ -104,14 +70,11 @@ export default function RootLayout({
   return (
     <html
       lang="zh-TW"
-      className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} ${fraunces.variable} ${inter.variable} ${notoSansTC.variable} ${notoSerifTC.variable}`}
+      className={`${albertSans.variable} ${notoSansTC.variable}`}
     >
-      <body className="relative">
-        <div aria-hidden className="sky-neb" />
-        <div aria-hidden className="sky" />
-        <div aria-hidden className="sky-glow" />
+      <body>
         <Header />
-        <div className="relative z-10">{children}</div>
+        {children}
         <Footer />
       </body>
     </html>
