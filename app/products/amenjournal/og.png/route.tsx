@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { CHROME, STAR, starryImage } from "@/lib/og";
+import { GOLD_TEXT, INK, LINE, shareImage } from "@/lib/og";
 
 /* Share preview for /products/amenjournal/. See lib/og for the font. */
 export const dynamic = "force-static";
@@ -10,7 +10,7 @@ export async function GET() {
     join(process.cwd(), "app/products/amenjournal/og.png/screenshot-02.jpg"),
   );
 
-  return starryImage([
+  return shareImage([
     <div
       key="text"
       style={{
@@ -20,8 +20,8 @@ export async function GET() {
         paddingLeft: 96,
       }}
     >
-      <div style={{ fontSize: 132, lineHeight: 1.06, color: CHROME }}>阿們日記</div>
-      <div style={{ marginTop: 32, fontSize: 48, lineHeight: 1.3, color: STAR }}>
+      <div style={{ fontSize: 132, lineHeight: 1.06, color: INK }}>阿們日記</div>
+      <div style={{ marginTop: 32, fontSize: 48, lineHeight: 1.3, color: GOLD_TEXT }}>
         用說的禱告日記
       </div>
     </div>,
@@ -35,7 +35,8 @@ export async function GET() {
         right: 112,
         top: 56,
         borderRadius: 36,
-        border: "1px solid rgba(233,237,246,0.14)",
+        border: `1px solid ${LINE}`,
+        boxShadow: "0 8px 24px rgba(22,24,29,0.12)",
       }}
     />,
   ]);
