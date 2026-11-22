@@ -40,11 +40,6 @@ a {
     @apply h-px w-full bg-line;
   }
 
-  /* Small signals in gold (numerals, status). */
-  .accent-text {
-    color: theme("colors.gold-text");
-  }
-
   .label {
     @apply inline-flex items-center gap-2 text-sm font-medium text-ink-muted;
   }
@@ -145,6 +140,13 @@ a {
 
   .num-badge {
     @apply accent-text text-[13px] font-semibold tabular-nums;
+  }
+}
+
+@layer utilities {
+  /* Gold for small text signals (numerals, status). Plain `gold` is for lines only. */
+  .accent-text {
+    color: theme("colors.gold-text");
   }
 }
 

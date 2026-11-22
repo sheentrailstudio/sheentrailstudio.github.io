@@ -137,14 +137,6 @@ export default function DoseMatePage() {
     <main>
       {/* HERO */}
       <section className="relative overflow-hidden pt-28 sm:pt-36">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{
-            background:
-              "radial-gradient(55% 45% at 85% 15%, rgba(58,122,134,0.12), transparent 60%), radial-gradient(45% 40% at 10% 85%, rgba(16,19,15,0.04), transparent 60%)",
-          }}
-        />
         <div className="shell grid gap-16 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-32">
           <Reveal>
             <p className="label">新生兒急救指引 · Dose Mate</p>
@@ -159,19 +151,19 @@ export default function DoseMatePage() {
             <dl className="mt-10 grid grid-cols-3 gap-8 border-t border-line pt-8">
               <div>
                 <dt className="label">Platform</dt>
-                <dd className="mt-2 text-lg text-ink">iOS · Android</dd>
+                <dd className="mt-2 text-lg font-medium text-ink">iOS · Android</dd>
               </div>
               <div>
                 <dt className="label">For</dt>
-                <dd className="mt-2 text-lg text-ink">Clinicians</dd>
+                <dd className="mt-2 text-lg font-medium text-ink">Clinicians</dd>
               </div>
               <div>
                 <dt className="label">Status</dt>
-                <dd className="mt-2 text-lg text-ink">Available</dd>
+                <dd className="mt-2 text-lg font-medium text-ink">Available</dd>
               </div>
             </dl>
-            <div className="mt-8 flex items-start gap-3 rounded-2xl border border-star-300/40 bg-star-50/60 p-4">
-              <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-star-500 text-[13px] text-ink">
+            <div className="mt-8 flex items-start gap-3 rounded-2xl border border-gold bg-surface-alt p-4">
+              <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-ink text-[13px] font-semibold text-surface">
                 !
               </span>
               <p className="font-sans text-[13px] leading-[1.65] text-ink-muted">
@@ -190,7 +182,7 @@ export default function DoseMatePage() {
       {/* CONTEXT IMAGE */}
       <section className="border-t border-line">
         <div className="shell py-12">
-          <div className="relative h-[36vh] min-h-[280px] w-full overflow-hidden rounded-2xl border border-line bg-void-soft">
+          <div className="relative h-[36vh] min-h-[280px] w-full overflow-hidden rounded-2xl border border-line bg-surface-alt">
             <Image
               src="/dose-mate-context-v4.png"
               alt="Clinical workspace"
@@ -198,8 +190,7 @@ export default function DoseMatePage() {
               className="object-cover"
               sizes="(min-width: 1024px) 1200px, 100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-chrome/30 via-transparent to-chrome/10" />
-            <div className="absolute bottom-6 left-6 max-w-lg text-2xl text-void sm:text-3xl">
+            <div className="absolute bottom-6 left-6 right-6 max-w-lg rounded-lg bg-surface px-5 py-4 text-2xl font-medium text-ink sm:right-auto sm:text-3xl">
               把資訊整理得更快、更容易確認。
               <span className="mt-2 block font-sans text-xs not-tracking-[0.22em] text-ink-muted">
                 Designed for clinical support
@@ -300,7 +291,7 @@ export default function DoseMatePage() {
             {useCases.map((u, i) => (
               <Reveal as="li" key={u.title} delay={i * 60}>
                 <div className="grid items-baseline gap-4 sm:grid-cols-[180px_1fr] sm:gap-10">
-                  <span className="font-sans text-[13px] font-medium text-plasma-500">
+                  <span className="font-sans text-[13px] font-medium accent-text">
                     {u.time}
                   </span>
                   <div>
@@ -333,12 +324,12 @@ export default function DoseMatePage() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-t border-void/15 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-0 border-t border-line sm:grid-cols-2 lg:grid-cols-3">
             {features.map((f, i) => (
               <Reveal
                 key={f.title}
                 delay={i * 60}
-                className={`border-void/15 p-8 ${
+                className={`border-line p-8 ${
                   i % 3 !== 2 ? "lg:border-r" : ""
                 } ${i % 2 === 0 ? "sm:border-r" : ""} ${
                   i < features.length - (i % 3 === 2 ? 1 : 0)
@@ -346,7 +337,7 @@ export default function DoseMatePage() {
                     : ""
                 }`}
               >
-                <p className="num-badge !text-void/55">0{i + 1}</p>
+                <p className="num-badge">0{i + 1}</p>
                 <h3 className="mt-10 font-display text-2xl font-medium text-ink">
                   {f.title}
                 </h3>
@@ -360,10 +351,10 @@ export default function DoseMatePage() {
       </section>
 
       {/* DISCLAIMER */}
-      <section className="section-tight border-t border-line bg-void">
+      <section className="section-tight border-t border-line bg-surface">
         <div className="shell">
-          <div className="rounded-2xl border border-star-300/50 bg-star-50/60 p-8 sm:p-10">
-            <p className="label !text-star-600">Boundaries</p>
+          <div className="rounded-2xl border border-gold bg-surface-alt p-8 sm:p-10">
+            <p className="label accent-text">Boundaries</p>
             <h3 className="mt-6 font-display text-2xl font-medium text-ink sm:text-3xl">
               新生兒急救指引 是輔助工具，不是醫療判斷的替代品。
             </h3>

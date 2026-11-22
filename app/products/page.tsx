@@ -21,7 +21,6 @@ type Product = {
   description: string;
   status: "available" | "soon";
   domain: string;
-  toneBg: string;
   mockup: "amen" | "dose" | "echo";
   ios?: string;
   android?: string;
@@ -43,7 +42,6 @@ const products: Product[] = [
       "劑量、換算、急救流程與常用公式，查得快、能二次確認。",
     status: "available",
     domain: "Medical · Clinical Support",
-    toneBg: "from-plasma-50 via-void to-void-soft",
     mockup: "dose",
     ios: "https://apps.apple.com/tw/app/id6755082556",
     android: "https://play.google.com/store/apps/details?id=com.sheentrail.dosemate",
@@ -58,7 +56,6 @@ const products: Product[] = [
       "用說的、寫的、拍的記錄禱告，同一件事的禱告串成軌跡。",
     status: "available",
     domain: "Devotional · Spiritual Care",
-    toneBg: "from-star-50 via-void to-aurora-50",
     mockup: "amen",
     ios: "https://apps.apple.com/tw/app/id6804240377",
   },
@@ -71,7 +68,6 @@ const products: Product[] = [
       "把一句有溫度的話，做成能傳出去的小卡。規劃中。",
     status: "soon",
     domain: "Social · Relationship",
-    toneBg: "from-void-soft via-void to-star-50",
     mockup: "echo",
   },
 ];
@@ -85,7 +81,7 @@ function MockupSlot({ kind }: { kind: Product["mockup"] }) {
     );
   if (kind === "dose") return <DoseMateMockup />;
   return (
-    <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[380px] overflow-hidden rounded-[38px] border border-dashed border-line bg-void">
+    <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[380px] overflow-hidden rounded-[38px] border border-dashed border-line bg-surface">
       <div className="flex h-full flex-col items-center justify-center gap-3 p-10 text-center">
         <span className="chip">In planning</span>
         <p className="font-display text-2xl font-medium text-ink">
@@ -141,7 +137,7 @@ export default function ProductsPage() {
                       {p.zh}
                     </span>
                   </h2>
-                  <p className="mt-6 text-2xl text-ink">
+                  <p className="mt-6 text-2xl font-medium text-ink">
                     &ldquo;{p.tagline}&rdquo;
                   </p>
                   <p className="mt-6 max-w-xl body">{p.description}</p>
@@ -149,13 +145,13 @@ export default function ProductsPage() {
                   <dl className="mt-10 grid gap-y-4 border-t border-line pt-6 sm:grid-cols-2">
                     <div>
                       <dt className="label">Domain</dt>
-                      <dd className="mt-2 text-base text-ink">
+                      <dd className="mt-2 text-base font-medium text-ink">
                         {p.domain}
                       </dd>
                     </div>
                     <div>
                       <dt className="label">Status</dt>
-                      <dd className="mt-2 text-base text-ink">
+                      <dd className="mt-2 text-base font-medium text-ink">
                         {statusLabel[p.status]}
                       </dd>
                     </div>
@@ -184,7 +180,7 @@ export default function ProductsPage() {
                   className={reverse ? "lg:order-1" : ""}
                 >
                   <div
-                    className={`relative overflow-hidden rounded-3xl border border-line bg-gradient-to-br ${p.toneBg} px-6 py-16 sm:px-10`}
+                    className="relative overflow-hidden rounded-3xl border border-line bg-surface-alt px-6 py-16 sm:px-10"
                   >
                     <MockupSlot kind={p.mockup} />
                   </div>

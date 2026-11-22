@@ -51,7 +51,7 @@ export default function ContactPage() {
               <p className="label">Primary contact</p>
               <a
                 href="mailto:info@sheentrail.com"
-                className="mt-6 inline-flex items-baseline gap-3 font-display text-[32px] font-medium text-ink underline decoration-line decoration-1 underline-offset-[8px] transition-colors hover:decoration-chrome sm:text-4xl"
+                className="mt-6 inline-flex items-baseline gap-3 font-display text-[32px] font-medium text-ink underline decoration-gold decoration-[1.5px] underline-offset-[8px] transition-colors hover:decoration-ink sm:text-4xl"
               >
                 info@sheentrail.com
                 <span aria-hidden className="text-xl not-italic">
@@ -143,7 +143,7 @@ export default function ContactPage() {
             </h2>
             <a
               href="mailto:info@sheentrail.com"
-              className="mt-12 inline-flex items-center gap-2 rounded-full bg-void px-6 py-3.5 font-sans text-sm font-medium text-ink transition-colors hover:bg-star-50"
+              className="mt-12 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 font-sans text-sm font-semibold text-surface transition-colors hover:bg-ink/85"
             >
               info@sheentrail.com
               <span aria-hidden>→</span>

@@ -161,14 +161,6 @@ export default function AmenJournalPage() {
     <main>
       {/* HERO */}
       <section className="relative overflow-hidden pt-28 sm:pt-36">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{
-            background:
-              "radial-gradient(55% 45% at 85% 15%, rgba(179,90,38,0.1), transparent 60%), radial-gradient(45% 40% at 10% 85%, rgba(38,68,51,0.08), transparent 60%)",
-          }}
-        />
         <div className="shell grid gap-16 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-32">
           <Reveal>
             <p className="label">Amen Journal · 阿們日記</p>
@@ -187,15 +179,15 @@ export default function AmenJournalPage() {
             <dl className="mt-10 grid grid-cols-3 gap-8 border-t border-line pt-8">
               <div>
                 <dt className="label">Platform</dt>
-                <dd className="mt-2 text-lg text-ink">iOS</dd>
+                <dd className="mt-2 text-lg font-medium text-ink">iOS</dd>
               </div>
               <div>
                 <dt className="label">For</dt>
-                <dd className="mt-2 text-lg text-ink">Believers</dd>
+                <dd className="mt-2 text-lg font-medium text-ink">Believers</dd>
               </div>
               <div>
                 <dt className="label">Status</dt>
-                <dd className="mt-2 text-lg text-ink">Available</dd>
+                <dd className="mt-2 text-lg font-medium text-ink">Available</dd>
               </div>
             </dl>
           </Reveal>
@@ -267,7 +259,7 @@ export default function AmenJournalPage() {
               {inputs.map((r, i) => (
                 <Reveal as="li" key={r.kicker} delay={i * 60}>
                   <div className="grid items-baseline gap-3 sm:grid-cols-[110px_1fr] sm:gap-8">
-                    <span className="font-display text-2xl font-medium text-star-500">
+                    <span className="font-display text-2xl font-medium accent-text">
                       {r.kicker}
                     </span>
                     <div>
@@ -317,7 +309,7 @@ export default function AmenJournalPage() {
               {trail.map((r, i) => (
                 <Reveal as="li" key={r.kicker} delay={i * 60}>
                   <div className="grid items-baseline gap-3 sm:grid-cols-[110px_1fr] sm:gap-8">
-                    <span className="font-display text-2xl font-medium text-star-500">
+                    <span className="font-display text-2xl font-medium accent-text">
                       {r.kicker}
                     </span>
                     <div>
@@ -363,7 +355,7 @@ export default function AmenJournalPage() {
               {review.map((r, i) => (
                 <Reveal as="li" key={r.kicker} delay={i * 60}>
                   <div className="grid items-baseline gap-3 sm:grid-cols-[110px_1fr] sm:gap-8">
-                    <span className="font-display text-2xl font-medium text-star-500">
+                    <span className="font-display text-2xl font-medium accent-text">
                       {r.kicker}
                     </span>
                     <div>
@@ -420,7 +412,7 @@ export default function AmenJournalPage() {
             <p className="mt-10">
               <Link
                 href="/products/amenjournal/privacy"
-                className="font-sans text-sm text-ink-muted underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+                className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
               >
                 完整的隱私權政策 →
               </Link>
@@ -513,19 +505,19 @@ export default function AmenJournalPage() {
             <div className="flex flex-col items-start gap-5 lg:items-end">
               <Link
                 href="/products/amenjournal/privacy"
-                className="font-sans text-sm text-ink-muted underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+                className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
               >
                 隱私權政策 →
               </Link>
               <Link
                 href="/products/amenjournal/terms"
-                className="font-sans text-sm text-ink-muted underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+                className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
               >
                 使用條款 →
               </Link>
               <Link
                 href="/products"
-                className="font-sans text-sm text-ink-muted underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+                className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
               >
                 查看其他產品 →
               </Link>

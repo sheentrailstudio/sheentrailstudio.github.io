@@ -87,14 +87,6 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="relative overflow-hidden pt-28 sm:pt-36">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{
-            background:
-              "radial-gradient(58% 46% at 78% 6%, rgba(92,238,192,0.14), transparent 62%), radial-gradient(48% 38% at 8% 92%, rgba(79,208,232,0.12), transparent 62%)",
-          }}
-        />
         <div className="shell grid gap-16 pb-20 lg:grid-cols-[1.25fr_0.75fr] lg:items-end lg:pb-32">
           <div className="reveal">
             <p className="label">Sheen Trail Digital · Est. 2025</p>
@@ -142,13 +134,13 @@ export default function Home() {
         <div className="shell">
           <div className="flex items-center gap-6 border-y border-line py-4 text-[13px] font-medium text-ink-muted">
             <span>Strategy</span>
-            <span aria-hidden className="text-[9px] text-star-300">✦</span>
+            <span aria-hidden className="text-[9px] accent-text">✦</span>
             <span>UX Design</span>
-            <span aria-hidden className="text-[9px] text-star-300">✦</span>
+            <span aria-hidden className="text-[9px] accent-text">✦</span>
             <span>AI Integration</span>
-            <span aria-hidden className="text-[9px] text-star-300">✦</span>
+            <span aria-hidden className="text-[9px] accent-text">✦</span>
             <span className="hidden sm:inline">App &amp; Service Build</span>
-            <span aria-hidden className="hidden sm:inline text-[9px] text-star-300">✦</span>
+            <span aria-hidden className="hidden sm:inline text-[9px] accent-text">✦</span>
             <span className="hidden md:inline">Long-term Iteration</span>
           </div>
         </div>
@@ -235,9 +227,9 @@ export default function Home() {
             <Reveal>
               <Link
                 href="/products/dosemate"
-                className="group block h-full overflow-hidden rounded-2xl border border-line bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-aurora-500/40"
+                className="group block h-full overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-ink-muted"
               >
-                <div className="relative overflow-hidden bg-gradient-to-b from-plasma-50/70 to-void px-8 pt-14 pb-10">
+                <div className="relative overflow-hidden bg-surface-alt px-8 pt-14 pb-10">
                   <DoseMateMockup />
                 </div>
                 <div className="flex items-end justify-between gap-4 border-t border-line px-8 py-7">
@@ -253,7 +245,7 @@ export default function Home() {
                       劑量計算與急救流程，查得快、能二次確認。
                     </p>
                   </div>
-                  <span className="shrink-0 pb-1 text-[13px] font-medium text-ink-muted transition-colors group-hover:text-aurora-500">
+                  <span className="shrink-0 pb-1 text-[13px] font-medium text-ink-muted transition-colors group-hover:text-ink">
                     View →
                   </span>
                 </div>
@@ -263,9 +255,9 @@ export default function Home() {
             <Reveal delay={120}>
               <Link
                 href="/products/amenjournal"
-                className="group block h-full overflow-hidden rounded-2xl border border-line bg-void-soft/40 transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-aurora-500/40"
+                className="group block h-full overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-500 ease-editorial hover:-translate-y-0.5 hover:border-ink-muted"
               >
-                <div className="relative overflow-hidden bg-gradient-to-b from-aurora-100/60 to-void px-8 pt-14 pb-10">
+                <div className="relative overflow-hidden bg-surface-alt px-8 pt-14 pb-10">
                   <div className="mx-auto w-full max-w-[380px]">
                     <AmenScreenshot n={2} />
                   </div>
@@ -283,7 +275,7 @@ export default function Home() {
                       用說的禱告日記——語音、文字、照片都能留下，依標籤串成軌跡。
                     </p>
                   </div>
-                  <span className="shrink-0 pb-1 text-[13px] font-medium text-ink-muted transition-colors group-hover:text-aurora-500">
+                  <span className="shrink-0 pb-1 text-[13px] font-medium text-ink-muted transition-colors group-hover:text-ink">
                     View →
                   </span>
                 </div>
@@ -292,7 +284,7 @@ export default function Home() {
           </div>
 
           <Reveal delay={200} className="mt-6">
-            <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-dashed border-line bg-void/60 p-8 sm:flex-row sm:items-center">
+            <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-dashed border-line bg-surface p-8 sm:flex-row sm:items-center">
               <div>
                 <p className="label">In planning</p>
                 <h3 className="mt-3 font-display text-2xl font-medium text-ink">
@@ -393,7 +385,7 @@ export default function Home() {
             <Reveal delay={80}>
               <Link
                 href="/announcements"
-                className="link-underline text-[13px] font-medium text-aurora-500"
+                className="link-underline text-sm font-semibold text-ink"
               >
                 All announcements
                 <span aria-hidden>→</span>

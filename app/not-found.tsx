@@ -18,14 +18,6 @@ export default function NotFound() {
   return (
     <main>
       <section className="relative overflow-hidden pt-28 sm:pt-36">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{
-            background:
-              "radial-gradient(55% 45% at 78% 8%, rgba(92,238,192,0.12), transparent 62%), radial-gradient(45% 38% at 8% 88%, rgba(79,208,232,0.1), transparent 62%)",
-          }}
-        />
         <div className="shell pb-24 sm:pb-32">
           <p className="label">Error 404</p>
           <h1 className="display-xxl mt-8 max-w-3xl text-balance">
