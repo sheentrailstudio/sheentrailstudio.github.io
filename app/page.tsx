@@ -385,7 +385,7 @@ export default function Home() {
             <Reveal delay={80}>
               <Link
                 href="/announcements"
-                className="link-underline text-sm font-semibold text-ink"
+                className="link-underline text-sm font-medium text-ink"
               >
                 All announcements
                 <span aria-hidden>→</span>

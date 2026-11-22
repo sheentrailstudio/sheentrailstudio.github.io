@@ -45,11 +45,11 @@ a {
   }
 
   .display-xxl {
-    @apply font-display font-bold tracking-display text-[clamp(2.6rem,6vw,5.25rem)] leading-[1.1];
+    @apply font-display font-semibold tracking-display text-[clamp(2.6rem,6vw,5.25rem)] leading-[1.06];
   }
 
   .display-xl {
-    @apply font-display font-bold tracking-display text-[clamp(1.9rem,3.4vw,3rem)] leading-[1.2];
+    @apply font-display font-semibold tracking-display text-[clamp(1.9rem,3.4vw,3rem)] leading-[1.18];
   }
 
   .display-lg {
@@ -76,7 +76,7 @@ a {
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 font-sans text-sm font-semibold transition-colors duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-sans text-sm font-medium transition-colors duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
   }
 
   .btn-primary {

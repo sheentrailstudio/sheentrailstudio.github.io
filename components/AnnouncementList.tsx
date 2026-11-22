@@ -52,7 +52,7 @@ export function AnnouncementList({
               {item.link ? (
                 <Link
                   href={item.link.href}
-                  className="link-underline mt-6 text-sm font-semibold text-ink"
+                  className="link-underline mt-6 text-sm font-medium text-ink"
                 >
                   {item.link.label}
                   <span aria-hidden>→</span>

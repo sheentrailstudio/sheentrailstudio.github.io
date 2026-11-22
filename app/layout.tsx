@@ -20,7 +20,7 @@ const albertSans = Albert_Sans({
 const notoSansTC = Noto_Sans_TC({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   variable: "--font-sans-tc",
 });
 
