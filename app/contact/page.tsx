@@ -51,7 +51,7 @@ export default function ContactPage() {
               <p className="label">Primary contact</p>
               <a
                 href="mailto:info@sheentrail.com"
-                className="mt-6 inline-flex items-baseline gap-3 font-display text-[32px] font-medium text-ink underline decoration-gold decoration-[1.5px] underline-offset-[8px] transition-colors hover:decoration-ink sm:text-4xl"
+                className="mt-6 inline-flex items-baseline gap-3 font-display text-2xl font-medium text-ink underline decoration-gold decoration-[1.5px] underline-offset-[8px] transition-colors hover:decoration-ink sm:text-4xl"
               >
                 info@sheentrail.com
                 <span aria-hidden className="text-xl not-italic">
