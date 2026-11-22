@@ -17,25 +17,17 @@ const destinations = [
 export default function NotFound() {
   return (
     <main>
-      <section className="relative overflow-hidden pt-28 sm:pt-36">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{
-            background:
-              "radial-gradient(55% 45% at 78% 8%, rgba(92,238,192,0.12), transparent 62%), radial-gradient(45% 38% at 8% 88%, rgba(79,208,232,0.1), transparent 62%)",
-          }}
-        />
+      <section className="pt-28 sm:pt-36">
         <div className="shell pb-24 sm:pb-32">
           <p className="label">Error 404</p>
-          <h1 className="display-xxl metal-text mt-8 max-w-3xl text-balance">
+          <h1 className="display-xxl mt-8 max-w-3xl text-balance">
             找不到這一頁
           </h1>
           <p className="mt-10 max-w-2xl text-pretty lede">
             這個網址不存在，或內容已經搬走了。
           </p>
 
-          <ul className="hairline-list mt-14 max-w-2xl border-t border-chrome-hair pt-10">
+          <ul className="hairline-list mt-14 max-w-2xl border-t border-line pt-10">
             {destinations.map((d) => (
               <li key={d.href}>
                 <Link
@@ -43,12 +35,12 @@ export default function NotFound() {
                   className="group flex items-baseline justify-between gap-6"
                 >
                   <span className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-5">
-                    <span className="font-display text-2xl font-medium text-chrome">
+                    <span className="font-display text-2xl font-medium text-ink">
                       {d.en}
                     </span>
                     <span className="body">{d.zh}</span>
                   </span>
-                  <span className="shrink-0 font-mono text-xs tracking-[0.12em] text-chrome-muted transition-colors group-hover:text-chrome">
+                  <span className="shrink-0 meta transition-colors group-hover:text-ink">
                     →
                   </span>
                 </Link>

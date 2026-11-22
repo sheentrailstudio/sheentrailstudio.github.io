@@ -66,7 +66,7 @@ export default function AboutPage() {
         <div className="shell pb-16 sm:pb-24">
           <Reveal>
             <p className="label">About · Sheen Trail Digital</p>
-            <h1 className="display-xxl metal-text mt-8 max-w-4xl text-balance">
+            <h1 className="display-xxl mt-8 max-w-4xl text-balance">
               行晨工作室
             </h1>
             <p className="mt-10 max-w-2xl text-pretty lede">
@@ -77,13 +77,13 @@ export default function AboutPage() {
       </section>
 
       {/* NARRATIVE */}
-      <section className="section border-t border-chrome-hair">
+      <section className="section border-t border-line">
         <div className="shell grid gap-14 lg:grid-cols-[0.4fr_1fr]">
           <Reveal>
             <p className="label">A · Story</p>
           </Reveal>
           <Reveal delay={100}>
-            <div className="space-y-8 font-display text-[21px] font-medium leading-[1.7] text-chrome sm:text-2xl">
+            <div className="space-y-8 font-display text-[21px] font-medium leading-[1.7] text-ink sm:text-2xl">
               <p>
                 「Sheen Trail 行晨」取自晨光與道路。做產品，是把需求變成能長久使用的東西。
               </p>
@@ -99,7 +99,7 @@ export default function AboutPage() {
       </section>
 
       {/* BELIEFS */}
-      <section className="section border-t border-chrome-hair bg-void-soft/60">
+      <section className="section border-t border-line bg-surface-alt">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -115,22 +115,22 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-y border-chrome-hair sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-0 border-y border-line sm:grid-cols-2 lg:grid-cols-4">
             {beliefs.map((b, i) => (
               <Reveal
                 key={b.k}
                 delay={i * 70}
                 className={`p-8 ${
-                  i < beliefs.length - 1 ? "lg:border-r lg:border-chrome-hair" : ""
-                } ${i % 2 === 0 ? "sm:border-r sm:border-chrome-hair lg:border-r" : ""} ${
-                  i < 2 ? "border-b border-chrome-hair sm:border-b lg:border-b-0" : ""
+                  i < beliefs.length - 1 ? "lg:border-r lg:border-line" : ""
+                } ${i % 2 === 0 ? "sm:border-r sm:border-line lg:border-r" : ""} ${
+                  i < 2 ? "border-b border-line sm:border-b lg:border-b-0" : ""
                 }`}
               >
                 <p className="num-badge">0{i + 1}</p>
-                <h3 className="mt-10 font-display text-[28px] font-medium leading-tight text-chrome">
+                <h3 className="mt-10 font-display text-[28px] font-medium leading-tight text-ink">
                   {b.k}
                 </h3>
-                <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.22em] text-chrome-muted">
+                <p className="mt-1 meta">
                   {b.zh}
                 </p>
                 <p className="mt-6 body">{b.body}</p>
@@ -141,7 +141,7 @@ export default function AboutPage() {
       </section>
 
       {/* DISCIPLINES */}
-      <section className="section border-t border-chrome-hair">
+      <section className="section border-t border-line">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -163,10 +163,10 @@ export default function AboutPage() {
                 <div className="grid items-baseline gap-4 sm:grid-cols-[60px_1fr_1.2fr] sm:gap-10">
                   <span className="num-badge">0{i + 1}</span>
                   <div>
-                    <h3 className="font-display text-2xl font-medium text-chrome">
+                    <h3 className="font-display text-2xl font-medium text-ink">
                       {d.t}
                     </h3>
-                    <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.22em] text-chrome-muted">
+                    <p className="mt-1 meta">
                       {d.zh}
                     </p>
                   </div>

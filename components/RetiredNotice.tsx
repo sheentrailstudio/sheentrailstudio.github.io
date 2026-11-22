@@ -10,14 +10,14 @@ export function RetiredNotice() {
       <section className="relative pt-24 sm:pt-28">
         <div className="shell pb-16 sm:pb-20">
           <p className="label">已下架的產品</p>
-          <h1 className="display-xxl metal-text mt-8 max-w-3xl text-balance">
+          <h1 className="display-xxl mt-8 max-w-3xl text-balance">
             QT Garden 已下架
           </h1>
           <p className="mt-7 max-w-2xl text-pretty lede">
             開發 QT Garden 的過程，其實也是我們慢慢想清楚要做什麼的過程。答案愈來愈明確之後，我們決定把它收起來，讓力氣集中在那一件事上。
           </p>
 
-          <div className="mt-10 max-w-2xl space-y-5 border-l border-aurora-500/30 pl-6">
+          <div className="mt-10 max-w-2xl space-y-5 border-l border-gold pl-6">
             <p className="body">
               那件事是：把禱告留下來。不是讀更多、記更多、整理得更漂亮，而是讓一句在車上、在睡前說出口的話，不會隔天就散掉。這個判斷是做了 QT Garden 才長出來的，不是一開始就知道。
             </p>
@@ -29,7 +29,7 @@ export function RetiredNotice() {
             </p>
           </div>
 
-          <div className="mt-9 flex flex-col gap-3 border-t border-chrome-hair pt-10 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-3 border-t border-line pt-10 sm:flex-row">
             <Link href="/products/amenjournal" className="btn-primary">
               認識 Amen Journal
               <span className="arrow">→</span>

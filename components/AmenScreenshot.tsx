@@ -22,7 +22,7 @@ export function AmenScreenshot({
       width={860}
       height={1870}
       priority={priority}
-      className="h-auto w-full rounded-3xl border border-chrome-hair"
+      className="h-auto w-full rounded-3xl border border-line"
     />
   );
 }

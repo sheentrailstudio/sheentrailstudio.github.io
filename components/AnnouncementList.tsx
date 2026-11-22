@@ -9,8 +9,8 @@ type AnnouncementListProps = {
 };
 
 /**
- * Announcements as a log: a mono timestamp on the left, the entry on the right,
- * separated by rules that catch the light.
+ * Announcements as a log: the date on the left, the entry on the right,
+ * separated by hairline rules.
  */
 export function AnnouncementList({
   items,
@@ -27,7 +27,7 @@ export function AnnouncementList({
           >
             <div className="flex flex-wrap items-center gap-3 sm:flex-col sm:items-start">
               <time
-                className="metal-soft font-mono text-[13px] tracking-[0.14em]"
+                className="text-[13px] font-semibold tabular-nums text-ink"
                 dateTime={item.date}
               >
                 {item.dateLabel}
@@ -36,11 +36,11 @@ export function AnnouncementList({
             </div>
 
             <div>
-              <h3 className="display-md metal-text">{item.title}</h3>
+              <h3 className="display-md">{item.title}</h3>
               <p className="mt-3 max-w-2xl body">{item.summary}</p>
 
               {variant === "full" && item.body?.length ? (
-                <div className="mt-6 max-w-2xl space-y-4 border-l border-aurora-500/30 pl-6">
+                <div className="mt-6 max-w-2xl space-y-4 border-l border-gold pl-6">
                   {item.body.map((paragraph) => (
                     <p key={paragraph} className="body">
                       {paragraph}
@@ -52,7 +52,7 @@ export function AnnouncementList({
               {item.link ? (
                 <Link
                   href={item.link.href}
-                  className="link-underline mt-6 font-mono text-[12px] uppercase tracking-[0.16em] text-aurora-500"
+                  className="link-underline mt-6 text-sm font-medium text-ink"
                 >
                   {item.link.label}
                   <span aria-hidden>→</span>

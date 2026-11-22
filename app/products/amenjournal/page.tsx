@@ -160,19 +160,11 @@ export default function AmenJournalPage() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative overflow-hidden pt-28 sm:pt-36">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{
-            background:
-              "radial-gradient(55% 45% at 85% 15%, rgba(179,90,38,0.1), transparent 60%), radial-gradient(45% 40% at 10% 85%, rgba(38,68,51,0.08), transparent 60%)",
-          }}
-        />
+      <section className="pt-28 sm:pt-36">
         <div className="shell grid gap-16 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-32">
           <Reveal>
             <p className="label">Amen Journal · 阿們日記</p>
-            <h1 className="display-xxl metal-text mt-8 text-balance">
+            <h1 className="display-xxl mt-8 text-balance">
               用說的禱告日記
             </h1>
             <p className="mt-10 max-w-xl text-pretty lede">
@@ -184,18 +176,18 @@ export default function AmenJournalPage() {
               <span className="chip">Android 即將推出</span>
             </div>
 
-            <dl className="mt-10 grid grid-cols-3 gap-8 border-t border-chrome-hair pt-8">
+            <dl className="mt-10 grid grid-cols-3 gap-8 border-t border-line pt-8">
               <div>
                 <dt className="label">Platform</dt>
-                <dd className="mt-2 font-serif text-lg text-chrome">iOS</dd>
+                <dd className="mt-2 text-lg font-medium text-ink">iOS</dd>
               </div>
               <div>
                 <dt className="label">For</dt>
-                <dd className="mt-2 font-serif text-lg text-chrome">Believers</dd>
+                <dd className="mt-2 text-lg font-medium text-ink">Believers</dd>
               </div>
               <div>
                 <dt className="label">Status</dt>
-                <dd className="mt-2 font-serif text-lg text-chrome">Available</dd>
+                <dd className="mt-2 text-lg font-medium text-ink">Available</dd>
               </div>
             </dl>
           </Reveal>
@@ -209,7 +201,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* PROBLEM */}
-      <section className="section border-t border-chrome-hair">
+      <section className="section border-t border-line">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -225,17 +217,17 @@ export default function AmenJournalPage() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-y border-chrome-hair sm:grid-cols-3">
+          <div className="mt-16 grid gap-0 border-y border-line sm:grid-cols-3">
             {problems.map((p, i) => (
               <Reveal
                 key={p.n}
                 delay={i * 80}
-                className={`p-8 sm:border-r sm:border-chrome-hair ${
+                className={`p-8 sm:border-r sm:border-line ${
                   i === problems.length - 1 ? "sm:border-r-0" : ""
-                } ${i < problems.length - 1 ? "border-b border-chrome-hair sm:border-b-0" : ""}`}
+                } ${i < problems.length - 1 ? "border-b border-line sm:border-b-0" : ""}`}
               >
                 <p className="num-badge">{p.n}</p>
-                <h3 className="mt-10 font-display text-2xl font-medium text-chrome">
+                <h3 className="mt-10 font-display text-2xl font-medium text-ink">
                   {p.title}
                 </h3>
                 <p className="mt-4 body">{p.body}</p>
@@ -246,7 +238,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* CAPTURE */}
-      <section className="section border-t border-chrome-hair bg-void-soft/60">
+      <section className="section border-t border-line bg-surface-alt">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -267,11 +259,11 @@ export default function AmenJournalPage() {
               {inputs.map((r, i) => (
                 <Reveal as="li" key={r.kicker} delay={i * 60}>
                   <div className="grid items-baseline gap-3 sm:grid-cols-[110px_1fr] sm:gap-8">
-                    <span className="font-display text-2xl font-medium text-star-500">
+                    <span className="font-display text-2xl font-medium accent-text">
                       {r.kicker}
                     </span>
                     <div>
-                      <h3 className="font-display text-2xl font-medium text-chrome">
+                      <h3 className="font-display text-2xl font-medium text-ink">
                         {r.title}
                       </h3>
                       <p className="mt-3 max-w-xl body">{r.body}</p>
@@ -291,7 +283,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* TRAIL */}
-      <section className="section border-t border-chrome-hair">
+      <section className="section border-t border-line">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -317,11 +309,11 @@ export default function AmenJournalPage() {
               {trail.map((r, i) => (
                 <Reveal as="li" key={r.kicker} delay={i * 60}>
                   <div className="grid items-baseline gap-3 sm:grid-cols-[110px_1fr] sm:gap-8">
-                    <span className="font-display text-2xl font-medium text-star-500">
+                    <span className="font-display text-2xl font-medium accent-text">
                       {r.kicker}
                     </span>
                     <div>
-                      <h3 className="font-display text-2xl font-medium text-chrome">
+                      <h3 className="font-display text-2xl font-medium text-ink">
                         {r.title}
                       </h3>
                       <p className="mt-3 max-w-xl body">{r.body}</p>
@@ -336,7 +328,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* REVIEW */}
-      <section className="section border-t border-chrome-hair bg-void-soft/60">
+      <section className="section border-t border-line bg-surface-alt">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -363,11 +355,11 @@ export default function AmenJournalPage() {
               {review.map((r, i) => (
                 <Reveal as="li" key={r.kicker} delay={i * 60}>
                   <div className="grid items-baseline gap-3 sm:grid-cols-[110px_1fr] sm:gap-8">
-                    <span className="font-display text-2xl font-medium text-star-500">
+                    <span className="font-display text-2xl font-medium accent-text">
                       {r.kicker}
                     </span>
                     <div>
-                      <h3 className="font-display text-2xl font-medium text-chrome">
+                      <h3 className="font-display text-2xl font-medium text-ink">
                         {r.title}
                       </h3>
                       <p className="mt-3 max-w-xl body">{r.body}</p>
@@ -384,7 +376,7 @@ export default function AmenJournalPage() {
       {/* PRIVACY */}
       <section
         id="privacy"
-        className="section border-t border-chrome-hair bg-void-soft/60"
+        className="section border-t border-line bg-surface-alt"
       >
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
@@ -401,14 +393,14 @@ export default function AmenJournalPage() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-y border-chrome-hair sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-0 border-y border-line sm:grid-cols-2 lg:grid-cols-3">
             {privacy.map((p, i) => (
               <Reveal
                 key={p.title}
                 delay={(i % 3) * 80}
-                className="border-b border-chrome-hair p-8 last:border-b-0 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
+                className="border-b border-line p-8 last:border-b-0 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
               >
-                <h3 className="font-display text-2xl font-medium text-chrome">
+                <h3 className="font-display text-2xl font-medium text-ink">
                   {p.title}
                 </h3>
                 <p className="mt-4 body">{p.body}</p>
@@ -420,7 +412,7 @@ export default function AmenJournalPage() {
             <p className="mt-10">
               <Link
                 href="/products/amenjournal/privacy"
-                className="font-sans text-sm text-chrome-soft underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+                className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
               >
                 完整的隱私權政策 →
               </Link>
@@ -430,7 +422,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="section border-t border-chrome-hair">
+      <section id="pricing" className="section border-t border-line">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
@@ -446,10 +438,10 @@ export default function AmenJournalPage() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-y border-chrome-hair sm:grid-cols-2">
-            <Reveal className="border-b border-chrome-hair p-8 sm:border-b-0 sm:border-r">
+          <div className="mt-16 grid gap-0 border-y border-line sm:grid-cols-2">
+            <Reveal className="border-b border-line p-8 sm:border-b-0 sm:border-r">
               <p className="num-badge">Free</p>
-              <h3 className="mt-6 font-display text-2xl font-medium text-chrome">
+              <h3 className="mt-6 font-display text-2xl font-medium text-ink">
                 免費
               </h3>
               <ul className="mt-6 space-y-3 body">
@@ -460,7 +452,7 @@ export default function AmenJournalPage() {
             </Reveal>
             <Reveal delay={80} className="p-8">
               <p className="num-badge">Subscription</p>
-              <h3 className="mt-6 font-display text-2xl font-medium text-chrome">
+              <h3 className="mt-6 font-display text-2xl font-medium text-ink">
                 訂閱
               </h3>
               <ul className="mt-6 space-y-3 body">
@@ -468,7 +460,7 @@ export default function AmenJournalPage() {
                   <li key={t}>{t}</li>
                 ))}
               </ul>
-              <p className="mt-6 font-sans text-sm text-chrome-muted">
+              <p className="mt-6 font-sans text-sm text-ink-muted">
                 價格以商店購買畫面為準。
               </p>
             </Reveal>
@@ -477,7 +469,7 @@ export default function AmenJournalPage() {
       </section>
 
       {/* FAQ */}
-      <section className="section border-t border-chrome-hair">
+      <section className="section border-t border-line">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-start">
             <Reveal>
@@ -494,15 +486,15 @@ export default function AmenJournalPage() {
       </section>
 
       {/* STATUS */}
-      <section className="relative border-t border-chrome-hair bg-void-soft/60">
+      <section className="relative border-t border-line bg-surface-alt">
         <div className="shell py-24 sm:py-32">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end">
             <div>
-              <p className="label ">Amen Journal · Available on iOS</p>
-              <h2 className="display-xl mt-7 text-balance text-chrome">
+              <p className="label">Amen Journal · Available on iOS</p>
+              <h2 className="display-xl mt-7 text-balance text-ink">
                 現在可以下載了
               </h2>
-              <p className="mt-6 max-w-xl font-sans text-[15px] leading-[1.75] text-chrome-soft">
+              <p className="mt-6 max-w-xl font-sans text-[15px] leading-[1.75] text-ink-muted">
                 iOS 版已在 App Store 上架，Android 即將推出。
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -513,19 +505,19 @@ export default function AmenJournalPage() {
             <div className="flex flex-col items-start gap-5 lg:items-end">
               <Link
                 href="/products/amenjournal/privacy"
-                className="font-sans text-sm text-chrome-soft underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+                className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
               >
                 隱私權政策 →
               </Link>
               <Link
                 href="/products/amenjournal/terms"
-                className="font-sans text-sm text-chrome-soft underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+                className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
               >
                 使用條款 →
               </Link>
               <Link
                 href="/products"
-                className="font-sans text-sm text-chrome-soft underline decoration-void/30 decoration-1 underline-offset-[6px] transition-colors hover:text-void hover:decoration-void"
+                className="font-sans text-sm text-ink-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
               >
                 查看其他產品 →
               </Link>
