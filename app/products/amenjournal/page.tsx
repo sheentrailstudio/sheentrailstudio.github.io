@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
-import { AmenJournalMockup } from "@/components/mockups/AmenJournalMockup";
+import { AmenScreenshot } from "@/components/AmenScreenshot";
 
 const APP_STORE_URL = "https://apps.apple.com/tw/app/id6804240377";
 
@@ -29,71 +28,61 @@ const problems = [
   {
     n: "03",
     title: "看不見自己走過的路",
-    body: "神有沒有回應？這一年長成什麼樣子？沒有紀錄，只剩模糊的感覺。",
+    body: "這一年為什麼事禱告、禱告了幾次？沒有紀錄，只剩模糊的感覺。",
   },
 ];
 
-const solutions = [
+const inputs = [
   {
-    n: "01",
-    title: "用說的就可以禱告",
-    body: "按一下開始錄音，把話直接說出來。說完自動轉成逐字稿，可以自己修改。",
+    kicker: "說",
+    title: "按一下，開口禱告",
+    body: "邊說邊出字，說完可以修改。原始錄音保留，停頓與情緒不會不見。",
   },
   {
-    n: "02",
-    title: "語音、文字、照片，同一本日記",
-    body: "有時一段錄音就夠，有時想安靜地打字，有時是一張照片。三種都收在同一天。",
+    kicker: "寫",
+    title: "一頁安靜的書寫畫面",
+    body: "想到什麼就寫。",
   },
   {
-    n: "03",
-    title: "依標籤串成軌跡",
-    body: "用標籤記下為什麼事禱告，同一標籤的禱告會依時間串成軌跡。",
-  },
-];
-
-const useCases = [
-  {
-    time: "Morning",
-    title: "出門前的一分鐘",
-    body: "還沒清醒到能寫字，但可以說。錄一段就出門。",
-  },
-  {
-    time: "Commute",
-    title: "車上、路上、走路的時候",
-    body: "手不方便打字的時候，正好最想禱告。語音讓它不必等坐下來。",
-  },
-  {
-    time: "Evening",
-    title: "睡前的整理",
-    body: "把今天的重擔說完，拍一張想記得的畫面。",
-  },
-  {
-    time: "Together",
-    title: "為別人禱告的時候",
-    body: "小組結束、朋友傳來消息，先記下這件事，之後為他禱告時一翻就找到。",
+    kicker: "拍",
+    title: "拍下手寫的禱告",
+    body: "手寫的禱告、經文或一個當下都可以拍。App 會辨識圖片上的文字，之後搜尋得到。",
   },
 ];
 
-const features = [
+const trail = [
   {
-    title: "語音禱告錄音",
-    body: "一鍵開始，長度不設限。原始錄音保留在你自己的日記裡。",
+    kicker: "標籤",
+    title: "記下為什麼事禱告",
+    body: "例如「為母親的健康」。記錄時自己下，事後都能改。",
   },
   {
-    title: "自動逐字稿",
-    body: "語音自動轉成文字，可以自由修改，也可以選擇只保留聲音。",
+    kicker: "軌跡",
+    title: "依時間串成一條線",
+    body: "同一個標籤底下的禱告依時間排開，像星星連成星座。",
+  },
+];
+
+const review = [
+  {
+    kicker: "清單",
+    title: "每一則禱告都在這裡",
+    body: "依日期排列，點開就能回頭看。",
   },
   {
-    title: "文字書寫",
-    body: "想安靜地寫的時候，一頁乾淨的書寫介面，支援自由格式。",
+    kicker: "月曆",
+    title: "哪一天留下過禱告",
+    body: "月曆上有點的日子，就是你禱告過的日子。",
   },
   {
-    title: "拍照記錄",
-    body: "把畫面收進禱告裡——一段講道筆記、一張照片、一個當下。",
+    kicker: "圖片",
+    title: "回顧拍下的畫面",
+    body: "手寫的禱告與經文，收在圖片頁，隨時回顧。",
   },
   {
-    title: "靈命軌跡回顧",
-    body: "用標籤記下禱告的事，同一標籤依時間串成軌跡，也能用月曆與搜尋回頭翻。",
+    kicker: "搜尋",
+    title: "搜尋任何一個字",
+    body: "找回曾經說過的話，錄音轉成的文字也找得到。",
   },
 ];
 
@@ -165,30 +154,10 @@ export default function AmenJournalPage() {
           </Reveal>
 
           <Reveal delay={150}>
-            <AmenJournalMockup />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* CONTEXT IMAGE */}
-      <section className="border-t border-chrome-hair">
-        <div className="shell py-12">
-          <div className="relative h-[36vh] min-h-[280px] w-full overflow-hidden rounded-2xl border border-chrome-hair bg-void-soft">
-            <Image
-              src="/amen-journal-context.png"
-              alt="Morning light over an open journal and Bible"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 1200px, 100vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-chrome/20 via-transparent to-chrome/10" />
-            <div className="absolute bottom-6 left-6 max-w-md font-serif text-2xl text-void sm:text-3xl">
-              &ldquo;你們眾民當時時倚靠他，在他面前傾心吐意。&rdquo;
-              <span className="mt-2 block font-sans text-xs not-tracking-[0.22em] text-chrome-soft">
-                Psalm 62:8
-              </span>
+            <div className="mx-auto w-full max-w-[340px]">
+              <AmenScreenshot n={1} priority />
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -229,116 +198,143 @@ export default function AmenJournalPage() {
         </div>
       </section>
 
-      {/* SOLUTION */}
+      {/* CAPTURE */}
       <section className="section border-t border-chrome-hair bg-void-soft/60">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
-              <p className="label">B · Solution</p>
+              <p className="label">B · Capture</p>
               <h2 className="display-xl mt-7 text-balance">
-                讓禱告留下來
+                三種方式留下禱告
               </h2>
             </Reveal>
             <Reveal delay={100}>
               <p className="max-w-xl body lg:text-right lg:ml-auto">
-                語音優先。其他功能都要先回答同一個問題——這能不能幫助禱告被留下？
+                說、寫、拍，都收在同一本日記裡。
               </p>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-4 sm:grid-cols-2">
-            {solutions.map((s, i) => (
-              <Reveal key={s.n} delay={i * 60}>
-                <article className="card card-hover h-full">
-                  <p className="num-badge">{s.n}</p>
-                  <h3 className="mt-10 font-display text-[26px] font-medium leading-tight text-chrome">
-                    {s.title}
-                  </h3>
-                  <p className="mt-4 body">{s.body}</p>
-                </article>
-              </Reveal>
-            ))}
+          <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_0.6fr] lg:items-center lg:gap-20">
+            <ul className="hairline-list">
+              {inputs.map((r, i) => (
+                <Reveal as="li" key={r.kicker} delay={i * 60}>
+                  <div className="grid items-baseline gap-3 sm:grid-cols-[110px_1fr] sm:gap-8">
+                    <span className="font-display text-2xl font-medium text-star-500">
+                      {r.kicker}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-2xl font-medium text-chrome">
+                        {r.title}
+                      </h3>
+                      <p className="mt-3 max-w-xl body">{r.body}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </ul>
+
+            <Reveal delay={100}>
+              <div className="mx-auto w-full max-w-[320px]">
+                <AmenScreenshot n={5} />
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
-      {/* USE CASES */}
+      {/* TRAIL */}
       <section className="section border-t border-chrome-hair">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
-              <p className="label">C · Use Cases</p>
+              <p className="label">C · Trail</p>
               <h2 className="display-xl mt-7 text-balance">
-                適合的時刻
+                依標籤串成軌跡
               </h2>
             </Reveal>
             <Reveal delay={100}>
               <p className="max-w-xl body lg:text-right lg:ml-auto">
-                我們不打算把使用者留在 App 裡，而是希望它出現在那些原本就會禱告的時刻。
+                同一件事的每一次禱告，排在同一條軌跡上。
               </p>
             </Reveal>
           </div>
 
-          <ul className="mt-14 hairline-list">
-            {useCases.map((u, i) => (
-              <Reveal as="li" key={u.title} delay={i * 60}>
-                <div className="grid items-baseline gap-4 sm:grid-cols-[180px_1fr] sm:gap-10">
-                  <span className="font-sans text-xs font-medium uppercase tracking-[0.22em] text-star-500">
-                    {u.time}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-2xl font-medium text-chrome">
-                      {u.title}
-                    </h3>
-                    <p className="mt-3 max-w-2xl body">{u.body}</p>
+          <div className="mt-16 grid gap-12 lg:grid-cols-[0.6fr_1fr] lg:items-center lg:gap-20">
+            <Reveal className="lg:order-2">
+              <div className="mx-auto w-full max-w-[320px]">
+                <AmenScreenshot n={2} />
+              </div>
+            </Reveal>
+            <ul className="hairline-list lg:order-1">
+              {trail.map((r, i) => (
+                <Reveal as="li" key={r.kicker} delay={i * 60}>
+                  <div className="grid items-baseline gap-3 sm:grid-cols-[110px_1fr] sm:gap-8">
+                    <span className="font-display text-2xl font-medium text-star-500">
+                      {r.kicker}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-2xl font-medium text-chrome">
+                        {r.title}
+                      </h3>
+                      <p className="mt-3 max-w-xl body">{r.body}</p>
+                    </div>
                   </div>
-                </div>
-              </Reveal>
-            ))}
-          </ul>
+                </Reveal>
+              ))}
+            </ul>
+
+          </div>
         </div>
       </section>
 
-      {/* FEATURES */}
+      {/* REVIEW */}
       <section className="section border-t border-chrome-hair bg-void-soft/60">
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-[0.55fr_1fr] lg:items-end">
             <Reveal>
-              <p className="label ">D · Features</p>
-              <h2 className="display-xl mt-7 text-chrome">
-                留下禱告的五件事
+              <p className="label">D · Review</p>
+              <h2 className="display-xl mt-7 text-balance">
+                回頭看走過的路
               </h2>
             </Reveal>
             <Reveal delay={100}>
-              <p className="max-w-xl font-sans text-[15px] leading-[1.75] text-chrome-soft lg:text-right lg:ml-auto">
+              <p className="max-w-xl body lg:text-right lg:ml-auto">
                 說出來、留下來，然後在某一天回頭看見。
               </p>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-0 border-t border-void/15 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((f, i) => (
-              <Reveal
-                key={f.title}
-                delay={i * 60}
-                className={`border-void/15 p-8 ${
-                  i % 3 !== 2 ? "lg:border-r" : ""
-                } ${i % 2 === 0 ? "sm:border-r" : ""} ${
-                  i < features.length - (i % 3 === 2 ? 1 : 0) ? "border-b" : ""
-                }`}
-              >
-                <p className="num-badge !text-void/55">0{i + 1}</p>
-                <h3 className="mt-10 font-display text-2xl font-medium text-chrome">
-                  {f.title}
-                </h3>
-                <p className="mt-3 font-sans text-[14px] leading-[1.7] text-chrome-soft">
-                  {f.body}
-                </p>
-              </Reveal>
-            ))}
+          <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-20">
+            <Reveal>
+              <div className="mx-auto grid max-w-[640px] grid-cols-2 gap-4 sm:gap-6">
+                <AmenScreenshot n={3} />
+                <AmenScreenshot n={4} />
+              </div>
+            </Reveal>
+            <ul className="hairline-list">
+              {review.map((r, i) => (
+                <Reveal as="li" key={r.kicker} delay={i * 60}>
+                  <div className="grid items-baseline gap-3 sm:grid-cols-[110px_1fr] sm:gap-8">
+                    <span className="font-display text-2xl font-medium text-star-500">
+                      {r.kicker}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-2xl font-medium text-chrome">
+                        {r.title}
+                      </h3>
+                      <p className="mt-3 max-w-xl body">{r.body}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </ul>
+
           </div>
         </div>
       </section>
+
+      {/* 隱私與收費段落（#13）加在這裡，FAQ 之前 */}
 
       {/* FAQ */}
       <section className="section border-t border-chrome-hair">
