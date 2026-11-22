@@ -24,7 +24,7 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-line bg-surface-alt">
+    <footer className="relative border-t border-line bg-surface">
       <div className="shell py-16 sm:py-20">
         <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr]">
           <div>

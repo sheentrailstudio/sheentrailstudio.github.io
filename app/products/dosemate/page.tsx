@@ -190,7 +190,7 @@ export default function DoseMatePage() {
               className="object-cover"
               sizes="(min-width: 1024px) 1200px, 100vw"
             />
-            <div className="absolute bottom-6 left-6 right-6 max-w-lg rounded-lg bg-surface px-5 py-4 text-2xl font-medium text-ink sm:right-auto sm:text-3xl">
+            <div className="absolute bottom-4 left-4 right-4 max-w-lg rounded-lg bg-surface px-4 py-3 text-lg font-medium text-ink sm:bottom-6 sm:left-6 sm:right-auto sm:px-5 sm:py-4 sm:text-3xl">
               把資訊整理得更快、更容易確認。
               <span className="mt-2 block font-sans text-xs text-ink-muted">
                 Designed for clinical support
