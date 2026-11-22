@@ -3,9 +3,10 @@ import { pageMetadata } from "@/lib/seo";
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
-import { DOSE_MATE_ANDROID_URL, DOSE_MATE_IOS_URL } from "@/content/stores";
 import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
 
+const IOS_URL = "https://apps.apple.com/tw/app/id6755082556";
+const ANDROID_URL = "https://play.google.com/store/apps/details?id=com.sheentrail.dosemate";
 
 export const metadata = pageMetadata({
   title: "新生兒急救指引",
@@ -145,7 +146,7 @@ export default function DoseMatePage() {
             <p className="mt-10 max-w-xl text-pretty lede">
               計算、查詢與急救流程，查得快。判斷留給專業人員。
             </p>
-            <StoreBadges ios={DOSE_MATE_IOS_URL} android={DOSE_MATE_ANDROID_URL} className="mt-10" />
+            <StoreBadges ios={IOS_URL} android={ANDROID_URL} className="mt-10" />
 
             <dl className="mt-10 grid grid-cols-3 gap-8 border-t border-line pt-8">
               <div>
@@ -395,7 +396,7 @@ export default function DoseMatePage() {
               </p>
             </div>
             <div className="flex flex-col items-start gap-5 lg:items-end">
-              <StoreBadges ios={DOSE_MATE_IOS_URL} android={DOSE_MATE_ANDROID_URL} />
+              <StoreBadges ios={IOS_URL} android={ANDROID_URL} />
             </div>
           </div>
         </div>

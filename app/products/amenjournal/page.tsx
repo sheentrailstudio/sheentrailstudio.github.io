@@ -4,9 +4,9 @@ import { ogImage, pageMetadata } from "@/lib/seo";
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
-import { AMEN_JOURNAL_IOS_URL } from "@/content/stores";
 import { AmenScreenshot } from "@/components/AmenScreenshot";
 
+const APP_STORE_URL = "https://apps.apple.com/tw/app/id6804240377";
 
 export const metadata: Metadata = {
   ...pageMetadata({
@@ -172,7 +172,7 @@ export default function AmenJournalPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-3">
-              <StoreBadges ios={AMEN_JOURNAL_IOS_URL} />
+              <StoreBadges ios={APP_STORE_URL} />
               <span className="chip">Android 即將推出</span>
             </div>
 
@@ -498,7 +498,7 @@ export default function AmenJournalPage() {
                 iOS 版已在 App Store 上架，Android 即將推出。
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <StoreBadges ios={AMEN_JOURNAL_IOS_URL} />
+                <StoreBadges ios={APP_STORE_URL} />
                 <span className="chip">Android 即將推出</span>
               </div>
             </div>

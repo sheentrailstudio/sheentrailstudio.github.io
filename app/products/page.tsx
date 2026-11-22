@@ -1,11 +1,6 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { Reveal } from "@/components/Reveal";
-import {
-  AMEN_JOURNAL_IOS_URL,
-  DOSE_MATE_ANDROID_URL,
-  DOSE_MATE_IOS_URL,
-} from "@/content/stores";
 import { StoreBadges } from "@/components/StoreBadges";
 import { AmenScreenshot } from "@/components/AmenScreenshot";
 import { DoseMateMockup } from "@/components/mockups/DoseMateMockup";
@@ -48,8 +43,8 @@ const products: Product[] = [
     status: "available",
     domain: "Medical · Clinical Support",
     mockup: "dose",
-    ios: DOSE_MATE_IOS_URL,
-    android: DOSE_MATE_ANDROID_URL,
+    ios: "https://apps.apple.com/tw/app/id6755082556",
+    android: "https://play.google.com/store/apps/details?id=com.sheentrail.dosemate",
   },
   {
     href: "/products/amenjournal",
@@ -62,7 +57,7 @@ const products: Product[] = [
     status: "available",
     domain: "Devotional · Spiritual Care",
     mockup: "amen",
-    ios: AMEN_JOURNAL_IOS_URL,
+    ios: "https://apps.apple.com/tw/app/id6804240377",
   },
   {
     label: "Product 03",
