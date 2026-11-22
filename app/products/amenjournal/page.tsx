@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ogImage, pageMetadata } from "@/lib/seo";
 import { FAQ } from "@/components/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { StoreBadges } from "@/components/StoreBadges";
@@ -8,10 +9,14 @@ import { AmenScreenshot } from "@/components/AmenScreenshot";
 const APP_STORE_URL = "https://apps.apple.com/tw/app/id6804240377";
 
 export const metadata: Metadata = {
-  title: "Amen Journal 阿們日記",
+  ...pageMetadata({
+    title: "Amen Journal 阿們日記",
+    description:
+      "Amen Journal 阿們日記是一款語音禱告日記 App。用說的、用寫的、用拍的留下禱告，依標籤串成軌跡。已在 iOS 上架，Android 即將推出。",
+    path: "/products/amenjournal/",
+    image: { ...ogImage, url: "/products/amenjournal/og.png", alt: "Amen Journal 阿們日記" },
+  }),
   itunes: { appId: "6804240377" },
-  description:
-    "Amen Journal 阿們日記是一款語音禱告日記 App。用說的、用寫的、用拍的留下禱告，依標籤串成軌跡。已在 iOS 上架，Android 即將推出。",
 };
 
 const problems = [

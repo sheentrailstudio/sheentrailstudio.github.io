@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About",
   description:
     "Sheen Trail Digital 是一間 AI 產品工作室，專注於 App 設計、AI 輔助體驗與服務開發。",
-};
+  path: "/about/",
+});
 
 const beliefs = [
   {

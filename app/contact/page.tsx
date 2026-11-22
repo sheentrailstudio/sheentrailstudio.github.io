@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact",
   description:
     "聯絡 Sheen Trail Digital 討論產品、合作、投資或技術開發。Email: info@sheentrail.com",
-};
+  path: "/contact/",
+});
 
 const channels = [
   {
