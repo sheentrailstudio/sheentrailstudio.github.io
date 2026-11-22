@@ -1,4 +1,4 @@
-/** Store listings, shared by the home page and the product pages. */
+/** Store listings shown on the home page. */
 
 export const DOSE_MATE_IOS_URL = "https://apps.apple.com/tw/app/id6755082556";
 export const DOSE_MATE_ANDROID_URL =
