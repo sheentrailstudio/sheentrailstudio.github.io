@@ -112,7 +112,7 @@ export default function ProductsPage() {
           </Reveal>
 
           <div className="mt-12 flex flex-wrap items-center gap-3 border-t border-line pt-6">
-            <span className="font-sans text-[13px] font-medium text-ink-muted">
+            <span className="font-sans meta">
               Currently shipping
             </span>
             <span className="chip">Dose Mate</span>

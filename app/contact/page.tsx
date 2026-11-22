@@ -85,7 +85,7 @@ export default function ContactPage() {
                 <h3 className="mt-10 font-display text-2xl font-medium text-ink">
                   {c.label}
                 </h3>
-                <p className="mt-2 font-sans text-[13px] font-medium text-ink-muted">
+                <p className="mt-2 font-sans meta">
                   {c.hint}
                 </p>
               </Reveal>

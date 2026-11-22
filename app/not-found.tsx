@@ -17,7 +17,7 @@ const destinations = [
 export default function NotFound() {
   return (
     <main>
-      <section className="relative overflow-hidden pt-28 sm:pt-36">
+      <section className="pt-28 sm:pt-36">
         <div className="shell pb-24 sm:pb-32">
           <p className="label">Error 404</p>
           <h1 className="display-xxl mt-8 max-w-3xl text-balance">
@@ -40,7 +40,7 @@ export default function NotFound() {
                     </span>
                     <span className="body">{d.zh}</span>
                   </span>
-                  <span className="shrink-0 text-[13px] font-medium text-ink-muted transition-colors group-hover:text-ink">
+                  <span className="shrink-0 meta transition-colors group-hover:text-ink">
                     →
                   </span>
                 </Link>

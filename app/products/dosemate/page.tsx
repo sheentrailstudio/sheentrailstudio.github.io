@@ -136,7 +136,7 @@ export default function DoseMatePage() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative overflow-hidden pt-28 sm:pt-36">
+      <section className="pt-28 sm:pt-36">
         <div className="shell grid gap-16 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-32">
           <Reveal>
             <p className="label">新生兒急救指引 · Dose Mate</p>
@@ -192,7 +192,7 @@ export default function DoseMatePage() {
             />
             <div className="absolute bottom-6 left-6 right-6 max-w-lg rounded-lg bg-surface px-5 py-4 text-2xl font-medium text-ink sm:right-auto sm:text-3xl">
               把資訊整理得更快、更容易確認。
-              <span className="mt-2 block font-sans text-xs not-tracking-[0.22em] text-ink-muted">
+              <span className="mt-2 block font-sans text-xs text-ink-muted">
                 Designed for clinical support
               </span>
             </div>

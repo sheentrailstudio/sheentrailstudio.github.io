@@ -56,7 +56,7 @@ function Block({ block }: { block: LegalBlock }) {
                 {block.head.map((cell) => (
                   <th
                     key={cell}
-                    className="border-b border-line py-3 pr-6 text-[13px] font-medium text-ink-muted"
+                    className="border-b border-line py-3 pr-6 meta"
                   >
                     {cell}
                   </th>

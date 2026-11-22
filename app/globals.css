@@ -41,7 +41,12 @@ a {
   }
 
   .label {
-    @apply inline-flex items-center gap-2 text-sm font-medium text-ink-muted;
+    @apply inline-flex text-sm font-medium text-ink-muted;
+  }
+
+  /* Small secondary text: sublabels, tags, dates. */
+  .meta {
+    @apply text-[13px] font-medium text-ink-muted;
   }
 
   .display-xxl {
@@ -96,7 +101,7 @@ a {
   }
 
   .link-underline {
-    @apply relative inline-flex items-center gap-1 transition-colors hover:text-ink;
+    @apply relative inline-flex items-center gap-1;
   }
 
   .link-underline::after {
@@ -113,7 +118,7 @@ a {
   }
 
   .card {
-    @apply relative overflow-hidden rounded-2xl border border-line bg-surface p-7 transition-all duration-500 ease-editorial;
+    @apply rounded-2xl border border-line bg-surface p-7 transition-all duration-500 ease-editorial;
   }
 
   .card-hover:hover {

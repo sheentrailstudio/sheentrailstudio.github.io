@@ -130,7 +130,7 @@ export default function AboutPage() {
                 <h3 className="mt-10 font-display text-[28px] font-medium leading-tight text-ink">
                   {b.k}
                 </h3>
-                <p className="mt-1 text-[13px] font-medium text-ink-muted">
+                <p className="mt-1 meta">
                   {b.zh}
                 </p>
                 <p className="mt-6 body">{b.body}</p>
@@ -166,7 +166,7 @@ export default function AboutPage() {
                     <h3 className="font-display text-2xl font-medium text-ink">
                       {d.t}
                     </h3>
-                    <p className="mt-1 text-[13px] font-medium text-ink-muted">
+                    <p className="mt-1 meta">
                       {d.zh}
                     </p>
                   </div>

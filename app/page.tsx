@@ -86,7 +86,7 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative overflow-hidden pt-28 sm:pt-36">
+      <section className="pt-28 sm:pt-36">
         <div className="shell grid gap-16 pb-20 lg:grid-cols-[1.25fr_0.75fr] lg:items-end lg:pb-32">
           <div className="reveal">
             <p className="label">Sheen Trail Digital · Est. 2025</p>
@@ -132,7 +132,7 @@ export default function Home() {
         </div>
 
         <div className="shell">
-          <div className="flex items-center gap-6 border-y border-line py-4 text-[13px] font-medium text-ink-muted">
+          <div className="flex items-center gap-6 border-y border-line py-4 meta">
             <span>Strategy</span>
             <span aria-hidden className="text-[9px] accent-text">✦</span>
             <span>UX Design</span>
@@ -185,7 +185,7 @@ export default function Home() {
                       {s.tags.map((t) => (
                         <span
                           key={t}
-                          className="text-[13px] font-medium text-ink-muted"
+                          className="meta"
                         >
                           {t}
                         </span>
@@ -195,7 +195,7 @@ export default function Home() {
                   <h3 className="mt-12 font-display text-[28px] font-medium leading-tight text-ink sm:text-[32px]">
                     {s.title}
                   </h3>
-                  <p className="mt-2 text-[13px] font-medium text-ink-muted">
+                  <p className="mt-2 meta">
                     {s.zh}
                   </p>
                   <p className="mt-6 max-w-md body">{s.body}</p>
@@ -245,7 +245,7 @@ export default function Home() {
                       劑量計算與急救流程，查得快、能二次確認。
                     </p>
                   </div>
-                  <span className="shrink-0 pb-1 text-[13px] font-medium text-ink-muted transition-colors group-hover:text-ink">
+                  <span className="shrink-0 pb-1 meta transition-colors group-hover:text-ink">
                     View →
                   </span>
                 </div>
@@ -275,7 +275,7 @@ export default function Home() {
                       用說的禱告日記——語音、文字、照片都能留下，依標籤串成軌跡。
                     </p>
                   </div>
-                  <span className="shrink-0 pb-1 text-[13px] font-medium text-ink-muted transition-colors group-hover:text-ink">
+                  <span className="shrink-0 pb-1 meta transition-colors group-hover:text-ink">
                     View →
                   </span>
                 </div>
@@ -330,7 +330,7 @@ export default function Home() {
                 <h3 className="mt-10 font-display text-[28px] font-medium leading-tight text-ink">
                   {p.t}
                 </h3>
-                <p className="mt-1 text-[13px] font-medium text-ink-muted">
+                <p className="mt-1 meta">
                   {p.zh}
                 </p>
                 <p className="mt-6 body">{p.body}</p>

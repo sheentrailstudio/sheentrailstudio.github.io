@@ -4,13 +4,14 @@ type StoreBadgesProps = {
   className?: string;
 };
 
+const badgeClass =
+  "inline-flex items-center gap-3 rounded-full border border-ink bg-ink px-5 py-2.5 text-surface transition-colors duration-300 ease-editorial hover:bg-ink/85";
+
 export function StoreBadges({
   ios,
   android,
   className = "",
 }: StoreBadgesProps) {
-  const baseBtn = "border-ink bg-ink text-surface hover:bg-ink/85";
-
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>
       {ios ? (
@@ -19,7 +20,7 @@ export function StoreBadges({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Download on the App Store"
-          className={`group inline-flex items-center gap-3 rounded-full border px-5 py-2.5 transition-all duration-300 ease-editorial ${baseBtn}`}
+          className={badgeClass}
         >
           <svg
             viewBox="0 0 24 24"
@@ -46,7 +47,7 @@ export function StoreBadges({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Get it on Google Play"
-          className={`group inline-flex items-center gap-3 rounded-full border px-5 py-2.5 transition-all duration-300 ease-editorial ${baseBtn}`}
+          className={badgeClass}
         >
           <svg
             viewBox="0 0 24 24"

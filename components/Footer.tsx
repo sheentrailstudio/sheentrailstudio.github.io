@@ -40,7 +40,7 @@ export function Footer() {
                 <span className="font-display text-lg font-semibold text-ink">
                   Sheen Trail
                 </span>
-                <span className="text-[13px] font-medium text-ink-muted">
+                <span className="meta">
                   Digital
                 </span>
               </span>

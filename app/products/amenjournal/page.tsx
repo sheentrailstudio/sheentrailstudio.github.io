@@ -160,7 +160,7 @@ export default function AmenJournalPage() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative overflow-hidden pt-28 sm:pt-36">
+      <section className="pt-28 sm:pt-36">
         <div className="shell grid gap-16 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-32">
           <Reveal>
             <p className="label">Amen Journal · 阿們日記</p>

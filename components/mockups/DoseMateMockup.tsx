@@ -1,7 +1,7 @@
 export function DoseMateMockup() {
   return (
-    <div className="relative mx-auto w-full max-w-[380px]">
-      <div className="relative aspect-[9/19.5] overflow-hidden rounded-[38px] border border-line bg-surface p-1 shadow-[0_24px_48px_-28px_rgba(22,24,29,0.35)]">
+    <div className="mx-auto w-full max-w-[380px]">
+      <div className="aspect-[9/19.5] overflow-hidden rounded-[38px] border border-line bg-surface p-1 shadow-[0_24px_48px_-28px_rgba(22,24,29,0.35)]">
         <div className="relative h-full w-full overflow-hidden rounded-[32px] bg-surface">
           <div className="flex items-center justify-between px-7 pt-6 text-[11px] font-medium text-ink-muted">
             <span>9:41</span>
